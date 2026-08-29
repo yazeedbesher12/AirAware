@@ -1,0 +1,1260 @@
+{
+  "phase": 3,
+  "version": "3.0.0",
+  "generated_at": "2026-08-24T15:47:39.121465+00:00",
+  "validation": {
+    "source_rows": 5636,
+    "ml_feature_rows": 5636,
+    "forecast_target_rows": 5636,
+    "timestamps_parse_failures": 0,
+    "continuous_segments": 5,
+    "sensor_ids_preserved": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "observation_signature_preserved": true,
+    "future_columns_in_feature_file": [],
+    "source_aqi_role": "Preserved as source_aqi_unverified; excluded from targets and WHO status.",
+    "model_trained": false
+  },
+  "feature_engineering": {
+    "total_candidate_features": 58,
+    "families": {
+      "ROLLING": 23,
+      "LAG": 16,
+      "TIME": 8,
+      "RATE_OF_CHANGE": 5,
+      "QUALITY": 4,
+      "CROSS_FEATURE": 2
+    },
+    "selected_lags": {
+      "pm25": [
+        15,
+        60,
+        180,
+        360
+      ],
+      "temperature": [
+        15,
+        60,
+        180
+      ],
+      "humidity": [
+        15,
+        60,
+        180
+      ],
+      "no2": [
+        15,
+        60,
+        180
+      ],
+      "o3": [
+        15,
+        60,
+        180
+      ]
+    },
+    "rolling_plan": {
+      "pm25": {
+        "60": [
+          "mean",
+          "std"
+        ],
+        "180": [
+          "mean",
+          "median",
+          "std",
+          "min",
+          "max",
+          "range"
+        ],
+        "360": [
+          "mean",
+          "std",
+          "cv"
+        ]
+      },
+      "temperature": {
+        "60": [
+          "mean"
+        ],
+        "180": [
+          "mean",
+          "std"
+        ]
+      },
+      "humidity": {
+        "60": [
+          "mean"
+        ],
+        "180": [
+          "mean",
+          "std"
+        ]
+      },
+      "no2": {
+        "60": [
+          "mean"
+        ],
+        "180": [
+          "mean",
+          "std"
+        ]
+      },
+      "o3": {
+        "60": [
+          "mean"
+        ],
+        "180": [
+          "mean",
+          "std"
+        ]
+      }
+    },
+    "redundant_pairs": 23,
+    "top_ranked": [
+      {
+        "feature": "pm25",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.8864994841440664,
+        "signed_score": 0.8864994841440664,
+        "n_observations": 5445,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "pm25_humidity_interaction",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.8808140851823094,
+        "signed_score": 0.8808140851823094,
+        "n_observations": 5445,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "pm25_mean_1h",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.8783246692823065,
+        "signed_score": 0.8783246692823065,
+        "n_observations": 5445,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "pm25_lag_15m",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.8670340353546416,
+        "signed_score": 0.8670340353546416,
+        "n_observations": 5419,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "pm25_mean_3h",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.8319534898997005,
+        "signed_score": 0.8319534898997005,
+        "n_observations": 5445,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "pm25_min_3h",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.8273227336574813,
+        "signed_score": 0.8273227336574813,
+        "n_observations": 5445,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "pm25_median_3h",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.8267660493039695,
+        "signed_score": 0.8267660493039695,
+        "n_observations": 5445,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "pm25_lag_1h",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.8161767336287422,
+        "signed_score": 0.8161767336287422,
+        "n_observations": 5418,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "pm25_mean_6h",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.7455722231134397,
+        "signed_score": 0.7455722231134397,
+        "n_observations": 5445,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "pm25_max_3h",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.724222337762096,
+        "signed_score": 0.724222337762096,
+        "n_observations": 5445,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "pm25_lag_3h",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.669488662234992,
+        "signed_score": 0.669488662234992,
+        "n_observations": 5418,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "temperature_humidity_interaction",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.6630749492001771,
+        "signed_score": 0.6630749492001771,
+        "n_observations": 5445,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "humidity",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.6559723932702596,
+        "signed_score": 0.6559723932702596,
+        "n_observations": 5445,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "humidity_lag_15m",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.6460626108194002,
+        "signed_score": 0.6460626108194002,
+        "n_observations": 5419,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "humidity_mean_1h",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.6446599128133959,
+        "signed_score": 0.6446599128133959,
+        "n_observations": 5445,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "humidity_lag_1h",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.6140822029305261,
+        "signed_score": 0.6140822029305261,
+        "n_observations": 5418,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "humidity_mean_3h",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.6065396257345628,
+        "signed_score": 0.6065396257345628,
+        "n_observations": 5445,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "humidity_lag_3h",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.4806943925315507,
+        "signed_score": 0.4806943925315507,
+        "n_observations": 5418,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "day_of_week",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.4632049121570706,
+        "signed_score": 0.4632049121570706,
+        "n_observations": 5445,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "pm25_lag_6h",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.4333479642184917,
+        "signed_score": 0.4333479642184917,
+        "n_observations": 5445,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "sin_day_of_week",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.41563333661334345,
+        "signed_score": -0.41563333661334345,
+        "n_observations": 5445,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "cos_hour",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.3936143459375714,
+        "signed_score": 0.3936143459375714,
+        "n_observations": 5445,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "pm25_std_6h",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.3467370455935063,
+        "signed_score": 0.3467370455935063,
+        "n_observations": 5445,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "cos_day_of_week",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.3397824450943401,
+        "signed_score": -0.3397824450943401,
+        "n_observations": 5445,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "temperature",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.3090223801560748,
+        "signed_score": -0.3090223801560748,
+        "n_observations": 5445,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "pm25_delta_3h",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.30071230001063365,
+        "signed_score": 0.30071230001063365,
+        "n_observations": 5418,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "pm25_slope_3h",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.3007123000106336,
+        "signed_score": 0.3007123000106336,
+        "n_observations": 5418,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "temperature_lag_15m",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.2993211135898194,
+        "signed_score": -0.2993211135898194,
+        "n_observations": 5420,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "temperature_mean_1h",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.2957498171877928,
+        "signed_score": -0.2957498171877928,
+        "n_observations": 5445,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      },
+      {
+        "feature": "pm25_std_3h",
+        "target": "target_pm25_1h",
+        "association_method": "absolute_pearson",
+        "score": 0.29523566751589736,
+        "signed_score": 0.29523566751589736,
+        "n_observations": 5445,
+        "notes": "Exploratory whole-dataset screening only; repeat on training folds in Phase 4."
+      }
+    ],
+    "catalog": [
+      {
+        "feature": "hour",
+        "family": "TIME",
+        "availability_scope": "All sensors",
+        "reason": "Backward-safe calendar representation; cyclic terms preserve clock/day adjacency.",
+        "evidence": "Phase 2 hourly and day-of-week profiles",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "minute",
+        "family": "TIME",
+        "availability_scope": "All sensors",
+        "reason": "Backward-safe calendar representation; cyclic terms preserve clock/day adjacency.",
+        "evidence": "Phase 2 hourly and day-of-week profiles",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "day_of_week",
+        "family": "TIME",
+        "availability_scope": "All sensors",
+        "reason": "Backward-safe calendar representation; cyclic terms preserve clock/day adjacency.",
+        "evidence": "Phase 2 hourly and day-of-week profiles",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "is_weekend",
+        "family": "TIME",
+        "availability_scope": "All sensors",
+        "reason": "Backward-safe calendar representation; cyclic terms preserve clock/day adjacency.",
+        "evidence": "Phase 2 hourly and day-of-week profiles",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "sin_hour",
+        "family": "TIME",
+        "availability_scope": "All sensors",
+        "reason": "Backward-safe calendar representation; cyclic terms preserve clock/day adjacency.",
+        "evidence": "Phase 2 hourly and day-of-week profiles",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "cos_hour",
+        "family": "TIME",
+        "availability_scope": "All sensors",
+        "reason": "Backward-safe calendar representation; cyclic terms preserve clock/day adjacency.",
+        "evidence": "Phase 2 hourly and day-of-week profiles",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "sin_day_of_week",
+        "family": "TIME",
+        "availability_scope": "All sensors",
+        "reason": "Backward-safe calendar representation; cyclic terms preserve clock/day adjacency.",
+        "evidence": "Phase 2 hourly and day-of-week profiles",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "cos_day_of_week",
+        "family": "TIME",
+        "availability_scope": "All sensors",
+        "reason": "Backward-safe calendar representation; cyclic terms preserve clock/day adjacency.",
+        "evidence": "Phase 2 hourly and day-of-week profiles",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "pm25_lag_15m",
+        "family": "LAG",
+        "availability_scope": "All sensors",
+        "reason": "Exact 15m elapsed-time history within a continuous segment.",
+        "evidence": "Phase 2 ACF/PACF and cross-correlation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "pm25_lag_1h",
+        "family": "LAG",
+        "availability_scope": "All sensors",
+        "reason": "Exact 1h elapsed-time history within a continuous segment.",
+        "evidence": "Phase 2 ACF/PACF and cross-correlation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "pm25_lag_3h",
+        "family": "LAG",
+        "availability_scope": "All sensors",
+        "reason": "Exact 3h elapsed-time history within a continuous segment.",
+        "evidence": "Phase 2 ACF/PACF and cross-correlation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "pm25_lag_6h",
+        "family": "LAG",
+        "availability_scope": "All sensors",
+        "reason": "Exact 6h elapsed-time history within a continuous segment.",
+        "evidence": "Phase 2 ACF/PACF and cross-correlation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "temperature_lag_15m",
+        "family": "LAG",
+        "availability_scope": "All sensors",
+        "reason": "Exact 15m elapsed-time history within a continuous segment.",
+        "evidence": "Phase 2 ACF/PACF and cross-correlation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "temperature_lag_1h",
+        "family": "LAG",
+        "availability_scope": "All sensors",
+        "reason": "Exact 1h elapsed-time history within a continuous segment.",
+        "evidence": "Phase 2 ACF/PACF and cross-correlation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "temperature_lag_3h",
+        "family": "LAG",
+        "availability_scope": "All sensors",
+        "reason": "Exact 3h elapsed-time history within a continuous segment.",
+        "evidence": "Phase 2 ACF/PACF and cross-correlation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "humidity_lag_15m",
+        "family": "LAG",
+        "availability_scope": "All sensors",
+        "reason": "Exact 15m elapsed-time history within a continuous segment.",
+        "evidence": "Phase 2 ACF/PACF and cross-correlation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "humidity_lag_1h",
+        "family": "LAG",
+        "availability_scope": "All sensors",
+        "reason": "Exact 1h elapsed-time history within a continuous segment.",
+        "evidence": "Phase 2 ACF/PACF and cross-correlation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "humidity_lag_3h",
+        "family": "LAG",
+        "availability_scope": "All sensors",
+        "reason": "Exact 3h elapsed-time history within a continuous segment.",
+        "evidence": "Phase 2 ACF/PACF and cross-correlation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "no2_lag_15m",
+        "family": "LAG",
+        "availability_scope": "Tulkarem only",
+        "reason": "Exact 15m elapsed-time history within a continuous segment.",
+        "evidence": "Phase 2 ACF/PACF and cross-correlation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "no2_lag_1h",
+        "family": "LAG",
+        "availability_scope": "Tulkarem only",
+        "reason": "Exact 1h elapsed-time history within a continuous segment.",
+        "evidence": "Phase 2 ACF/PACF and cross-correlation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "no2_lag_3h",
+        "family": "LAG",
+        "availability_scope": "Tulkarem only",
+        "reason": "Exact 3h elapsed-time history within a continuous segment.",
+        "evidence": "Phase 2 ACF/PACF and cross-correlation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "o3_lag_15m",
+        "family": "LAG",
+        "availability_scope": "Tulkarem only",
+        "reason": "Exact 15m elapsed-time history within a continuous segment.",
+        "evidence": "Phase 2 ACF/PACF and cross-correlation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "o3_lag_1h",
+        "family": "LAG",
+        "availability_scope": "Tulkarem only",
+        "reason": "Exact 1h elapsed-time history within a continuous segment.",
+        "evidence": "Phase 2 ACF/PACF and cross-correlation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "o3_lag_3h",
+        "family": "LAG",
+        "availability_scope": "Tulkarem only",
+        "reason": "Exact 3h elapsed-time history within a continuous segment.",
+        "evidence": "Phase 2 ACF/PACF and cross-correlation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "pm25_mean_1h",
+        "family": "ROLLING",
+        "availability_scope": "All sensors",
+        "reason": "Backward-only 1h mean; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "pm25_std_1h",
+        "family": "ROLLING",
+        "availability_scope": "All sensors",
+        "reason": "Backward-only 1h std; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "pm25_mean_3h",
+        "family": "ROLLING",
+        "availability_scope": "All sensors",
+        "reason": "Backward-only 3h mean; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "pm25_median_3h",
+        "family": "ROLLING",
+        "availability_scope": "All sensors",
+        "reason": "Backward-only 3h median; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "pm25_std_3h",
+        "family": "ROLLING",
+        "availability_scope": "All sensors",
+        "reason": "Backward-only 3h std; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "pm25_min_3h",
+        "family": "ROLLING",
+        "availability_scope": "All sensors",
+        "reason": "Backward-only 3h min; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "pm25_max_3h",
+        "family": "ROLLING",
+        "availability_scope": "All sensors",
+        "reason": "Backward-only 3h max; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "pm25_range_3h",
+        "family": "ROLLING",
+        "availability_scope": "All sensors",
+        "reason": "Backward-only 3h range; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "pm25_mean_6h",
+        "family": "ROLLING",
+        "availability_scope": "All sensors",
+        "reason": "Backward-only 6h mean; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "pm25_std_6h",
+        "family": "ROLLING",
+        "availability_scope": "All sensors",
+        "reason": "Backward-only 6h std; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "pm25_cv_6h",
+        "family": "ROLLING",
+        "availability_scope": "All sensors",
+        "reason": "Backward-only 6h cv; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "temperature_mean_1h",
+        "family": "ROLLING",
+        "availability_scope": "All sensors",
+        "reason": "Backward-only 1h mean; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "temperature_mean_3h",
+        "family": "ROLLING",
+        "availability_scope": "All sensors",
+        "reason": "Backward-only 3h mean; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "temperature_std_3h",
+        "family": "ROLLING",
+        "availability_scope": "All sensors",
+        "reason": "Backward-only 3h std; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "humidity_mean_1h",
+        "family": "ROLLING",
+        "availability_scope": "All sensors",
+        "reason": "Backward-only 1h mean; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "humidity_mean_3h",
+        "family": "ROLLING",
+        "availability_scope": "All sensors",
+        "reason": "Backward-only 3h mean; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "humidity_std_3h",
+        "family": "ROLLING",
+        "availability_scope": "All sensors",
+        "reason": "Backward-only 3h std; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "no2_mean_1h",
+        "family": "ROLLING",
+        "availability_scope": "Tulkarem only",
+        "reason": "Backward-only 1h mean; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "no2_mean_3h",
+        "family": "ROLLING",
+        "availability_scope": "Tulkarem only",
+        "reason": "Backward-only 3h mean; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "no2_std_3h",
+        "family": "ROLLING",
+        "availability_scope": "Tulkarem only",
+        "reason": "Backward-only 3h std; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "o3_mean_1h",
+        "family": "ROLLING",
+        "availability_scope": "Tulkarem only",
+        "reason": "Backward-only 1h mean; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "o3_mean_3h",
+        "family": "ROLLING",
+        "availability_scope": "Tulkarem only",
+        "reason": "Backward-only 3h mean; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "o3_std_3h",
+        "family": "ROLLING",
+        "availability_scope": "Tulkarem only",
+        "reason": "Backward-only 3h std; minimum 50% history coverage.",
+        "evidence": "Phase 2 rolling stability and autocorrelation",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "pm25_delta_15m",
+        "family": "RATE_OF_CHANGE",
+        "availability_scope": "All sensors",
+        "reason": "Captures observed PM2.5 movement using only current and exact past values.",
+        "evidence": "Phase 2 sudden-jump and persistence analysis",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "pm25_delta_1h",
+        "family": "RATE_OF_CHANGE",
+        "availability_scope": "All sensors",
+        "reason": "Captures observed PM2.5 movement using only current and exact past values.",
+        "evidence": "Phase 2 sudden-jump and persistence analysis",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "pm25_delta_3h",
+        "family": "RATE_OF_CHANGE",
+        "availability_scope": "All sensors",
+        "reason": "Captures observed PM2.5 movement using only current and exact past values.",
+        "evidence": "Phase 2 sudden-jump and persistence analysis",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "pm25_pct_change_1h",
+        "family": "RATE_OF_CHANGE",
+        "availability_scope": "All sensors",
+        "reason": "Captures observed PM2.5 movement using only current and exact past values.",
+        "evidence": "Phase 2 sudden-jump and persistence analysis",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "pm25_slope_3h",
+        "family": "RATE_OF_CHANGE",
+        "availability_scope": "All sensors",
+        "reason": "Captures observed PM2.5 movement using only current and exact past values.",
+        "evidence": "Phase 2 sudden-jump and persistence analysis",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "pm25_humidity_interaction",
+        "family": "CROSS_FEATURE",
+        "availability_scope": "All sensors",
+        "reason": "Phase 2 found strong PM2.5-humidity association for Nablus sensors 2 and 4.",
+        "evidence": "Phase 2 Pearson/Spearman analysis",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "temperature_humidity_interaction",
+        "family": "CROSS_FEATURE",
+        "availability_scope": "All sensors",
+        "reason": "Phase 2 found strong inverse temperature-humidity association across sensors.",
+        "evidence": "Phase 2 Pearson/Spearman analysis",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "current_quality_review_flag",
+        "family": "QUALITY",
+        "availability_scope": "All sensors",
+        "reason": "Current/backward-only quality context; no future anomaly or gap information is used.",
+        "evidence": "Phase 1 flags and Phase 2 anomaly consensus",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "recent_gap_count_3h",
+        "family": "QUALITY",
+        "availability_scope": "All sensors",
+        "reason": "Current/backward-only quality context; no future anomaly or gap information is used.",
+        "evidence": "Phase 1 flags and Phase 2 anomaly consensus",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "recent_missing_pm25_count_3h",
+        "family": "QUALITY",
+        "availability_scope": "All sensors",
+        "reason": "Current/backward-only quality context; no future anomaly or gap information is used.",
+        "evidence": "Phase 1 flags and Phase 2 anomaly consensus",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      },
+      {
+        "feature": "recent_anomaly_count_3h",
+        "family": "QUALITY",
+        "availability_scope": "All sensors",
+        "reason": "Current/backward-only quality context; no future anomaly or gap information is used.",
+        "evidence": "Phase 1 flags and Phase 2 anomaly consensus",
+        "prediction_time_available": true,
+        "leakage_check": "PASS"
+      }
+    ]
+  },
+  "who": {
+    "source": "https://www.who.int/publications/i/item/9789240034228",
+    "version": "WHO 2021",
+    "minimum_coverage_percent": 75,
+    "supported_pollutants": [
+      "pm25"
+    ],
+    "unit_unverified": [
+      "no2",
+      "o3"
+    ],
+    "not_available": [
+      "pm10",
+      "so2",
+      "co"
+    ],
+    "valid_pm25_windows": 5280,
+    "pm25_exceedance_windows": 3826,
+    "pm25_exceedance_percentage": 72.46212121212122,
+    "warning": "WHO status uses pollutant-specific averaging periods, not single readings. It is not a WHO AQI or legal compliance determination."
+  },
+  "forecast_dataset": {
+    "horizons": [
+      "1h",
+      "3h",
+      "6h"
+    ],
+    "target_pollutants": [
+      "pm25"
+    ],
+    "summary": [
+      {
+        "sensor_id": 1,
+        "city": "Tulkarem",
+        "horizon": "1h",
+        "total_timestamps": 1628,
+        "valid_training_samples": 1584,
+        "invalid_due_to_history": 31,
+        "invalid_due_to_future_gap": 0,
+        "invalid_due_to_missing_target": 12,
+        "invalid_due_to_quality_issue": 1,
+        "valid_event_labels": 1550,
+        "positive_event_labels": 1111
+      },
+      {
+        "sensor_id": 2,
+        "city": "Nablus",
+        "horizon": "1h",
+        "total_timestamps": 1582,
+        "valid_training_samples": 1543,
+        "invalid_due_to_history": 29,
+        "invalid_due_to_future_gap": 0,
+        "invalid_due_to_missing_target": 10,
+        "invalid_due_to_quality_issue": 0,
+        "valid_event_labels": 1506,
+        "positive_event_labels": 1073
+      },
+      {
+        "sensor_id": 4,
+        "city": "Nablus",
+        "horizon": "1h",
+        "total_timestamps": 1597,
+        "valid_training_samples": 1554,
+        "invalid_due_to_history": 31,
+        "invalid_due_to_future_gap": 0,
+        "invalid_due_to_missing_target": 12,
+        "invalid_due_to_quality_issue": 0,
+        "valid_event_labels": 1518,
+        "positive_event_labels": 995
+      },
+      {
+        "sensor_id": 5,
+        "city": "Nablus",
+        "horizon": "1h",
+        "total_timestamps": 829,
+        "valid_training_samples": 764,
+        "invalid_due_to_history": 52,
+        "invalid_due_to_future_gap": 4,
+        "invalid_due_to_missing_target": 9,
+        "invalid_due_to_quality_issue": 0,
+        "valid_event_labels": 683,
+        "positive_event_labels": 629
+      },
+      {
+        "sensor_id": 1,
+        "city": "Tulkarem",
+        "horizon": "3h",
+        "total_timestamps": 1628,
+        "valid_training_samples": 1576,
+        "invalid_due_to_history": 31,
+        "invalid_due_to_future_gap": 0,
+        "invalid_due_to_missing_target": 20,
+        "invalid_due_to_quality_issue": 1,
+        "valid_event_labels": 1550,
+        "positive_event_labels": 1111
+      },
+      {
+        "sensor_id": 2,
+        "city": "Nablus",
+        "horizon": "3h",
+        "total_timestamps": 1582,
+        "valid_training_samples": 1535,
+        "invalid_due_to_history": 29,
+        "invalid_due_to_future_gap": 0,
+        "invalid_due_to_missing_target": 18,
+        "invalid_due_to_quality_issue": 0,
+        "valid_event_labels": 1506,
+        "positive_event_labels": 1073
+      },
+      {
+        "sensor_id": 4,
+        "city": "Nablus",
+        "horizon": "3h",
+        "total_timestamps": 1597,
+        "valid_training_samples": 1546,
+        "invalid_due_to_history": 31,
+        "invalid_due_to_future_gap": 0,
+        "invalid_due_to_missing_target": 20,
+        "invalid_due_to_quality_issue": 0,
+        "valid_event_labels": 1518,
+        "positive_event_labels": 995
+      },
+      {
+        "sensor_id": 5,
+        "city": "Nablus",
+        "horizon": "3h",
+        "total_timestamps": 829,
+        "valid_training_samples": 748,
+        "invalid_due_to_history": 52,
+        "invalid_due_to_future_gap": 12,
+        "invalid_due_to_missing_target": 17,
+        "invalid_due_to_quality_issue": 0,
+        "valid_event_labels": 682,
+        "positive_event_labels": 628
+      },
+      {
+        "sensor_id": 1,
+        "city": "Tulkarem",
+        "horizon": "6h",
+        "total_timestamps": 1628,
+        "valid_training_samples": 1565,
+        "invalid_due_to_history": 31,
+        "invalid_due_to_future_gap": 0,
+        "invalid_due_to_missing_target": 31,
+        "invalid_due_to_quality_issue": 1,
+        "valid_event_labels": 1551,
+        "positive_event_labels": 1112
+      },
+      {
+        "sensor_id": 2,
+        "city": "Nablus",
+        "horizon": "6h",
+        "total_timestamps": 1582,
+        "valid_training_samples": 1524,
+        "invalid_due_to_history": 29,
+        "invalid_due_to_future_gap": 0,
+        "invalid_due_to_missing_target": 29,
+        "invalid_due_to_quality_issue": 0,
+        "valid_event_labels": 1506,
+        "positive_event_labels": 1074
+      },
+      {
+        "sensor_id": 4,
+        "city": "Nablus",
+        "horizon": "6h",
+        "total_timestamps": 1597,
+        "valid_training_samples": 1535,
+        "invalid_due_to_history": 31,
+        "invalid_due_to_future_gap": 0,
+        "invalid_due_to_missing_target": 31,
+        "invalid_due_to_quality_issue": 0,
+        "valid_event_labels": 1519,
+        "positive_event_labels": 996
+      },
+      {
+        "sensor_id": 5,
+        "city": "Nablus",
+        "horizon": "6h",
+        "total_timestamps": 829,
+        "valid_training_samples": 726,
+        "invalid_due_to_history": 52,
+        "invalid_due_to_future_gap": 23,
+        "invalid_due_to_missing_target": 28,
+        "invalid_due_to_quality_issue": 0,
+        "valid_event_labels": 683,
+        "positive_event_labels": 629
+      }
+    ],
+    "horizon_totals": [
+      {
+        "horizon": "1h",
+        "total_timestamps": 5636,
+        "valid_training_samples": 5445
+      },
+      {
+        "horizon": "3h",
+        "total_timestamps": 5636,
+        "valid_training_samples": 5405
+      },
+      {
+        "horizon": "6h",
+        "total_timestamps": 5636,
+        "valid_training_samples": 5350
+      }
+    ],
+    "event_definition": "Future valid PM2.5 24-hour rolling average ending at t+h exceeds 15 ug/m3.",
+    "recommended_strategy": "Compare per-sensor PM2.5 baselines with a combined sensor-aware model using chronological walk-forward evaluation.",
+    "chronological_split_plan": {
+      "train": "2026-08-06 through 2026-08-15",
+      "validation": "2026-08-16 through 2026-08-19",
+      "test": "2026-08-20 through 2026-08-23",
+      "primary_evaluation": "Walk-forward validation with preprocessing fitted inside each training fold"
+    }
+  },
+  "phase2_evidence": {
+    "pm25_autocorrelation": [
+      {
+        "sensor_id": 4,
+        "city": "Nablus",
+        "source_feature": "pm25",
+        "target_feature": "aqi",
+        "lag_minutes": 15,
+        "lag": "+15 min",
+        "correlation": 0.8528761871676008,
+        "absolute_correlation": 0.8528761871676008,
+        "n_observations": 1589
+      },
+      {
+        "sensor_id": 1,
+        "city": "Tulkarem",
+        "source_feature": "pm25",
+        "target_feature": "aqi",
+        "lag_minutes": -15,
+        "lag": "-15 min",
+        "correlation": 0.8362634253687322,
+        "absolute_correlation": 0.8362634253687322,
+        "n_observations": 1619
+      },
+      {
+        "sensor_id": 2,
+        "city": "Nablus",
+        "source_feature": "pm25",
+        "target_feature": "aqi",
+        "lag_minutes": -15,
+        "lag": "-15 min",
+        "correlation": 0.7823226203921607,
+        "absolute_correlation": 0.7823226203921607,
+        "n_observations": 1575
+      },
+      {
+        "sensor_id": 2,
+        "city": "Nablus",
+        "source_feature": "pm25",
+        "target_feature": "humidity",
+        "lag_minutes": -15,
+        "lag": "-15 min",
+        "correlation": 0.7359749308515219,
+        "absolute_correlation": 0.7359749308515219,
+        "n_observations": 1575
+      },
+      {
+        "sensor_id": 4,
+        "city": "Nablus",
+        "source_feature": "pm25",
+        "target_feature": "humidity",
+        "lag_minutes": -15,
+        "lag": "-15 min",
+        "correlation": 0.7321128437240735,
+        "absolute_correlation": 0.7321128437240735,
+        "n_observations": 1589
+      },
+      {
+        "sensor_id": 5,
+        "city": "Nablus",
+        "source_feature": "pm25",
+        "target_feature": "aqi",
+        "lag_minutes": -15,
+        "lag": "-15 min",
+        "correlation": 0.6966895340328012,
+        "absolute_correlation": 0.6966895340328012,
+        "n_observations": 822
+      },
+      {
+        "sensor_id": 5,
+        "city": "Nablus",
+        "source_feature": "pm25",
+        "target_feature": "humidity",
+        "lag_minutes": -30,
+        "lag": "-30 min",
+        "correlation": 0.6382463092480937,
+        "absolute_correlation": 0.6382463092480937,
+        "n_observations": 820
+      },
+      {
+        "sensor_id": 2,
+        "city": "Nablus",
+        "source_feature": "pm25",
+        "target_feature": "temperature",
+        "lag_minutes": -15,
+        "lag": "-15 min",
+        "correlation": -0.5330279887068222,
+        "absolute_correlation": 0.5330279887068222,
+        "n_observations": 1575
+      }
+    ],
+    "phase2_modeling_report": "06_modeling_readiness_report.md"
+  },
+  "artifacts": [
+    {
+      "name": "AirAware_ML_Features.csv",
+      "download_url": "/api/ml/download/AirAware_ML_Features.csv"
+    },
+    {
+      "name": "AirAware_Forecast_Targets.csv",
+      "download_url": "/api/ml/download/AirAware_Forecast_Targets.csv"
+    },
+    {
+      "name": "feature_catalog.csv",
+      "download_url": "/api/ml/download/feature_catalog.csv"
+    },
+    {
+      "name": "candidate_feature_ranking.csv",
+      "download_url": "/api/ml/download/candidate_feature_ranking.csv"
+    },
+    {
+      "name": "feature_redundancy.csv",
+      "download_url": "/api/ml/download/feature_redundancy.csv"
+    },
+    {
+      "name": "who_guideline_config.csv",
+      "download_url": "/api/ml/download/who_guideline_config.csv"
+    },
+    {
+      "name": "who_analysis_results.csv",
+      "download_url": "/api/ml/download/who_analysis_results.csv"
+    },
+    {
+      "name": "forecast_sample_validity.csv",
+      "download_url": "/api/ml/download/forecast_sample_validity.csv"
+    },
+    {
+      "name": "forecast_dataset_summary.csv",
+      "download_url": "/api/ml/download/forecast_dataset_summary.csv"
+    }
+  ]
+}

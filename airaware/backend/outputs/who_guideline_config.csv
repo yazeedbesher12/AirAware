@@ -1,0 +1,7 @@
+pollutant,guideline,unit,averaging_period,dataset_presence,dataset_unit,unit_evidence,unit_compatible,interim_targets.IT-4,interim_targets.IT-3,interim_targets.IT-2,interim_targets.IT-1,source_version,source_url,minimum_window_coverage_percent
+pm25,15,ug/m3,24h,AVAILABLE,ug/m3,Declared by the existing AirAware project and Phase 1 reporting; not encoded in the CSV header.,True,25.0,37.5,50.0,75,WHO 2021,https://www.who.int/publications/i/item/9789240034228,75
+pm10,45,ug/m3,24h,NOT_AVAILABLE,,No PM10 column exists.,False,50.0,75.0,100.0,150,WHO 2021,https://www.who.int/publications/i/item/9789240034228,75
+no2,25,ug/m3,24h,TULKAREM_ONLY,UNVERIFIED,The CSV header and available source documentation do not state whether values are ug/m3 or ppb.,False,,,50.0,120,WHO 2021,https://www.who.int/publications/i/item/9789240034228,75
+o3,100,ug/m3,8h,TULKAREM_ONLY,UNVERIFIED,The CSV header and available source documentation do not state whether values are ug/m3 or ppb.,False,,,120.0,160,WHO 2021,https://www.who.int/publications/i/item/9789240034228,75
+so2,40,ug/m3,24h,NOT_AVAILABLE,,No SO2 column exists.,False,,,50.0,125,WHO 2021,https://www.who.int/publications/i/item/9789240034228,75
+co,4,mg/m3,24h,NOT_AVAILABLE,,No CO column exists.,False,,,,7,WHO 2021,https://www.who.int/publications/i/item/9789240034228,75

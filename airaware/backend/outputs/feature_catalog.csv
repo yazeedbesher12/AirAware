@@ -1,0 +1,59 @@
+feature,family,availability_scope,reason,evidence,prediction_time_available,leakage_check
+hour,TIME,All sensors,Backward-safe calendar representation; cyclic terms preserve clock/day adjacency.,Phase 2 hourly and day-of-week profiles,True,PASS
+minute,TIME,All sensors,Backward-safe calendar representation; cyclic terms preserve clock/day adjacency.,Phase 2 hourly and day-of-week profiles,True,PASS
+day_of_week,TIME,All sensors,Backward-safe calendar representation; cyclic terms preserve clock/day adjacency.,Phase 2 hourly and day-of-week profiles,True,PASS
+is_weekend,TIME,All sensors,Backward-safe calendar representation; cyclic terms preserve clock/day adjacency.,Phase 2 hourly and day-of-week profiles,True,PASS
+sin_hour,TIME,All sensors,Backward-safe calendar representation; cyclic terms preserve clock/day adjacency.,Phase 2 hourly and day-of-week profiles,True,PASS
+cos_hour,TIME,All sensors,Backward-safe calendar representation; cyclic terms preserve clock/day adjacency.,Phase 2 hourly and day-of-week profiles,True,PASS
+sin_day_of_week,TIME,All sensors,Backward-safe calendar representation; cyclic terms preserve clock/day adjacency.,Phase 2 hourly and day-of-week profiles,True,PASS
+cos_day_of_week,TIME,All sensors,Backward-safe calendar representation; cyclic terms preserve clock/day adjacency.,Phase 2 hourly and day-of-week profiles,True,PASS
+pm25_lag_15m,LAG,All sensors,Exact 15m elapsed-time history within a continuous segment.,Phase 2 ACF/PACF and cross-correlation,True,PASS
+pm25_lag_1h,LAG,All sensors,Exact 1h elapsed-time history within a continuous segment.,Phase 2 ACF/PACF and cross-correlation,True,PASS
+pm25_lag_3h,LAG,All sensors,Exact 3h elapsed-time history within a continuous segment.,Phase 2 ACF/PACF and cross-correlation,True,PASS
+pm25_lag_6h,LAG,All sensors,Exact 6h elapsed-time history within a continuous segment.,Phase 2 ACF/PACF and cross-correlation,True,PASS
+temperature_lag_15m,LAG,All sensors,Exact 15m elapsed-time history within a continuous segment.,Phase 2 ACF/PACF and cross-correlation,True,PASS
+temperature_lag_1h,LAG,All sensors,Exact 1h elapsed-time history within a continuous segment.,Phase 2 ACF/PACF and cross-correlation,True,PASS
+temperature_lag_3h,LAG,All sensors,Exact 3h elapsed-time history within a continuous segment.,Phase 2 ACF/PACF and cross-correlation,True,PASS
+humidity_lag_15m,LAG,All sensors,Exact 15m elapsed-time history within a continuous segment.,Phase 2 ACF/PACF and cross-correlation,True,PASS
+humidity_lag_1h,LAG,All sensors,Exact 1h elapsed-time history within a continuous segment.,Phase 2 ACF/PACF and cross-correlation,True,PASS
+humidity_lag_3h,LAG,All sensors,Exact 3h elapsed-time history within a continuous segment.,Phase 2 ACF/PACF and cross-correlation,True,PASS
+no2_lag_15m,LAG,Tulkarem only,Exact 15m elapsed-time history within a continuous segment.,Phase 2 ACF/PACF and cross-correlation,True,PASS
+no2_lag_1h,LAG,Tulkarem only,Exact 1h elapsed-time history within a continuous segment.,Phase 2 ACF/PACF and cross-correlation,True,PASS
+no2_lag_3h,LAG,Tulkarem only,Exact 3h elapsed-time history within a continuous segment.,Phase 2 ACF/PACF and cross-correlation,True,PASS
+o3_lag_15m,LAG,Tulkarem only,Exact 15m elapsed-time history within a continuous segment.,Phase 2 ACF/PACF and cross-correlation,True,PASS
+o3_lag_1h,LAG,Tulkarem only,Exact 1h elapsed-time history within a continuous segment.,Phase 2 ACF/PACF and cross-correlation,True,PASS
+o3_lag_3h,LAG,Tulkarem only,Exact 3h elapsed-time history within a continuous segment.,Phase 2 ACF/PACF and cross-correlation,True,PASS
+pm25_mean_1h,ROLLING,All sensors,Backward-only 1h mean; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+pm25_std_1h,ROLLING,All sensors,Backward-only 1h std; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+pm25_mean_3h,ROLLING,All sensors,Backward-only 3h mean; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+pm25_median_3h,ROLLING,All sensors,Backward-only 3h median; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+pm25_std_3h,ROLLING,All sensors,Backward-only 3h std; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+pm25_min_3h,ROLLING,All sensors,Backward-only 3h min; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+pm25_max_3h,ROLLING,All sensors,Backward-only 3h max; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+pm25_range_3h,ROLLING,All sensors,Backward-only 3h range; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+pm25_mean_6h,ROLLING,All sensors,Backward-only 6h mean; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+pm25_std_6h,ROLLING,All sensors,Backward-only 6h std; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+pm25_cv_6h,ROLLING,All sensors,Backward-only 6h cv; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+temperature_mean_1h,ROLLING,All sensors,Backward-only 1h mean; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+temperature_mean_3h,ROLLING,All sensors,Backward-only 3h mean; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+temperature_std_3h,ROLLING,All sensors,Backward-only 3h std; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+humidity_mean_1h,ROLLING,All sensors,Backward-only 1h mean; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+humidity_mean_3h,ROLLING,All sensors,Backward-only 3h mean; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+humidity_std_3h,ROLLING,All sensors,Backward-only 3h std; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+no2_mean_1h,ROLLING,Tulkarem only,Backward-only 1h mean; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+no2_mean_3h,ROLLING,Tulkarem only,Backward-only 3h mean; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+no2_std_3h,ROLLING,Tulkarem only,Backward-only 3h std; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+o3_mean_1h,ROLLING,Tulkarem only,Backward-only 1h mean; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+o3_mean_3h,ROLLING,Tulkarem only,Backward-only 3h mean; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+o3_std_3h,ROLLING,Tulkarem only,Backward-only 3h std; minimum 50% history coverage.,Phase 2 rolling stability and autocorrelation,True,PASS
+pm25_delta_15m,RATE_OF_CHANGE,All sensors,Captures observed PM2.5 movement using only current and exact past values.,Phase 2 sudden-jump and persistence analysis,True,PASS
+pm25_delta_1h,RATE_OF_CHANGE,All sensors,Captures observed PM2.5 movement using only current and exact past values.,Phase 2 sudden-jump and persistence analysis,True,PASS
+pm25_delta_3h,RATE_OF_CHANGE,All sensors,Captures observed PM2.5 movement using only current and exact past values.,Phase 2 sudden-jump and persistence analysis,True,PASS
+pm25_pct_change_1h,RATE_OF_CHANGE,All sensors,Captures observed PM2.5 movement using only current and exact past values.,Phase 2 sudden-jump and persistence analysis,True,PASS
+pm25_slope_3h,RATE_OF_CHANGE,All sensors,Captures observed PM2.5 movement using only current and exact past values.,Phase 2 sudden-jump and persistence analysis,True,PASS
+pm25_humidity_interaction,CROSS_FEATURE,All sensors,Phase 2 found strong PM2.5-humidity association for Nablus sensors 2 and 4.,Phase 2 Pearson/Spearman analysis,True,PASS
+temperature_humidity_interaction,CROSS_FEATURE,All sensors,Phase 2 found strong inverse temperature-humidity association across sensors.,Phase 2 Pearson/Spearman analysis,True,PASS
+current_quality_review_flag,QUALITY,All sensors,Current/backward-only quality context; no future anomaly or gap information is used.,Phase 1 flags and Phase 2 anomaly consensus,True,PASS
+recent_gap_count_3h,QUALITY,All sensors,Current/backward-only quality context; no future anomaly or gap information is used.,Phase 1 flags and Phase 2 anomaly consensus,True,PASS
+recent_missing_pm25_count_3h,QUALITY,All sensors,Current/backward-only quality context; no future anomaly or gap information is used.,Phase 1 flags and Phase 2 anomaly consensus,True,PASS
+recent_anomaly_count_3h,QUALITY,All sensors,Current/backward-only quality context; no future anomaly or gap information is used.,Phase 1 flags and Phase 2 anomaly consensus,True,PASS

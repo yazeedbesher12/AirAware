@@ -1,0 +1,355 @@
+feature,target,association_method,score,signed_score,n_observations,notes
+pm25,target_pm25_1h,absolute_pearson,0.8864994841440664,0.8864994841440664,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_humidity_interaction,target_pm25_1h,absolute_pearson,0.8808140851823094,0.8808140851823094,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_mean_1h,target_pm25_1h,absolute_pearson,0.8783246692823065,0.8783246692823065,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_lag_15m,target_pm25_1h,absolute_pearson,0.8670340353546416,0.8670340353546416,5419,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_mean_3h,target_pm25_1h,absolute_pearson,0.8319534898997005,0.8319534898997005,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_min_3h,target_pm25_1h,absolute_pearson,0.8273227336574813,0.8273227336574813,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_median_3h,target_pm25_1h,absolute_pearson,0.8267660493039695,0.8267660493039695,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_lag_1h,target_pm25_1h,absolute_pearson,0.8161767336287422,0.8161767336287422,5418,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_mean_6h,target_pm25_1h,absolute_pearson,0.7455722231134397,0.7455722231134397,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_max_3h,target_pm25_1h,absolute_pearson,0.724222337762096,0.724222337762096,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_lag_3h,target_pm25_1h,absolute_pearson,0.669488662234992,0.669488662234992,5418,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature_humidity_interaction,target_pm25_1h,absolute_pearson,0.6630749492001771,0.6630749492001771,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+humidity,target_pm25_1h,absolute_pearson,0.6559723932702596,0.6559723932702596,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+humidity_lag_15m,target_pm25_1h,absolute_pearson,0.6460626108194002,0.6460626108194002,5419,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+humidity_mean_1h,target_pm25_1h,absolute_pearson,0.6446599128133959,0.6446599128133959,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+humidity_lag_1h,target_pm25_1h,absolute_pearson,0.6140822029305261,0.6140822029305261,5418,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+humidity_mean_3h,target_pm25_1h,absolute_pearson,0.6065396257345628,0.6065396257345628,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+humidity_lag_3h,target_pm25_1h,absolute_pearson,0.4806943925315507,0.4806943925315507,5418,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+day_of_week,target_pm25_1h,absolute_pearson,0.4632049121570706,0.4632049121570706,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_lag_6h,target_pm25_1h,absolute_pearson,0.4333479642184917,0.4333479642184917,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+sin_day_of_week,target_pm25_1h,absolute_pearson,0.41563333661334345,-0.41563333661334345,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+cos_hour,target_pm25_1h,absolute_pearson,0.3936143459375714,0.3936143459375714,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_std_6h,target_pm25_1h,absolute_pearson,0.3467370455935063,0.3467370455935063,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+cos_day_of_week,target_pm25_1h,absolute_pearson,0.3397824450943401,-0.3397824450943401,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature,target_pm25_1h,absolute_pearson,0.3090223801560748,-0.3090223801560748,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_delta_3h,target_pm25_1h,absolute_pearson,0.30071230001063365,0.30071230001063365,5418,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_slope_3h,target_pm25_1h,absolute_pearson,0.3007123000106336,0.3007123000106336,5418,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature_lag_15m,target_pm25_1h,absolute_pearson,0.2993211135898194,-0.2993211135898194,5420,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature_mean_1h,target_pm25_1h,absolute_pearson,0.2957498171877928,-0.2957498171877928,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_std_3h,target_pm25_1h,absolute_pearson,0.29523566751589736,0.29523566751589736,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_range_3h,target_pm25_1h,absolute_pearson,0.2780613594582065,0.2780613594582065,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature_lag_1h,target_pm25_1h,absolute_pearson,0.2649480812017621,-0.2649480812017621,5419,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+no2_mean_1h,target_pm25_1h,absolute_pearson,0.256145407996469,0.256145407996469,1584,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+no2,target_pm25_1h,absolute_pearson,0.25153515401789905,0.25153515401789905,1584,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+no2_mean_3h,target_pm25_1h,absolute_pearson,0.24844761570347854,0.24844761570347854,1584,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature_mean_3h,target_pm25_1h,absolute_pearson,0.24684040032838833,-0.24684040032838833,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+no2_lag_15m,target_pm25_1h,absolute_pearson,0.2381899630756278,0.2381899630756278,1577,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+no2_lag_1h,target_pm25_1h,absolute_pearson,0.19183463227194267,0.19183463227194267,1577,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_std_1h,target_pm25_1h,absolute_pearson,0.19084990408613908,0.19084990408613908,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+no2_lag_3h,target_pm25_1h,absolute_pearson,0.158397276358406,0.158397276358406,1577,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_pct_change_1h,target_pm25_1h,absolute_pearson,0.15645780052879527,0.15645780052879527,5418,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_delta_1h,target_pm25_1h,absolute_pearson,0.15585024075213766,0.15585024075213766,5418,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature_lag_3h,target_pm25_1h,absolute_pearson,0.13287863975448885,-0.13287863975448885,5419,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+sin_hour,target_pm25_1h,absolute_pearson,0.11712605739650403,-0.11712605739650403,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature_std_3h,target_pm25_1h,absolute_pearson,0.10162181798692428,-0.10162181798692428,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+o3_mean_3h,target_pm25_1h,absolute_pearson,0.09402603776775262,-0.09402603776775262,1584,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+o3_lag_3h,target_pm25_1h,absolute_pearson,0.08901464165984983,-0.08901464165984983,1577,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+o3_lag_1h,target_pm25_1h,absolute_pearson,0.08673246931600381,-0.08673246931600381,1577,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+o3_mean_1h,target_pm25_1h,absolute_pearson,0.08200738180816232,-0.08200738180816232,1584,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+o3_lag_15m,target_pm25_1h,absolute_pearson,0.07751514978923019,-0.07751514978923019,1577,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_delta_15m,target_pm25_1h,absolute_pearson,0.07003354455424156,0.07003354455424156,5419,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+o3,target_pm25_1h,absolute_pearson,0.06686360890986905,-0.06686360890986905,1584,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+humidity_std_3h,target_pm25_1h,absolute_pearson,0.058642476067915915,-0.058642476067915915,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+no2_std_3h,target_pm25_1h,absolute_pearson,0.045328816929517374,-0.045328816929517374,1584,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+o3_std_3h,target_pm25_1h,absolute_pearson,0.039890667898019955,-0.039890667898019955,1584,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+hour,target_pm25_1h,absolute_pearson,0.035911987821716236,0.035911987821716236,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+recent_anomaly_count_3h,target_pm25_1h,absolute_pearson,0.0031053693180470134,-0.0031053693180470134,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_cv_6h,target_pm25_1h,absolute_pearson,0.0024096650432855666,0.0024096650432855666,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+minute,target_pm25_1h,absolute_pearson,0.00021261186849584068,-0.00021261186849584068,5445,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25,target_pm25_1h,mutual_information,1.1044597394602422,,2723,Nonlinear screening only; final selection must use training folds.
+pm25_lag_15m,target_pm25_1h,mutual_information,0.9838862819126799,,2710,Nonlinear screening only; final selection must use training folds.
+pm25_mean_1h,target_pm25_1h,mutual_information,0.9464089383071546,,2723,Nonlinear screening only; final selection must use training folds.
+pm25_humidity_interaction,target_pm25_1h,mutual_information,0.8619450410946983,,2723,Nonlinear screening only; final selection must use training folds.
+pm25_min_3h,target_pm25_1h,mutual_information,0.8127225046544124,,2723,Nonlinear screening only; final selection must use training folds.
+pm25_lag_1h,target_pm25_1h,mutual_information,0.7280930591538359,,2709,Nonlinear screening only; final selection must use training folds.
+pm25_median_3h,target_pm25_1h,mutual_information,0.7243333646977668,,2723,Nonlinear screening only; final selection must use training folds.
+pm25_mean_3h,target_pm25_1h,mutual_information,0.714941449091202,,2723,Nonlinear screening only; final selection must use training folds.
+pm25_max_3h,target_pm25_1h,mutual_information,0.7138414393545052,,2723,Nonlinear screening only; final selection must use training folds.
+pm25_mean_6h,target_pm25_1h,mutual_information,0.5094716152182936,,2723,Nonlinear screening only; final selection must use training folds.
+temperature_humidity_interaction,target_pm25_1h,mutual_information,0.49239014741257936,,2723,Nonlinear screening only; final selection must use training folds.
+humidity,target_pm25_1h,mutual_information,0.445697422239137,,2723,Nonlinear screening only; final selection must use training folds.
+humidity_lag_15m,target_pm25_1h,mutual_information,0.42180308051205184,,2710,Nonlinear screening only; final selection must use training folds.
+humidity_mean_1h,target_pm25_1h,mutual_information,0.39523183139275453,,2723,Nonlinear screening only; final selection must use training folds.
+pm25_lag_3h,target_pm25_1h,mutual_information,0.38623505029124594,,2709,Nonlinear screening only; final selection must use training folds.
+humidity_mean_3h,target_pm25_1h,mutual_information,0.35263125344776647,,2723,Nonlinear screening only; final selection must use training folds.
+humidity_lag_1h,target_pm25_1h,mutual_information,0.3504650766264312,,2709,Nonlinear screening only; final selection must use training folds.
+o3_mean_3h,target_pm25_1h,mutual_information,0.2749401000830982,,1584,Nonlinear screening only; final selection must use training folds.
+day_of_week,target_pm25_1h,mutual_information,0.2637544962366558,,2723,Nonlinear screening only; final selection must use training folds.
+sin_day_of_week,target_pm25_1h,mutual_information,0.26259025276519177,,2723,Nonlinear screening only; final selection must use training folds.
+humidity_lag_3h,target_pm25_1h,mutual_information,0.2464367930009752,,2709,Nonlinear screening only; final selection must use training folds.
+no2_mean_3h,target_pm25_1h,mutual_information,0.24215067582118666,,1584,Nonlinear screening only; final selection must use training folds.
+temperature,target_pm25_1h,mutual_information,0.23270141397947963,,2723,Nonlinear screening only; final selection must use training folds.
+temperature_mean_1h,target_pm25_1h,mutual_information,0.22715284573768546,,2723,Nonlinear screening only; final selection must use training folds.
+no2_mean_1h,target_pm25_1h,mutual_information,0.22073797953931695,,1584,Nonlinear screening only; final selection must use training folds.
+temperature_lag_15m,target_pm25_1h,mutual_information,0.2177972777263788,,2710,Nonlinear screening only; final selection must use training folds.
+pm25_lag_6h,target_pm25_1h,mutual_information,0.2163923000281489,,2723,Nonlinear screening only; final selection must use training folds.
+no2_std_3h,target_pm25_1h,mutual_information,0.21064678708681717,,1584,Nonlinear screening only; final selection must use training folds.
+hour,target_pm25_1h,mutual_information,0.20871401874387052,,2723,Nonlinear screening only; final selection must use training folds.
+pm25_delta_3h,target_pm25_1h,mutual_information,0.18459309984758931,,2709,Nonlinear screening only; final selection must use training folds.
+pm25_slope_3h,target_pm25_1h,mutual_information,0.18459309984758931,,2709,Nonlinear screening only; final selection must use training folds.
+temperature_mean_3h,target_pm25_1h,mutual_information,0.18235256390675492,,2723,Nonlinear screening only; final selection must use training folds.
+pm25_range_3h,target_pm25_1h,mutual_information,0.18027753272543556,,2723,Nonlinear screening only; final selection must use training folds.
+temperature_lag_1h,target_pm25_1h,mutual_information,0.1799023028852833,,2710,Nonlinear screening only; final selection must use training folds.
+o3_lag_3h,target_pm25_1h,mutual_information,0.17943632991411373,,1577,Nonlinear screening only; final selection must use training folds.
+pm25_std_3h,target_pm25_1h,mutual_information,0.16636579407990837,,2723,Nonlinear screening only; final selection must use training folds.
+o3_mean_1h,target_pm25_1h,mutual_information,0.16212095377185776,,1584,Nonlinear screening only; final selection must use training folds.
+pm25_std_6h,target_pm25_1h,mutual_information,0.15427068556951795,,2723,Nonlinear screening only; final selection must use training folds.
+cos_hour,target_pm25_1h,mutual_information,0.15183986716465547,,2723,Nonlinear screening only; final selection must use training folds.
+no2,target_pm25_1h,mutual_information,0.1482104129669799,,1584,Nonlinear screening only; final selection must use training folds.
+o3_lag_1h,target_pm25_1h,mutual_information,0.14810412062918665,,1577,Nonlinear screening only; final selection must use training folds.
+no2_lag_15m,target_pm25_1h,mutual_information,0.1405917341793912,,1577,Nonlinear screening only; final selection must use training folds.
+o3_std_3h,target_pm25_1h,mutual_information,0.13897348146001676,,1584,Nonlinear screening only; final selection must use training folds.
+no2_lag_1h,target_pm25_1h,mutual_information,0.13432331051844848,,1577,Nonlinear screening only; final selection must use training folds.
+temperature_lag_3h,target_pm25_1h,mutual_information,0.13262332416515576,,2710,Nonlinear screening only; final selection must use training folds.
+o3_lag_15m,target_pm25_1h,mutual_information,0.12699203726168395,,1577,Nonlinear screening only; final selection must use training folds.
+no2_lag_3h,target_pm25_1h,mutual_information,0.11508821888933785,,1577,Nonlinear screening only; final selection must use training folds.
+o3,target_pm25_1h,mutual_information,0.11182507858988444,,1584,Nonlinear screening only; final selection must use training folds.
+cos_day_of_week,target_pm25_1h,mutual_information,0.10399428202886218,,2723,Nonlinear screening only; final selection must use training folds.
+pm25_std_1h,target_pm25_1h,mutual_information,0.0987098582021706,,2723,Nonlinear screening only; final selection must use training folds.
+pm25_delta_1h,target_pm25_1h,mutual_information,0.09312949012187666,,2709,Nonlinear screening only; final selection must use training folds.
+temperature_std_3h,target_pm25_1h,mutual_information,0.09216588139343873,,2723,Nonlinear screening only; final selection must use training folds.
+pm25_cv_6h,target_pm25_1h,mutual_information,0.08092270622618969,,2723,Nonlinear screening only; final selection must use training folds.
+sin_hour,target_pm25_1h,mutual_information,0.06668670159916834,,2723,Nonlinear screening only; final selection must use training folds.
+pm25_delta_15m,target_pm25_1h,mutual_information,0.046054053126852956,,2710,Nonlinear screening only; final selection must use training folds.
+humidity_std_3h,target_pm25_1h,mutual_information,0.03725015023222422,,2723,Nonlinear screening only; final selection must use training folds.
+pm25_pct_change_1h,target_pm25_1h,mutual_information,0.027775037943815306,,2709,Nonlinear screening only; final selection must use training folds.
+recent_anomaly_count_3h,target_pm25_1h,mutual_information,0.02652174451661815,,2723,Nonlinear screening only; final selection must use training folds.
+minute,target_pm25_1h,mutual_information,0.013894733837944706,,2723,Nonlinear screening only; final selection must use training folds.
+pm25,target_pm25_3h,absolute_pearson,0.7420986106675521,0.7420986106675521,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_humidity_interaction,target_pm25_3h,absolute_pearson,0.7417356057348726,0.7417356057348726,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_mean_1h,target_pm25_3h,absolute_pearson,0.7336523699322628,0.7336523699322628,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_lag_15m,target_pm25_3h,absolute_pearson,0.7252026481427543,0.7252026481427543,5379,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_mean_3h,target_pm25_3h,absolute_pearson,0.6783919078949371,0.6783919078949371,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_min_3h,target_pm25_3h,absolute_pearson,0.6773146660492129,0.6773146660492129,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_median_3h,target_pm25_3h,absolute_pearson,0.6750406638884918,0.6750406638884918,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_lag_1h,target_pm25_3h,absolute_pearson,0.6719482926920444,0.6719482926920444,5378,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature_humidity_interaction,target_pm25_3h,absolute_pearson,0.6001918002869194,0.6001918002869194,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_max_3h,target_pm25_3h,absolute_pearson,0.5873180115775412,0.5873180115775412,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_mean_6h,target_pm25_3h,absolute_pearson,0.58185786798068,0.58185786798068,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+humidity,target_pm25_3h,absolute_pearson,0.5546439759749842,0.5546439759749842,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+humidity_lag_15m,target_pm25_3h,absolute_pearson,0.5361136298635732,0.5361136298635732,5379,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+humidity_mean_1h,target_pm25_3h,absolute_pearson,0.5315736083853271,0.5315736083853271,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_lag_3h,target_pm25_3h,absolute_pearson,0.5142420723393697,0.5142420723393697,5382,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+humidity_lag_1h,target_pm25_3h,absolute_pearson,0.4825886323363934,0.4825886323363934,5378,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+humidity_mean_3h,target_pm25_3h,absolute_pearson,0.4689543797407529,0.4689543797407529,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+day_of_week,target_pm25_3h,absolute_pearson,0.4202030180077295,0.4202030180077295,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+cos_day_of_week,target_pm25_3h,absolute_pearson,0.38889122663975917,-0.38889122663975917,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+sin_day_of_week,target_pm25_3h,absolute_pearson,0.3760026557865414,-0.3760026557865414,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+humidity_lag_3h,target_pm25_3h,absolute_pearson,0.3223886169059402,0.3223886169059402,5382,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_slope_3h,target_pm25_3h,absolute_pearson,0.314687038850745,0.314687038850745,5382,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_delta_3h,target_pm25_3h,absolute_pearson,0.31468703885074484,0.31468703885074484,5382,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_lag_6h,target_pm25_3h,absolute_pearson,0.298839305490811,0.298839305490811,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+sin_hour,target_pm25_3h,absolute_pearson,0.29652498468534044,-0.29652498468534044,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+cos_hour,target_pm25_3h,absolute_pearson,0.2828517795749657,0.2828517795749657,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_std_6h,target_pm25_3h,absolute_pearson,0.28059463870514056,0.28059463870514056,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_std_3h,target_pm25_3h,absolute_pearson,0.2390734674147101,0.2390734674147101,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_range_3h,target_pm25_3h,absolute_pearson,0.2207850478226706,0.2207850478226706,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature,target_pm25_3h,absolute_pearson,0.20596440970896485,-0.20596440970896485,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+o3_std_3h,target_pm25_3h,absolute_pearson,0.20493120297547324,-0.20493120297547324,1576,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature_lag_15m,target_pm25_3h,absolute_pearson,0.1879417541997423,-0.1879417541997423,5380,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature_mean_1h,target_pm25_3h,absolute_pearson,0.18116759519905287,-0.18116759519905287,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+no2_mean_1h,target_pm25_3h,absolute_pearson,0.17562543732808775,0.17562543732808775,1576,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+no2_mean_3h,target_pm25_3h,absolute_pearson,0.17421262583941757,0.17421262583941757,1576,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+hour,target_pm25_3h,absolute_pearson,0.1667155092739542,0.1667155092739542,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+no2,target_pm25_3h,absolute_pearson,0.16517777081248097,0.16517777081248097,1576,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+no2_lag_15m,target_pm25_3h,absolute_pearson,0.16475193374688438,0.16475193374688438,1569,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+no2_lag_1h,target_pm25_3h,absolute_pearson,0.15333773469839834,0.15333773469839834,1569,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_delta_1h,target_pm25_3h,absolute_pearson,0.14808999273619314,0.14808999273619314,5378,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_pct_change_1h,target_pm25_3h,absolute_pearson,0.1436840497585509,0.1436840497585509,5378,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature_lag_1h,target_pm25_3h,absolute_pearson,0.13444187221444884,-0.13444187221444884,5379,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_std_1h,target_pm25_3h,absolute_pearson,0.13365553979948824,0.13365553979948824,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature_mean_3h,target_pm25_3h,absolute_pearson,0.11058569425299078,-0.11058569425299078,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+no2_std_3h,target_pm25_3h,absolute_pearson,0.09996700909459796,-0.09996700909459796,1576,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+o3,target_pm25_3h,absolute_pearson,0.08554878675256113,-0.08554878675256113,1576,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+no2_lag_3h,target_pm25_3h,absolute_pearson,0.08466042924848857,0.08466042924848857,1570,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+o3_mean_1h,target_pm25_3h,absolute_pearson,0.08322009024313344,-0.08322009024313344,1576,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+o3_lag_1h,target_pm25_3h,absolute_pearson,0.08217331478660594,-0.08217331478660594,1569,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+o3_lag_15m,target_pm25_3h,absolute_pearson,0.08176744666211805,-0.08176744666211805,1569,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+o3_mean_3h,target_pm25_3h,absolute_pearson,0.07469344298911135,-0.07469344298911135,1576,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+humidity_std_3h,target_pm25_3h,absolute_pearson,0.07041458424829035,-0.07041458424829035,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature_std_3h,target_pm25_3h,absolute_pearson,0.0643087057770599,-0.0643087057770599,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_delta_15m,target_pm25_3h,absolute_pearson,0.060650847445020195,0.060650847445020195,5379,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+o3_lag_3h,target_pm25_3h,absolute_pearson,0.019321684509228745,-0.019321684509228745,1570,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature_lag_3h,target_pm25_3h,absolute_pearson,0.012648326142631719,0.012648326142631719,5383,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+recent_anomaly_count_3h,target_pm25_3h,absolute_pearson,0.011882043564829966,-0.011882043564829966,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_cv_6h,target_pm25_3h,absolute_pearson,0.0035758036772456803,-0.0035758036772456803,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+minute,target_pm25_3h,absolute_pearson,0.0019463025860199782,0.0019463025860199782,5405,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25,target_pm25_3h,mutual_information,0.5280694429757729,,2703,Nonlinear screening only; final selection must use training folds.
+pm25_min_3h,target_pm25_3h,mutual_information,0.5113944226541003,,2703,Nonlinear screening only; final selection must use training folds.
+pm25_humidity_interaction,target_pm25_3h,mutual_information,0.5015278942776247,,2703,Nonlinear screening only; final selection must use training folds.
+pm25_mean_1h,target_pm25_3h,mutual_information,0.4875617005880173,,2703,Nonlinear screening only; final selection must use training folds.
+pm25_lag_15m,target_pm25_3h,mutual_information,0.48069051457440093,,2690,Nonlinear screening only; final selection must use training folds.
+pm25_median_3h,target_pm25_3h,mutual_information,0.4713188687897887,,2703,Nonlinear screening only; final selection must use training folds.
+pm25_max_3h,target_pm25_3h,mutual_information,0.413124863368858,,2703,Nonlinear screening only; final selection must use training folds.
+pm25_mean_3h,target_pm25_3h,mutual_information,0.41080633308440273,,2703,Nonlinear screening only; final selection must use training folds.
+temperature_humidity_interaction,target_pm25_3h,mutual_information,0.39491926614591844,,2703,Nonlinear screening only; final selection must use training folds.
+pm25_lag_1h,target_pm25_3h,mutual_information,0.39314644790803754,,2689,Nonlinear screening only; final selection must use training folds.
+pm25_mean_6h,target_pm25_3h,mutual_information,0.33696641332445143,,2703,Nonlinear screening only; final selection must use training folds.
+o3_mean_3h,target_pm25_3h,mutual_information,0.29935875028989756,,1576,Nonlinear screening only; final selection must use training folds.
+humidity,target_pm25_3h,mutual_information,0.29670507687241443,,2703,Nonlinear screening only; final selection must use training folds.
+humidity_mean_1h,target_pm25_3h,mutual_information,0.2882316359835233,,2703,Nonlinear screening only; final selection must use training folds.
+humidity_lag_15m,target_pm25_3h,mutual_information,0.28223709760362414,,2690,Nonlinear screening only; final selection must use training folds.
+sin_day_of_week,target_pm25_3h,mutual_information,0.2745419077964928,,2703,Nonlinear screening only; final selection must use training folds.
+day_of_week,target_pm25_3h,mutual_information,0.27335904927337573,,2703,Nonlinear screening only; final selection must use training folds.
+pm25_lag_3h,target_pm25_3h,mutual_information,0.2726699340879426,,2691,Nonlinear screening only; final selection must use training folds.
+no2_mean_3h,target_pm25_3h,mutual_information,0.2643446321320835,,1576,Nonlinear screening only; final selection must use training folds.
+humidity_mean_3h,target_pm25_3h,mutual_information,0.25255920600395765,,2703,Nonlinear screening only; final selection must use training folds.
+humidity_lag_1h,target_pm25_3h,mutual_information,0.24924519115583088,,2689,Nonlinear screening only; final selection must use training folds.
+no2_std_3h,target_pm25_3h,mutual_information,0.22748397301237278,,1576,Nonlinear screening only; final selection must use training folds.
+no2_mean_1h,target_pm25_3h,mutual_information,0.21980724936112583,,1576,Nonlinear screening only; final selection must use training folds.
+o3_mean_1h,target_pm25_3h,mutual_information,0.2154719052144669,,1576,Nonlinear screening only; final selection must use training folds.
+hour,target_pm25_3h,mutual_information,0.204608892519079,,2703,Nonlinear screening only; final selection must use training folds.
+o3_lag_1h,target_pm25_3h,mutual_information,0.18142989947810761,,1569,Nonlinear screening only; final selection must use training folds.
+pm25_lag_6h,target_pm25_3h,mutual_information,0.1798673504442716,,2703,Nonlinear screening only; final selection must use training folds.
+humidity_lag_3h,target_pm25_3h,mutual_information,0.17855152010835784,,2691,Nonlinear screening only; final selection must use training folds.
+o3_lag_3h,target_pm25_3h,mutual_information,0.16988815578364402,,1570,Nonlinear screening only; final selection must use training folds.
+temperature,target_pm25_3h,mutual_information,0.15766419486055394,,2703,Nonlinear screening only; final selection must use training folds.
+temperature_mean_3h,target_pm25_3h,mutual_information,0.14739456979132193,,2703,Nonlinear screening only; final selection must use training folds.
+temperature_mean_1h,target_pm25_3h,mutual_information,0.14393723804974723,,2703,Nonlinear screening only; final selection must use training folds.
+temperature_lag_1h,target_pm25_3h,mutual_information,0.13705195262753556,,2690,Nonlinear screening only; final selection must use training folds.
+temperature_lag_15m,target_pm25_3h,mutual_information,0.13624167815591992,,2690,Nonlinear screening only; final selection must use training folds.
+no2_lag_15m,target_pm25_3h,mutual_information,0.13567775955772898,,1569,Nonlinear screening only; final selection must use training folds.
+pm25_std_6h,target_pm25_3h,mutual_information,0.134951514006465,,2703,Nonlinear screening only; final selection must use training folds.
+o3,target_pm25_3h,mutual_information,0.13196854545886083,,1576,Nonlinear screening only; final selection must use training folds.
+o3_lag_15m,target_pm25_3h,mutual_information,0.1303544284185909,,1569,Nonlinear screening only; final selection must use training folds.
+cos_day_of_week,target_pm25_3h,mutual_information,0.12318858951811018,,2703,Nonlinear screening only; final selection must use training folds.
+pm25_range_3h,target_pm25_3h,mutual_information,0.11953992087796461,,2703,Nonlinear screening only; final selection must use training folds.
+o3_std_3h,target_pm25_3h,mutual_information,0.11389173830356025,,1576,Nonlinear screening only; final selection must use training folds.
+pm25_delta_3h,target_pm25_3h,mutual_information,0.11193617744539619,,2691,Nonlinear screening only; final selection must use training folds.
+pm25_slope_3h,target_pm25_3h,mutual_information,0.11193617744539619,,2691,Nonlinear screening only; final selection must use training folds.
+no2,target_pm25_3h,mutual_information,0.11016710032331156,,1576,Nonlinear screening only; final selection must use training folds.
+temperature_lag_3h,target_pm25_3h,mutual_information,0.10906614642640111,,2692,Nonlinear screening only; final selection must use training folds.
+no2_lag_1h,target_pm25_3h,mutual_information,0.10904131511725401,,1569,Nonlinear screening only; final selection must use training folds.
+cos_hour,target_pm25_3h,mutual_information,0.10262672057499733,,2703,Nonlinear screening only; final selection must use training folds.
+pm25_std_3h,target_pm25_3h,mutual_information,0.09619441962295294,,2703,Nonlinear screening only; final selection must use training folds.
+sin_hour,target_pm25_3h,mutual_information,0.09479842416352913,,2703,Nonlinear screening only; final selection must use training folds.
+no2_lag_3h,target_pm25_3h,mutual_information,0.08250242573899547,,1570,Nonlinear screening only; final selection must use training folds.
+pm25_std_1h,target_pm25_3h,mutual_information,0.07686657963986665,,2703,Nonlinear screening only; final selection must use training folds.
+pm25_cv_6h,target_pm25_3h,mutual_information,0.07580094677039284,,2703,Nonlinear screening only; final selection must use training folds.
+pm25_delta_1h,target_pm25_3h,mutual_information,0.06456622826421121,,2689,Nonlinear screening only; final selection must use training folds.
+pm25_pct_change_1h,target_pm25_3h,mutual_information,0.044206985000882604,,2689,Nonlinear screening only; final selection must use training folds.
+pm25_delta_15m,target_pm25_3h,mutual_information,0.029656897158671036,,2690,Nonlinear screening only; final selection must use training folds.
+temperature_std_3h,target_pm25_3h,mutual_information,0.027075094502385433,,2703,Nonlinear screening only; final selection must use training folds.
+humidity_std_3h,target_pm25_3h,mutual_information,0.02700955672915395,,2703,Nonlinear screening only; final selection must use training folds.
+recent_anomaly_count_3h,target_pm25_3h,mutual_information,0.020423725520187563,,2703,Nonlinear screening only; final selection must use training folds.
+minute,target_pm25_3h,mutual_information,0.0021479330270666175,,2703,Nonlinear screening only; final selection must use training folds.
+pm25,target_pm25_6h,absolute_pearson,0.5137302538083333,0.5137302538083333,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_mean_1h,target_pm25_6h,absolute_pearson,0.49563341738065736,0.49563341738065736,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_lag_15m,target_pm25_6h,absolute_pearson,0.49398097036076843,0.49398097036076843,5324,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_humidity_interaction,target_pm25_6h,absolute_pearson,0.4831982739346916,0.4831982739346916,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature_humidity_interaction,target_pm25_6h,absolute_pearson,0.462829749168394,0.462829749168394,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+cos_day_of_week,target_pm25_6h,absolute_pearson,0.44832019280052826,-0.44832019280052826,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_lag_1h,target_pm25_6h,absolute_pearson,0.4354399606823268,0.4354399606823268,5323,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_mean_3h,target_pm25_6h,absolute_pearson,0.4338752469573859,0.4338752469573859,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_median_3h,target_pm25_6h,absolute_pearson,0.431382526745572,0.431382526745572,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_min_3h,target_pm25_6h,absolute_pearson,0.43132216256037265,0.43132216256037265,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+sin_hour,target_pm25_6h,absolute_pearson,0.4105372441654641,-0.4105372441654641,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_max_3h,target_pm25_6h,absolute_pearson,0.3738612014000752,0.3738612014000752,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+day_of_week,target_pm25_6h,absolute_pearson,0.35888928011909743,0.35888928011909743,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_mean_6h,target_pm25_6h,absolute_pearson,0.35591099520404146,0.35591099520404146,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+hour,target_pm25_6h,absolute_pearson,0.33334821783628343,0.33334821783628343,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+humidity,target_pm25_6h,absolute_pearson,0.3251065549450927,0.3251065549450927,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+sin_day_of_week,target_pm25_6h,absolute_pearson,0.31417493692246573,-0.31417493692246573,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+humidity_lag_15m,target_pm25_6h,absolute_pearson,0.30187222020812055,0.30187222020812055,5324,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_lag_3h,target_pm25_6h,absolute_pearson,0.29881495816455217,0.29881495816455217,5323,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_slope_3h,target_pm25_6h,absolute_pearson,0.29785375628027755,0.29785375628027755,5323,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_delta_3h,target_pm25_6h,absolute_pearson,0.2978537562802775,0.2978537562802775,5323,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+humidity_mean_1h,target_pm25_6h,absolute_pearson,0.29329770490050044,0.29329770490050044,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+o3_std_3h,target_pm25_6h,absolute_pearson,0.279559078887936,-0.279559078887936,1565,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+humidity_lag_1h,target_pm25_6h,absolute_pearson,0.23387844307202163,0.23387844307202163,5323,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+humidity_mean_3h,target_pm25_6h,absolute_pearson,0.21078189905976363,0.21078189905976363,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_std_6h,target_pm25_6h,absolute_pearson,0.20796535360675394,0.20796535360675394,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature_lag_3h,target_pm25_6h,absolute_pearson,0.20283848269873161,0.20283848269873161,5324,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+o3_lag_3h,target_pm25_6h,absolute_pearson,0.19903938130151716,0.19903938130151716,1558,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_lag_6h,target_pm25_6h,absolute_pearson,0.1796547603283179,0.1796547603283179,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_delta_1h,target_pm25_6h,absolute_pearson,0.16450619868734417,0.16450619868734417,5323,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_std_3h,target_pm25_6h,absolute_pearson,0.16090698546228724,0.16090698546228724,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_pct_change_1h,target_pm25_6h,absolute_pearson,0.15604413667268127,0.15604413667268127,5323,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_range_3h,target_pm25_6h,absolute_pearson,0.14248874492986763,0.14248874492986763,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+no2_lag_3h,target_pm25_6h,absolute_pearson,0.11497695453083695,-0.11497695453083695,1558,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature_mean_3h,target_pm25_6h,absolute_pearson,0.10935539245767992,0.10935539245767992,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+o3_mean_3h,target_pm25_6h,absolute_pearson,0.08526705350915385,0.08526705350915385,1565,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_std_1h,target_pm25_6h,absolute_pearson,0.08430216061594278,0.08430216061594278,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature_lag_1h,target_pm25_6h,absolute_pearson,0.08301891366423823,0.08301891366423823,5324,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+no2,target_pm25_6h,absolute_pearson,0.08298542957966215,0.08298542957966215,1565,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+no2_lag_15m,target_pm25_6h,absolute_pearson,0.07642814791088895,0.07642814791088895,1558,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+humidity_lag_3h,target_pm25_6h,absolute_pearson,0.07316471382202848,0.07316471382202848,5323,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_delta_15m,target_pm25_6h,absolute_pearson,0.07030900578332713,0.07030900578332713,5324,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+no2_mean_1h,target_pm25_6h,absolute_pearson,0.07030039334035176,0.07030039334035176,1565,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature_std_3h,target_pm25_6h,absolute_pearson,0.05096784780909708,0.05096784780909708,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+o3_lag_1h,target_pm25_6h,absolute_pearson,0.04271255122858635,0.04271255122858635,1558,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature_mean_1h,target_pm25_6h,absolute_pearson,0.03700976692970285,0.03700976692970285,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature_lag_15m,target_pm25_6h,absolute_pearson,0.028400883977842534,0.028400883977842534,5325,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+recent_anomaly_count_3h,target_pm25_6h,absolute_pearson,0.028352562309531443,-0.028352562309531443,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+no2_lag_1h,target_pm25_6h,absolute_pearson,0.024555170152736592,0.024555170152736592,1558,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_cv_6h,target_pm25_6h,absolute_pearson,0.015965051394047566,0.015965051394047566,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+o3,target_pm25_6h,absolute_pearson,0.014799659573592812,-0.014799659573592812,1565,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+cos_hour,target_pm25_6h,absolute_pearson,0.00953881998084225,-0.00953881998084225,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+temperature,target_pm25_6h,absolute_pearson,0.009297216659346968,0.009297216659346968,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+humidity_std_3h,target_pm25_6h,absolute_pearson,0.007222714323872558,0.007222714323872558,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+o3_lag_15m,target_pm25_6h,absolute_pearson,0.005942073839688847,-0.005942073839688847,1558,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+o3_mean_1h,target_pm25_6h,absolute_pearson,0.003234138768422878,0.003234138768422878,1565,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+no2_mean_3h,target_pm25_6h,absolute_pearson,0.0016685555600280194,0.0016685555600280194,1565,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+minute,target_pm25_6h,absolute_pearson,0.0015702237663212117,-0.0015702237663212117,5350,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+no2_std_3h,target_pm25_6h,absolute_pearson,0.0011207148375643467,-0.0011207148375643467,1565,Exploratory whole-dataset screening only; repeat on training folds in Phase 4.
+pm25_min_3h,target_pm25_6h,mutual_information,0.34231692995786833,,2675,Nonlinear screening only; final selection must use training folds.
+pm25_max_3h,target_pm25_6h,mutual_information,0.3303529926894564,,2675,Nonlinear screening only; final selection must use training folds.
+day_of_week,target_pm25_6h,mutual_information,0.3030687251895472,,2675,Nonlinear screening only; final selection must use training folds.
+sin_day_of_week,target_pm25_6h,mutual_information,0.30045259286999393,,2675,Nonlinear screening only; final selection must use training folds.
+pm25_median_3h,target_pm25_6h,mutual_information,0.29101497753228855,,2675,Nonlinear screening only; final selection must use training folds.
+pm25,target_pm25_6h,mutual_information,0.2786611660974039,,2675,Nonlinear screening only; final selection must use training folds.
+pm25_mean_3h,target_pm25_6h,mutual_information,0.2713665205731699,,2675,Nonlinear screening only; final selection must use training folds.
+pm25_lag_15m,target_pm25_6h,mutual_information,0.2650943116425504,,2662,Nonlinear screening only; final selection must use training folds.
+pm25_mean_1h,target_pm25_6h,mutual_information,0.2615489142155978,,2675,Nonlinear screening only; final selection must use training folds.
+temperature_humidity_interaction,target_pm25_6h,mutual_information,0.23476041761217026,,2675,Nonlinear screening only; final selection must use training folds.
+o3_mean_3h,target_pm25_6h,mutual_information,0.23052588446168443,,1565,Nonlinear screening only; final selection must use training folds.
+o3_mean_1h,target_pm25_6h,mutual_information,0.22950373172424854,,1565,Nonlinear screening only; final selection must use training folds.
+pm25_humidity_interaction,target_pm25_6h,mutual_information,0.22599837412227242,,2675,Nonlinear screening only; final selection must use training folds.
+o3_std_3h,target_pm25_6h,mutual_information,0.22349255400752188,,1565,Nonlinear screening only; final selection must use training folds.
+pm25_mean_6h,target_pm25_6h,mutual_information,0.2211966089209998,,2675,Nonlinear screening only; final selection must use training folds.
+pm25_lag_1h,target_pm25_6h,mutual_information,0.21619327080168382,,2662,Nonlinear screening only; final selection must use training folds.
+temperature_lag_3h,target_pm25_6h,mutual_information,0.2018111276154544,,2662,Nonlinear screening only; final selection must use training folds.
+pm25_lag_3h,target_pm25_6h,mutual_information,0.19699288334783738,,2662,Nonlinear screening only; final selection must use training folds.
+no2_mean_3h,target_pm25_6h,mutual_information,0.18549693143115098,,1565,Nonlinear screening only; final selection must use training folds.
+temperature_mean_3h,target_pm25_6h,mutual_information,0.1822650989358987,,2675,Nonlinear screening only; final selection must use training folds.
+o3,target_pm25_6h,mutual_information,0.17956178274801715,,1565,Nonlinear screening only; final selection must use training folds.
+no2_std_3h,target_pm25_6h,mutual_information,0.17943191282936022,,1565,Nonlinear screening only; final selection must use training folds.
+humidity,target_pm25_6h,mutual_information,0.1787470794119166,,2675,Nonlinear screening only; final selection must use training folds.
+pm25_lag_6h,target_pm25_6h,mutual_information,0.17398282082744032,,2675,Nonlinear screening only; final selection must use training folds.
+o3_lag_15m,target_pm25_6h,mutual_information,0.17243446245542948,,1558,Nonlinear screening only; final selection must use training folds.
+humidity_mean_3h,target_pm25_6h,mutual_information,0.17127057330491358,,2675,Nonlinear screening only; final selection must use training folds.
+hour,target_pm25_6h,mutual_information,0.16836648658829567,,2675,Nonlinear screening only; final selection must use training folds.
+o3_lag_3h,target_pm25_6h,mutual_information,0.16295020818525074,,1558,Nonlinear screening only; final selection must use training folds.
+sin_hour,target_pm25_6h,mutual_information,0.16232166822037097,,2675,Nonlinear screening only; final selection must use training folds.
+temperature_mean_1h,target_pm25_6h,mutual_information,0.1599691109291026,,2675,Nonlinear screening only; final selection must use training folds.
+humidity_lag_3h,target_pm25_6h,mutual_information,0.15615127723283173,,2662,Nonlinear screening only; final selection must use training folds.
+humidity_mean_1h,target_pm25_6h,mutual_information,0.15357826808932096,,2675,Nonlinear screening only; final selection must use training folds.
+pm25_std_6h,target_pm25_6h,mutual_information,0.1527370772904293,,2675,Nonlinear screening only; final selection must use training folds.
+cos_day_of_week,target_pm25_6h,mutual_information,0.15189781192764018,,2675,Nonlinear screening only; final selection must use training folds.
+humidity_lag_15m,target_pm25_6h,mutual_information,0.14807326229137097,,2662,Nonlinear screening only; final selection must use training folds.
+temperature_lag_1h,target_pm25_6h,mutual_information,0.14313775453793465,,2662,Nonlinear screening only; final selection must use training folds.
+humidity_lag_1h,target_pm25_6h,mutual_information,0.13792199801134686,,2662,Nonlinear screening only; final selection must use training folds.
+temperature,target_pm25_6h,mutual_information,0.13090995849465603,,2675,Nonlinear screening only; final selection must use training folds.
+temperature_lag_15m,target_pm25_6h,mutual_information,0.12671720150067411,,2663,Nonlinear screening only; final selection must use training folds.
+pm25_delta_3h,target_pm25_6h,mutual_information,0.12298321462164363,,2662,Nonlinear screening only; final selection must use training folds.
+pm25_slope_3h,target_pm25_6h,mutual_information,0.12298321462164363,,2662,Nonlinear screening only; final selection must use training folds.
+o3_lag_1h,target_pm25_6h,mutual_information,0.12058546235970358,,1558,Nonlinear screening only; final selection must use training folds.
+pm25_range_3h,target_pm25_6h,mutual_information,0.10172555423821361,,2675,Nonlinear screening only; final selection must use training folds.
+no2_lag_15m,target_pm25_6h,mutual_information,0.09216650804351545,,1558,Nonlinear screening only; final selection must use training folds.
+no2,target_pm25_6h,mutual_information,0.08817548803302744,,1565,Nonlinear screening only; final selection must use training folds.
+no2_mean_1h,target_pm25_6h,mutual_information,0.08372528492567355,,1565,Nonlinear screening only; final selection must use training folds.
+pm25_std_3h,target_pm25_6h,mutual_information,0.07022826789027548,,2675,Nonlinear screening only; final selection must use training folds.
+pm25_cv_6h,target_pm25_6h,mutual_information,0.06289705938946533,,2675,Nonlinear screening only; final selection must use training folds.
+no2_lag_3h,target_pm25_6h,mutual_information,0.061360034041662015,,1558,Nonlinear screening only; final selection must use training folds.
+pm25_delta_1h,target_pm25_6h,mutual_information,0.05884689451335934,,2662,Nonlinear screening only; final selection must use training folds.
+no2_lag_1h,target_pm25_6h,mutual_information,0.05222373419570614,,1558,Nonlinear screening only; final selection must use training folds.
+temperature_std_3h,target_pm25_6h,mutual_information,0.03483227187859139,,2675,Nonlinear screening only; final selection must use training folds.
+recent_anomaly_count_3h,target_pm25_6h,mutual_information,0.032333727103533993,,2675,Nonlinear screening only; final selection must use training folds.
+pm25_pct_change_1h,target_pm25_6h,mutual_information,0.027189547086757138,,2662,Nonlinear screening only; final selection must use training folds.
+humidity_std_3h,target_pm25_6h,mutual_information,0.020912697306236794,,2675,Nonlinear screening only; final selection must use training folds.
+cos_hour,target_pm25_6h,mutual_information,0.02069632250497211,,2675,Nonlinear screening only; final selection must use training folds.
+pm25_delta_15m,target_pm25_6h,mutual_information,0.016108605695969835,,2662,Nonlinear screening only; final selection must use training folds.
+minute,target_pm25_6h,mutual_information,0.0,,2675,Nonlinear screening only; final selection must use training folds.
+pm25_std_1h,target_pm25_6h,mutual_information,0.0,,2675,Nonlinear screening only; final selection must use training folds.

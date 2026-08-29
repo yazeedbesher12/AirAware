@@ -1,0 +1,13 @@
+sensor_id,city,horizon,total_timestamps,valid_training_samples,invalid_due_to_history,invalid_due_to_future_gap,invalid_due_to_missing_target,invalid_due_to_quality_issue,valid_event_labels,positive_event_labels
+1,Tulkarem,1h,1628,1584,31,0,12,1,1550,1111
+2,Nablus,1h,1582,1543,29,0,10,0,1506,1073
+4,Nablus,1h,1597,1554,31,0,12,0,1518,995
+5,Nablus,1h,829,764,52,4,9,0,683,629
+1,Tulkarem,3h,1628,1576,31,0,20,1,1550,1111
+2,Nablus,3h,1582,1535,29,0,18,0,1506,1073
+4,Nablus,3h,1597,1546,31,0,20,0,1518,995
+5,Nablus,3h,829,748,52,12,17,0,682,628
+1,Tulkarem,6h,1628,1565,31,0,31,1,1551,1112
+2,Nablus,6h,1582,1524,29,0,29,0,1506,1074
+4,Nablus,6h,1597,1535,31,0,31,0,1519,996
+5,Nablus,6h,829,726,52,23,28,0,683,629

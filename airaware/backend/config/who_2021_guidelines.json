@@ -1,0 +1,77 @@
+{
+  "config_version": "2021.1",
+  "retrieved_date": "2026-08-24",
+  "source_title": "WHO global air quality guidelines: particulate matter, ozone, nitrogen dioxide, sulfur dioxide and carbon monoxide",
+  "source_version": "WHO 2021",
+  "source_url": "https://www.who.int/publications/i/item/9789240034228",
+  "minimum_window_coverage_percent": 75,
+  "important_note": "Short-term AQG values are defined with annual exceedance-frequency context. AirAware rolling-window statuses are health-reference screening results, not legal compliance determinations or a WHO AQI.",
+  "pollutants": [
+    {
+      "pollutant": "pm25",
+      "guideline": 15,
+      "unit": "ug/m3",
+      "averaging_period": "24h",
+      "dataset_presence": "AVAILABLE",
+      "dataset_unit": "ug/m3",
+      "unit_evidence": "Declared by the existing AirAware project and Phase 1 reporting; not encoded in the CSV header.",
+      "unit_compatible": true,
+      "interim_targets": {"IT-4": 25, "IT-3": 37.5, "IT-2": 50, "IT-1": 75}
+    },
+    {
+      "pollutant": "pm10",
+      "guideline": 45,
+      "unit": "ug/m3",
+      "averaging_period": "24h",
+      "dataset_presence": "NOT_AVAILABLE",
+      "dataset_unit": null,
+      "unit_evidence": "No PM10 column exists.",
+      "unit_compatible": false,
+      "interim_targets": {"IT-4": 50, "IT-3": 75, "IT-2": 100, "IT-1": 150}
+    },
+    {
+      "pollutant": "no2",
+      "guideline": 25,
+      "unit": "ug/m3",
+      "averaging_period": "24h",
+      "dataset_presence": "TULKAREM_ONLY",
+      "dataset_unit": "UNVERIFIED",
+      "unit_evidence": "The CSV header and available source documentation do not state whether values are ug/m3 or ppb.",
+      "unit_compatible": false,
+      "interim_targets": {"IT-2": 50, "IT-1": 120}
+    },
+    {
+      "pollutant": "o3",
+      "guideline": 100,
+      "unit": "ug/m3",
+      "averaging_period": "8h",
+      "dataset_presence": "TULKAREM_ONLY",
+      "dataset_unit": "UNVERIFIED",
+      "unit_evidence": "The CSV header and available source documentation do not state whether values are ug/m3 or ppb.",
+      "unit_compatible": false,
+      "interim_targets": {"IT-2": 120, "IT-1": 160}
+    },
+    {
+      "pollutant": "so2",
+      "guideline": 40,
+      "unit": "ug/m3",
+      "averaging_period": "24h",
+      "dataset_presence": "NOT_AVAILABLE",
+      "dataset_unit": null,
+      "unit_evidence": "No SO2 column exists.",
+      "unit_compatible": false,
+      "interim_targets": {"IT-2": 50, "IT-1": 125}
+    },
+    {
+      "pollutant": "co",
+      "guideline": 4,
+      "unit": "mg/m3",
+      "averaging_period": "24h",
+      "dataset_presence": "NOT_AVAILABLE",
+      "dataset_unit": null,
+      "unit_evidence": "No CO column exists.",
+      "unit_compatible": false,
+      "interim_targets": {"IT-1": 7}
+    }
+  ]
+}

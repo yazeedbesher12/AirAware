@@ -1,0 +1,79 @@
+{
+  "project": "AirAware",
+  "selection_method": "Multi-metric forecasting selection",
+  "important_note": "This registry does not use WHO AQI. High-PM performance is based on the upper tail of observed PM2.5 values (P90 and P95) in the common TEST set.",
+  "score_weights": {
+    "overall_accuracy": 0.4,
+    "high_pm_performance": 0.4,
+    "sensor_stability": 0.2,
+    "details": {
+      "overall_mae": 0.15,
+      "overall_rmse": 0.1,
+      "overall_median_ae": 0.1,
+      "overall_r2": 0.05,
+      "p90_mae": 0.12,
+      "p90_rmse": 0.08,
+      "p95_mae": 0.12,
+      "p95_rmse": 0.08,
+      "sensor_mean_mae": 0.08,
+      "sensor_worst_mae": 0.07,
+      "sensor_rmse_std": 0.05
+    }
+  },
+  "horizons": {
+    "1h": {
+      "method": "lightgbm",
+      "final_score": 97.92218401803738,
+      "overall_accuracy_score": 0.9895065857621396,
+      "high_pm_score": 0.9613888088403073,
+      "sensor_stability_score": 0.9943184116969751,
+      "rmse": 3.239131744279672,
+      "mae": 2.1837216709886778,
+      "median_ae": 1.5081479071094943,
+      "r2": 0.8050831517089292,
+      "p90_mae": 4.807972792536205,
+      "p90_rmse": 6.701151627855047,
+      "p95_mae": 6.422635688121528,
+      "p95_rmse": 8.367914815717583,
+      "sensor_mean_mae": 2.1837216709886778,
+      "sensor_worst_mae": 2.521231938845458,
+      "sensor_rmse_std": 0.4517636389528238
+    },
+    "3h": {
+      "method": "tft",
+      "final_score": 99.86522906820498,
+      "overall_accuracy_score": 0.9987957601740172,
+      "high_pm_score": 1.0,
+      "sensor_stability_score": 0.9956699330622145,
+      "rmse": 3.0481449974518013,
+      "mae": 2.230740307564516,
+      "median_ae": 1.798825187683109,
+      "r2": 0.828400852615724,
+      "p90_mae": 4.473321852684021,
+      "p90_rmse": 5.738652335854282,
+      "p95_mae": 5.3816681655248,
+      "p95_rmse": 6.768912993073623,
+      "sensor_mean_mae": 2.230740307564516,
+      "sensor_worst_mae": 2.66257076933793,
+      "sensor_rmse_std": 0.296683646383443
+    },
+    "6h": {
+      "method": "lightgbm",
+      "final_score": 98.45560965807272,
+      "overall_accuracy_score": 0.9706439792772923,
+      "high_pm_score": 1.0,
+      "sensor_stability_score": 0.9814925243490513,
+      "rmse": 3.975257572868103,
+      "mae": 2.90068627682299,
+      "median_ae": 2.06657223832986,
+      "r2": 0.6806144656400854,
+      "p90_mae": 4.2788476568591465,
+      "p90_rmse": 5.923600657861971,
+      "p95_mae": 5.593994742009361,
+      "p95_rmse": 7.440926220191864,
+      "sensor_mean_mae": 2.9006862768229906,
+      "sensor_worst_mae": 3.125397745153531,
+      "sensor_rmse_std": 0.2561877965728753
+    }
+  }
+}

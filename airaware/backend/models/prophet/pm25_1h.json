@@ -1,0 +1,20 @@
+{
+    "models":  {
+                   "sensor_1_target_pm25_1h":  "pm25_1h_sensor_1_target_pm25_1h.json",
+                   "sensor_1_target_pm25_who_24h_avg_1h":  "pm25_1h_sensor_1_target_pm25_who_24h_avg_1h.json",
+                   "sensor_2_target_pm25_1h":  "pm25_1h_sensor_2_target_pm25_1h.json",
+                   "sensor_2_target_pm25_who_24h_avg_1h":  "pm25_1h_sensor_2_target_pm25_who_24h_avg_1h.json",
+                   "sensor_4_target_pm25_1h":  "pm25_1h_sensor_4_target_pm25_1h.json",
+                   "sensor_4_target_pm25_who_24h_avg_1h":  "pm25_1h_sensor_4_target_pm25_who_24h_avg_1h.json",
+                   "sensor_5_target_pm25_1h":  "pm25_1h_sensor_5_target_pm25_1h.json",
+                   "sensor_5_target_pm25_who_24h_avg_1h":  "pm25_1h_sensor_5_target_pm25_who_24h_avg_1h.json"
+               },
+    "hyperparameters":  {
+                            "daily_seasonality":  true,
+                            "weekly_seasonality":  false,
+                            "yearly_seasonality":  false,
+                            "seasonality_mode":  "additive",
+                            "changepoint_prior_scale":  0.05,
+                            "uncertainty_samples":  0
+                        }
+}

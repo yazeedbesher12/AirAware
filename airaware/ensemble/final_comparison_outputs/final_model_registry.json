@@ -1,0 +1,34 @@
+{
+  "project": "AirAware",
+  "selection_basis": "Final comparison on identical unseen TEST timestamps.",
+  "forecast_target": "PM2.5 concentration",
+  "horizons": {
+    "1h": {
+      "method": "weighted",
+      "rmse": 3.150308534833078,
+      "mae": 2.089610972267116,
+      "r2": 0.8156265698984894,
+      "test_samples": 1020,
+      "best_single": "lightgbm",
+      "improvement_vs_best_single_percent": 2.7421919347200467
+    },
+    "3h": {
+      "method": "tft",
+      "rmse": 3.0481449974518013,
+      "mae": 2.230740307564516,
+      "r2": 0.828400852615724,
+      "test_samples": 956,
+      "best_single": "tft",
+      "improvement_vs_best_single_percent": 0.0
+    },
+    "6h": {
+      "method": "lightgbm",
+      "rmse": 3.9752575728681028,
+      "mae": 2.90068627682299,
+      "r2": 0.6806144656400854,
+      "test_samples": 908,
+      "best_single": "lightgbm",
+      "improvement_vs_best_single_percent": 0.0
+    }
+  }
+}

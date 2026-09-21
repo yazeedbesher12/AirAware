@@ -14,11 +14,12 @@ from app.config import (
 from app.services.data_store import DataStore, get_store, records
 from app.services.phase2_store import Phase2Store, get_phase2_store
 from app.services.phase3_store import Phase3Store, get_phase3_store
+from app.services.phase4_store import Phase4Store, get_phase4_store
 
 app = FastAPI(
     title="AirAware Local Analysis API",
     description="Local Phase 1–3 data quality, advanced analysis, WHO-reference, and forecasting-dataset API.",
-    version="3.0.0",
+    version="4.1.0",
 )
 app.add_middleware(
     CORSMiddleware,
@@ -380,3 +381,43 @@ def phase3_download(filename: str) -> FileResponse:
     if safe_name != filename or safe_name not in allowed or not path.exists():
         raise HTTPException(status_code=404, detail="Phase 3 artifact not found.")
     return FileResponse(path, media_type="text/csv", filename=safe_name)
+
+
+@app.get("/api/models/results")
+def model_results(store: Phase4Store = Depends(get_phase4_store)) -> dict[str, object]:
+    return store.json("model_results.json", {"project": "AirAware", "phase": "4A", "models": {}})
+
+
+@app.get("/api/models/leaderboard")
+def model_leaderboard(store: Phase4Store = Depends(get_phase4_store)) -> dict[str, object]:
+    return store.json("model_leaderboard.json", {})
+
+
+@app.get("/api/models/realtime-readiness")
+def model_realtime_readiness(store: Phase4Store = Depends(get_phase4_store)) -> dict[str, object]:
+    return store.json("realtime_replay_results.json", {"models": {}})
+
+
+@app.get("/api/models/{model_name}")
+def model_detail(model_name: str, store: Phase4Store = Depends(get_phase4_store)) -> dict[str, object]:
+    try: return store.model_detail(model_name)
+    except KeyError as exc: raise HTTPException(status_code=404, detail="Model result not found") from exc
+
+
+@app.get("/api/models/{model_name}/predictions")
+def model_predictions(model_name: str, horizon: str = "1h", split: str = "test", sensor_id: int | None = None, max_points: int = Query(1500, ge=50, le=5000), store: Phase4Store = Depends(get_phase4_store)) -> dict[str, object]:
+    if horizon not in {"1h", "3h", "6h"} or split not in {"test", "oof"}: raise HTTPException(status_code=400, detail="Unsupported horizon or split")
+    try: return store.predictions(model_name, horizon, split, sensor_id, max_points)
+    except KeyError as exc: raise HTTPException(status_code=404, detail="Prediction file not found") from exc
+
+
+@app.get("/api/models/{model_name}/metrics")
+def model_metrics(model_name: str, store: Phase4Store = Depends(get_phase4_store)) -> dict[str, object]:
+    detail = model_detail(model_name, store)
+    return {"model": model_name, "summary": detail["summary"], "details": detail["details"]}
+
+
+@app.get("/api/models/{model_name}/training-history")
+def model_training_history(model_name: str, store: Phase4Store = Depends(get_phase4_store)) -> dict[str, object]:
+    detail = model_detail(model_name, store)
+    return {"model": model_name, "items": detail["training_history"]}

@@ -1,0 +1,105 @@
+{
+  "project": "AirAware",
+  "phase": "Robustness and Underprediction Check",
+  "weight_schemes": {
+    "balanced_40_40_20": {
+      "overall": 0.4,
+      "high_pm": 0.4,
+      "stability": 0.2
+    },
+    "accuracy_focused_50_30_20": {
+      "overall": 0.5,
+      "high_pm": 0.3,
+      "stability": 0.2
+    },
+    "health_focused_35_45_20": {
+      "overall": 0.35,
+      "high_pm": 0.45,
+      "stability": 0.2
+    },
+    "high_pm_heavy_30_50_20": {
+      "overall": 0.3,
+      "high_pm": 0.5,
+      "stability": 0.2
+    },
+    "stability_focused_40_35_25": {
+      "overall": 0.4,
+      "high_pm": 0.35,
+      "stability": 0.25
+    }
+  },
+  "sensitivity_summary": {
+    "1h": {
+      "winner_counts": {
+        "lightgbm": 5
+      },
+      "most_robust_method": "lightgbm",
+      "wins": 5,
+      "total_schemes": 5,
+      "robustness_fraction": 1.0
+    },
+    "3h": {
+      "winner_counts": {
+        "tft": 5
+      },
+      "most_robust_method": "tft",
+      "wins": 5,
+      "total_schemes": 5,
+      "robustness_fraction": 1.0
+    },
+    "6h": {
+      "winner_counts": {
+        "lightgbm": 5
+      },
+      "most_robust_method": "lightgbm",
+      "wins": 5,
+      "total_schemes": 5,
+      "robustness_fraction": 1.0
+    }
+  },
+  "underprediction_summary": {
+    "1h": {
+      "lowest_underprediction_rate": {
+        "method": "xgboost",
+        "value": 0.8627450980392157
+      },
+      "lowest_mean_underprediction": {
+        "method": "persistence",
+        "value": 5.593061224489796
+      },
+      "lowest_worst_underprediction": {
+        "method": "tft",
+        "value": 24.526918029785158
+      }
+    },
+    "3h": {
+      "lowest_underprediction_rate": {
+        "method": "xgboost",
+        "value": 0.8958333333333334
+      },
+      "lowest_mean_underprediction": {
+        "method": "tft",
+        "value": 5.513599068535699
+      },
+      "lowest_worst_underprediction": {
+        "method": "persistence",
+        "value": 20.749999999999996
+      }
+    },
+    "6h": {
+      "lowest_underprediction_rate": {
+        "method": "tft",
+        "value": 0.717391304347826
+      },
+      "lowest_mean_underprediction": {
+        "method": "lightgbm",
+        "value": 5.976075210321744
+      },
+      "lowest_worst_underprediction": {
+        "method": "tft",
+        "value": 23.163583374023442
+      }
+    }
+  },
+  "important_note": "Negative prediction bias means systematic underprediction. P95 analysis focuses on the highest 5% observed PM2.5 values in the final common TEST subset."
+}

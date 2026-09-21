@@ -1,0 +1,977 @@
+{
+  "project": "AirAware",
+  "phase": "Weighted Ensemble",
+  "selection_rule": "Candidate and weights selected using OOF RMSE only. TEST was never used for optimization.",
+  "dynamic_missing_behavior": "Zero-weight models are treated as inactive. Only missing active model predictions trigger fallback. Available active model weights are renormalized.",
+  "candidates": [
+    {
+      "horizon": "1h",
+      "models": [
+        "prediction_gru",
+        "prediction_lightgbm"
+      ],
+      "weights": {
+        "prediction_gru": 0.413090756134054,
+        "prediction_lightgbm": 0.586909243865946
+      },
+      "oof_strict_rows": 1255,
+      "oof_total_rows": 1362,
+      "equal_oof_metrics": {
+        "n": 1255,
+        "rmse": 2.442772445928172,
+        "mae": 1.758939797341832,
+        "median_ae": 1.2649925953318917,
+        "r2": 0.8103994875679674
+      },
+      "weighted_oof_metrics": {
+        "n": 1255,
+        "rmse": 2.4380491006324427,
+        "mae": 1.7536608826841331,
+        "median_ae": 1.2473499334595939,
+        "r2": 0.811132001866131
+      },
+      "dynamic_oof_metrics": {
+        "n": 1362,
+        "rmse": 2.5854576975444057,
+        "mae": 1.7858248551494502,
+        "median_ae": 1.2905883686793356,
+        "r2": 0.793419481097953
+      },
+      "equal_test_metrics": {
+        "n": 1136,
+        "rmse": 4.098806003060323,
+        "mae": 2.3341495261275598,
+        "median_ae": 1.5564983719549907,
+        "r2": 0.7385652708911157
+      },
+      "weighted_test_metrics": {
+        "n": 1136,
+        "rmse": 4.089008429574929,
+        "mae": 2.3223942695132154,
+        "median_ae": 1.5622356568597304,
+        "r2": 0.7398136171745016
+      },
+      "test_total_rows": 1136,
+      "test_valid_predictions": 1136,
+      "fallback_count": 116,
+      "fallback_rate_percent": 10.211267605633804,
+      "minimum_models_available": 1,
+      "prediction_file": "D:\\Desktop\\Air\\airaware\\ensemble\\weighted_outputs\\1h_gru__lightgbm_test_predictions.csv"
+    },
+    {
+      "horizon": "1h",
+      "models": [
+        "prediction_gru",
+        "prediction_tft"
+      ],
+      "weights": {
+        "prediction_gru": 0.5682805622442506,
+        "prediction_tft": 0.43171943775574945
+      },
+      "oof_strict_rows": 1254,
+      "oof_total_rows": 1362,
+      "equal_oof_metrics": {
+        "n": 1254,
+        "rmse": 2.4082303294192937,
+        "mae": 1.6642025384720434,
+        "median_ae": 1.0719084167480482,
+        "r2": 0.8158704236158564
+      },
+      "weighted_oof_metrics": {
+        "n": 1254,
+        "rmse": 2.4018629747521443,
+        "mae": 1.6727379353011822,
+        "median_ae": 1.1038890061973934,
+        "r2": 0.8168428126500529
+      },
+      "dynamic_oof_metrics": {
+        "n": 1351,
+        "rmse": 2.59860258498089,
+        "mae": 1.7137163031293239,
+        "median_ae": 1.1645444138143368,
+        "r2": 0.7929546316196201
+      },
+      "equal_test_metrics": {
+        "n": 1136,
+        "rmse": 4.1073787522869,
+        "mae": 2.2956481511660027,
+        "median_ae": 1.4874111366271983,
+        "r2": 0.7374705334742202
+      },
+      "weighted_test_metrics": {
+        "n": 1136,
+        "rmse": 4.112373332322174,
+        "mae": 2.308216065899114,
+        "median_ae": 1.5328412999811611,
+        "r2": 0.736831672664465
+      },
+      "test_total_rows": 1136,
+      "test_valid_predictions": 1136,
+      "fallback_count": 116,
+      "fallback_rate_percent": 10.211267605633804,
+      "minimum_models_available": 1,
+      "prediction_file": "D:\\Desktop\\Air\\airaware\\ensemble\\weighted_outputs\\1h_gru__tft_test_predictions.csv"
+    },
+    {
+      "horizon": "1h",
+      "models": [
+        "prediction_lightgbm",
+        "prediction_tft"
+      ],
+      "weights": {
+        "prediction_lightgbm": 0.6650091876063925,
+        "prediction_tft": 0.3349908123936075
+      },
+      "oof_strict_rows": 1350,
+      "oof_total_rows": 1362,
+      "equal_oof_metrics": {
+        "n": 1350,
+        "rmse": 2.6026903275548667,
+        "mae": 1.7506004958979817,
+        "median_ae": 1.2064700424807762,
+        "r2": 0.7924558859324174
+      },
+      "weighted_oof_metrics": {
+        "n": 1350,
+        "rmse": 2.578030490530325,
+        "mae": 1.7501986908753042,
+        "median_ae": 1.211363196797576,
+        "r2": 0.7963701112039769
+      },
+      "dynamic_oof_metrics": {
+        "n": 1362,
+        "rmse": 2.5773263155291404,
+        "mae": 1.7564306600072608,
+        "median_ae": 1.231102245205351,
+        "r2": 0.7947168479954377
+      },
+      "equal_test_metrics": {
+        "n": 1136,
+        "rmse": 3.9063806601917928,
+        "mae": 2.192716466133788,
+        "median_ae": 1.3535939581260994,
+        "r2": 0.7625360574013358
+      },
+      "weighted_test_metrics": {
+        "n": 1136,
+        "rmse": 3.9171095286673516,
+        "mae": 2.203079552654423,
+        "median_ae": 1.383577885800456,
+        "r2": 0.7612298774442493
+      },
+      "test_total_rows": 1136,
+      "test_valid_predictions": 1136,
+      "fallback_count": 0,
+      "fallback_rate_percent": 0.0,
+      "minimum_models_available": 2,
+      "prediction_file": "D:\\Desktop\\Air\\airaware\\ensemble\\weighted_outputs\\1h_lightgbm__tft_test_predictions.csv"
+    },
+    {
+      "horizon": "1h",
+      "models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft"
+      ],
+      "weights": {
+        "prediction_gru": 0.34469783242131785,
+        "prediction_lightgbm": 0.34947666812591954,
+        "prediction_tft": 0.30582549945276266
+      },
+      "oof_strict_rows": 1254,
+      "oof_total_rows": 1362,
+      "equal_oof_metrics": {
+        "n": 1254,
+        "rmse": 2.3459968181935054,
+        "mae": 1.647805841433365,
+        "median_ae": 1.121671192598491,
+        "r2": 0.8252640166941335
+      },
+      "weighted_oof_metrics": {
+        "n": 1254,
+        "rmse": 2.3452155536675177,
+        "mae": 1.651367629452238,
+        "median_ae": 1.133972474226681,
+        "r2": 0.8253803785689457
+      },
+      "dynamic_oof_metrics": {
+        "n": 1362,
+        "rmse": 2.5187553319969256,
+        "mae": 1.6915906281325304,
+        "median_ae": 1.1819688224718012,
+        "r2": 0.8039411472850477
+      },
+      "equal_test_metrics": {
+        "n": 1136,
+        "rmse": 3.9216485396003384,
+        "mae": 2.218289256171519,
+        "median_ae": 1.451569812289618,
+        "r2": 0.7606761997325061
+      },
+      "weighted_test_metrics": {
+        "n": 1136,
+        "rmse": 3.9231696676356176,
+        "mae": 2.22110153515549,
+        "median_ae": 1.4657804702578368,
+        "r2": 0.7604905060168627
+      },
+      "test_total_rows": 1136,
+      "test_valid_predictions": 1136,
+      "fallback_count": 116,
+      "fallback_rate_percent": 10.211267605633804,
+      "minimum_models_available": 2,
+      "prediction_file": "D:\\Desktop\\Air\\airaware\\ensemble\\weighted_outputs\\1h_gru__lightgbm__tft_test_predictions.csv"
+    },
+    {
+      "horizon": "1h",
+      "models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest"
+      ],
+      "weights": {
+        "prediction_gru": 0.3303823544614056,
+        "prediction_lightgbm": 0.1689663362657028,
+        "prediction_tft": 0.28005241095446837,
+        "prediction_random_forest": 0.22059889831842333
+      },
+      "oof_strict_rows": 1254,
+      "oof_total_rows": 1362,
+      "equal_oof_metrics": {
+        "n": 1254,
+        "rmse": 2.3298675787061094,
+        "mae": 1.6444250428382212,
+        "median_ae": 1.1360537374282966,
+        "r2": 0.8276584531106227
+      },
+      "weighted_oof_metrics": {
+        "n": 1254,
+        "rmse": 2.32408771103018,
+        "mae": 1.6325447057825924,
+        "median_ae": 1.1216840679453117,
+        "r2": 0.8285124722687701
+      },
+      "dynamic_oof_metrics": {
+        "n": 1362,
+        "rmse": 2.4913254693564526,
+        "mae": 1.6667829723453107,
+        "median_ae": 1.1742958497310116,
+        "r2": 0.8081881530856645
+      },
+      "equal_test_metrics": {
+        "n": 1136,
+        "rmse": 3.939615106834525,
+        "mae": 2.2124634196685085,
+        "median_ae": 1.3907524719436113,
+        "r2": 0.7584783093919792
+      },
+      "weighted_test_metrics": {
+        "n": 1136,
+        "rmse": 3.9344702467612587,
+        "mae": 2.218447520747585,
+        "median_ae": 1.4150377716766638,
+        "r2": 0.7591087181492585
+      },
+      "test_total_rows": 1136,
+      "test_valid_predictions": 1136,
+      "fallback_count": 116,
+      "fallback_rate_percent": 10.211267605633804,
+      "minimum_models_available": 3,
+      "prediction_file": "D:\\Desktop\\Air\\airaware\\ensemble\\weighted_outputs\\1h_gru__lightgbm__tft__random_forest_test_predictions.csv"
+    },
+    {
+      "horizon": "1h",
+      "models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_xgboost"
+      ],
+      "weights": {
+        "prediction_gru": 0.34511237248087684,
+        "prediction_lightgbm": 0.33724159695915035,
+        "prediction_tft": 0.30440170269072797,
+        "prediction_xgboost": 0.01324432786924495
+      },
+      "oof_strict_rows": 1254,
+      "oof_total_rows": 1362,
+      "equal_oof_metrics": {
+        "n": 1254,
+        "rmse": 2.3644377099727087,
+        "mae": 1.6786669157277032,
+        "median_ae": 1.1767766944595839,
+        "r2": 0.8225061682144614
+      },
+      "weighted_oof_metrics": {
+        "n": 1254,
+        "rmse": 2.345181925244565,
+        "mae": 1.6513728450751117,
+        "median_ae": 1.1337463559707617,
+        "r2": 0.8253853863307057
+      },
+      "dynamic_oof_metrics": {
+        "n": 1362,
+        "rmse": 2.518861529102352,
+        "mae": 1.6918136876718226,
+        "median_ae": 1.1880211913967953,
+        "r2": 0.8039246142607261
+      },
+      "equal_test_metrics": {
+        "n": 1136,
+        "rmse": 3.963723685973444,
+        "mae": 2.23431325781969,
+        "median_ae": 1.4151076812674708,
+        "r2": 0.7555132679582345
+      },
+      "weighted_test_metrics": {
+        "n": 1136,
+        "rmse": 3.9247775064012758,
+        "mae": 2.2220520038782157,
+        "median_ae": 1.4608290820432712,
+        "r2": 0.7602941486867638
+      },
+      "test_total_rows": 1136,
+      "test_valid_predictions": 1136,
+      "fallback_count": 116,
+      "fallback_rate_percent": 10.211267605633804,
+      "minimum_models_available": 3,
+      "prediction_file": "D:\\Desktop\\Air\\airaware\\ensemble\\weighted_outputs\\1h_gru__lightgbm__tft__xgboost_test_predictions.csv"
+    },
+    {
+      "horizon": "3h",
+      "models": [
+        "prediction_tft",
+        "prediction_lightgbm"
+      ],
+      "weights": {
+        "prediction_tft": 1.0,
+        "prediction_lightgbm": 0.0
+      },
+      "oof_strict_rows": 1350,
+      "oof_total_rows": 1362,
+      "equal_oof_metrics": {
+        "n": 1350,
+        "rmse": 3.3047330567902358,
+        "mae": 2.302880497945994,
+        "median_ae": 1.683811310392807,
+        "r2": 0.5905221915889177
+      },
+      "weighted_oof_metrics": {
+        "n": 1350,
+        "rmse": 2.7631866289568072,
+        "mae": 1.8830038979141799,
+        "median_ae": 1.3786586189270018,
+        "r2": 0.7137285496759591
+      },
+      "dynamic_oof_metrics": {
+        "n": 1350,
+        "rmse": 2.7631866289568072,
+        "mae": 1.8830038979141799,
+        "median_ae": 1.3786586189270018,
+        "r2": 0.7137285496759591
+      },
+      "equal_test_metrics": {
+        "n": 1104,
+        "rmse": 4.097326965505338,
+        "mae": 2.6335801424869265,
+        "median_ae": 1.9484716261571213,
+        "r2": 0.7337120121741327
+      },
+      "weighted_test_metrics": {
+        "n": 1104,
+        "rmse": 4.340062418256875,
+        "mae": 2.4737118093518244,
+        "median_ae": 1.7696771621704102,
+        "r2": 0.7012263565410883
+      },
+      "test_total_rows": 1104,
+      "test_valid_predictions": 1104,
+      "fallback_count": 0,
+      "fallback_rate_percent": 0.0,
+      "minimum_models_available": 1,
+      "prediction_file": "D:\\Desktop\\Air\\airaware\\ensemble\\weighted_outputs\\3h_tft__lightgbm_test_predictions.csv"
+    },
+    {
+      "horizon": "3h",
+      "models": [
+        "prediction_tft",
+        "prediction_gru"
+      ],
+      "weights": {
+        "prediction_tft": 1.0,
+        "prediction_gru": 0.0
+      },
+      "oof_strict_rows": 1222,
+      "oof_total_rows": 1362,
+      "equal_oof_metrics": {
+        "n": 1222,
+        "rmse": 3.382056231413384,
+        "mae": 2.4094738436291534,
+        "median_ae": 1.7182245159149163,
+        "r2": 0.5597867564290002
+      },
+      "weighted_oof_metrics": {
+        "n": 1222,
+        "rmse": 2.754318389287619,
+        "mae": 1.889609100635235,
+        "median_ae": 1.3861575508117667,
+        "r2": 0.7080357081111078
+      },
+      "dynamic_oof_metrics": {
+        "n": 1350,
+        "rmse": 2.7631866289568072,
+        "mae": 1.8830038979141799,
+        "median_ae": 1.3786586189270018,
+        "r2": 0.7137285496759591
+      },
+      "equal_test_metrics": {
+        "n": 1104,
+        "rmse": 4.736164016517326,
+        "mae": 2.8414385431918547,
+        "median_ae": 1.8650963783264167,
+        "r2": 0.6442017563411215
+      },
+      "weighted_test_metrics": {
+        "n": 1104,
+        "rmse": 4.340062418256875,
+        "mae": 2.4737118093518244,
+        "median_ae": 1.7696771621704102,
+        "r2": 0.7012263565410883
+      },
+      "test_total_rows": 1104,
+      "test_valid_predictions": 1104,
+      "fallback_count": 0,
+      "fallback_rate_percent": 0.0,
+      "minimum_models_available": 1,
+      "prediction_file": "D:\\Desktop\\Air\\airaware\\ensemble\\weighted_outputs\\3h_tft__gru_test_predictions.csv"
+    },
+    {
+      "horizon": "3h",
+      "models": [
+        "prediction_tft",
+        "prediction_random_forest"
+      ],
+      "weights": {
+        "prediction_tft": 0.9999999999999999,
+        "prediction_random_forest": 1.6653345369377348e-16
+      },
+      "oof_strict_rows": 1350,
+      "oof_total_rows": 1362,
+      "equal_oof_metrics": {
+        "n": 1350,
+        "rmse": 3.2773591134416673,
+        "mae": 2.3151940934889277,
+        "median_ae": 1.7026899497122727,
+        "r2": 0.5972777137739349
+      },
+      "weighted_oof_metrics": {
+        "n": 1350,
+        "rmse": 2.7631866289568077,
+        "mae": 1.8830038979141799,
+        "median_ae": 1.3786586189270027,
+        "r2": 0.7137285496759591
+      },
+      "dynamic_oof_metrics": {
+        "n": 1350,
+        "rmse": 2.7631866289568072,
+        "mae": 1.8830038979141799,
+        "median_ae": 1.3786586189270018,
+        "r2": 0.7137285496759591
+      },
+      "equal_test_metrics": {
+        "n": 1104,
+        "rmse": 4.231220858940461,
+        "mae": 2.8394767465639945,
+        "median_ae": 2.31635188210622,
+        "r2": 0.7160239446925738
+      },
+      "weighted_test_metrics": {
+        "n": 1104,
+        "rmse": 4.340062418256875,
+        "mae": 2.4737118093518244,
+        "median_ae": 1.7696771621704102,
+        "r2": 0.7012263565410883
+      },
+      "test_total_rows": 1104,
+      "test_valid_predictions": 1104,
+      "fallback_count": 0,
+      "fallback_rate_percent": 0.0,
+      "minimum_models_available": 1,
+      "prediction_file": "D:\\Desktop\\Air\\airaware\\ensemble\\weighted_outputs\\3h_tft__random_forest_test_predictions.csv"
+    },
+    {
+      "horizon": "3h",
+      "models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru"
+      ],
+      "weights": {
+        "prediction_tft": 0.9999999999999998,
+        "prediction_lightgbm": 0.0,
+        "prediction_gru": 2.2204460492503126e-16
+      },
+      "oof_strict_rows": 1222,
+      "oof_total_rows": 1362,
+      "equal_oof_metrics": {
+        "n": 1222,
+        "rmse": 3.525648445500911,
+        "mae": 2.490699643886542,
+        "median_ae": 1.8173885290778111,
+        "r2": 0.5216128934901354
+      },
+      "weighted_oof_metrics": {
+        "n": 1222,
+        "rmse": 2.7543183892876195,
+        "mae": 1.8896091006352354,
+        "median_ae": 1.3861575508117667,
+        "r2": 0.7080357081111077
+      },
+      "dynamic_oof_metrics": {
+        "n": 1350,
+        "rmse": 2.7631866289568072,
+        "mae": 1.8830038979141799,
+        "median_ae": 1.3786586189270018,
+        "r2": 0.7137285496759591
+      },
+      "equal_test_metrics": {
+        "n": 1104,
+        "rmse": 4.281887340540833,
+        "mae": 2.7429327790043114,
+        "median_ae": 1.915147462982853,
+        "r2": 0.7091823202263008
+      },
+      "weighted_test_metrics": {
+        "n": 1104,
+        "rmse": 4.340062418256875,
+        "mae": 2.4737118093518244,
+        "median_ae": 1.7696771621704102,
+        "r2": 0.7012263565410883
+      },
+      "test_total_rows": 1104,
+      "test_valid_predictions": 1104,
+      "fallback_count": 0,
+      "fallback_rate_percent": 0.0,
+      "minimum_models_available": 1,
+      "prediction_file": "D:\\Desktop\\Air\\airaware\\ensemble\\weighted_outputs\\3h_tft__lightgbm__gru_test_predictions.csv"
+    },
+    {
+      "horizon": "3h",
+      "models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "weights": {
+        "prediction_tft": 0.9999999999999996,
+        "prediction_lightgbm": 0.0,
+        "prediction_gru": 3.6082248300317573e-16,
+        "prediction_random_forest": 5.55111512312578e-17
+      },
+      "oof_strict_rows": 1222,
+      "oof_total_rows": 1362,
+      "equal_oof_metrics": {
+        "n": 1222,
+        "rmse": 3.6172176535015415,
+        "mae": 2.5649588936191954,
+        "median_ae": 1.828823692448731,
+        "r2": 0.4964405631427733
+      },
+      "weighted_oof_metrics": {
+        "n": 1222,
+        "rmse": 2.7543183892876195,
+        "mae": 1.8896091006352354,
+        "median_ae": 1.3861575508117658,
+        "r2": 0.7080357081111077
+      },
+      "dynamic_oof_metrics": {
+        "n": 1350,
+        "rmse": 2.7631866289568072,
+        "mae": 1.8830038979141799,
+        "median_ae": 1.3786586189270018,
+        "r2": 0.7137285496759591
+      },
+      "equal_test_metrics": {
+        "n": 1104,
+        "rmse": 4.307991005628429,
+        "mae": 2.8532991988318237,
+        "median_ae": 2.211858670581462,
+        "r2": 0.705625689024773
+      },
+      "weighted_test_metrics": {
+        "n": 1104,
+        "rmse": 4.340062418256875,
+        "mae": 2.4737118093518244,
+        "median_ae": 1.7696771621704102,
+        "r2": 0.7012263565410883
+      },
+      "test_total_rows": 1104,
+      "test_valid_predictions": 1104,
+      "fallback_count": 0,
+      "fallback_rate_percent": 0.0,
+      "minimum_models_available": 1,
+      "prediction_file": "D:\\Desktop\\Air\\airaware\\ensemble\\weighted_outputs\\3h_tft__lightgbm__gru__random_forest_test_predictions.csv"
+    },
+    {
+      "horizon": "6h",
+      "models": [
+        "prediction_tft",
+        "prediction_gru"
+      ],
+      "weights": {
+        "prediction_tft": 0.9999999999999997,
+        "prediction_gru": 3.33066907387547e-16
+      },
+      "oof_strict_rows": 1222,
+      "oof_total_rows": 1362,
+      "equal_oof_metrics": {
+        "n": 1222,
+        "rmse": 3.603754075282363,
+        "mae": 2.7102679651731747,
+        "median_ae": 2.069452457427981,
+        "r2": 0.4342456086744636
+      },
+      "weighted_oof_metrics": {
+        "n": 1222,
+        "rmse": 2.8089200939986445,
+        "mae": 1.906359367089654,
+        "median_ae": 1.4069253730773932,
+        "r2": 0.6562866423410718
+      },
+      "dynamic_oof_metrics": {
+        "n": 1350,
+        "rmse": 2.969968411703853,
+        "mae": 1.9454695891203704,
+        "median_ae": 1.4404439163208007,
+        "r2": 0.6234197419266774
+      },
+      "equal_test_metrics": {
+        "n": 1056,
+        "rmse": 4.392102021468654,
+        "mae": 2.7249911415396313,
+        "median_ae": 1.9071472167968757,
+        "r2": 0.6867409536795577
+      },
+      "weighted_test_metrics": {
+        "n": 1056,
+        "rmse": 4.808986555306451,
+        "mae": 2.677732566035155,
+        "median_ae": 1.680376205444336,
+        "r2": 0.6244516067811483
+      },
+      "test_total_rows": 1056,
+      "test_valid_predictions": 1056,
+      "fallback_count": 0,
+      "fallback_rate_percent": 0.0,
+      "minimum_models_available": 1,
+      "prediction_file": "D:\\Desktop\\Air\\airaware\\ensemble\\weighted_outputs\\6h_tft__gru_test_predictions.csv"
+    },
+    {
+      "horizon": "6h",
+      "models": [
+        "prediction_tft",
+        "prediction_random_forest"
+      ],
+      "weights": {
+        "prediction_tft": 0.9441002401866139,
+        "prediction_random_forest": 0.0558997598133861
+      },
+      "oof_strict_rows": 1350,
+      "oof_total_rows": 1362,
+      "equal_oof_metrics": {
+        "n": 1350,
+        "rmse": 3.7080965666766557,
+        "mae": 2.7160881260782865,
+        "median_ae": 2.1320204686620023,
+        "r2": 0.4129758621066011
+      },
+      "weighted_oof_metrics": {
+        "n": 1350,
+        "rmse": 2.9565785921873773,
+        "mae": 1.9555831175476315,
+        "median_ae": 1.422536121662577,
+        "r2": 0.6268076400678051
+      },
+      "dynamic_oof_metrics": {
+        "n": 1362,
+        "rmse": 2.9813790138101752,
+        "mae": 1.9825876518655234,
+        "median_ae": 1.437183235723154,
+        "r2": 0.6176981560382647
+      },
+      "equal_test_metrics": {
+        "n": 1056,
+        "rmse": 4.2632924905308816,
+        "mae": 2.636028816723576,
+        "median_ae": 1.7524839950769078,
+        "r2": 0.7048457502311682
+      },
+      "weighted_test_metrics": {
+        "n": 1056,
+        "rmse": 4.684105378708033,
+        "mae": 2.6183890946207686,
+        "median_ae": 1.5954089749378841,
+        "r2": 0.6437030570166042
+      },
+      "test_total_rows": 1056,
+      "test_valid_predictions": 1056,
+      "fallback_count": 0,
+      "fallback_rate_percent": 0.0,
+      "minimum_models_available": 2,
+      "prediction_file": "D:\\Desktop\\Air\\airaware\\ensemble\\weighted_outputs\\6h_tft__random_forest_test_predictions.csv"
+    },
+    {
+      "horizon": "6h",
+      "models": [
+        "prediction_tft",
+        "prediction_lightgbm"
+      ],
+      "weights": {
+        "prediction_tft": 0.9752399057454489,
+        "prediction_lightgbm": 0.024760094254551033
+      },
+      "oof_strict_rows": 1350,
+      "oof_total_rows": 1362,
+      "equal_oof_metrics": {
+        "n": 1350,
+        "rmse": 3.547269411783236,
+        "mae": 2.651717326545282,
+        "median_ae": 2.282294406367132,
+        "r2": 0.4627922909819643
+      },
+      "weighted_oof_metrics": {
+        "n": 1350,
+        "rmse": 2.968243887554689,
+        "mae": 1.9502114521607463,
+        "median_ae": 1.4421668244866757,
+        "r2": 0.6238569406537123
+      },
+      "dynamic_oof_metrics": {
+        "n": 1362,
+        "rmse": 3.015351358323026,
+        "mae": 1.9892182381423011,
+        "median_ae": 1.4723939605953085,
+        "r2": 0.6089359783804416
+      },
+      "equal_test_metrics": {
+        "n": 1056,
+        "rmse": 4.175588971436917,
+        "mae": 2.5104082980044313,
+        "median_ae": 1.6529927216997935,
+        "r2": 0.7168645386178434
+      },
+      "weighted_test_metrics": {
+        "n": 1056,
+        "rmse": 4.750560919833281,
+        "mae": 2.6457964434562844,
+        "median_ae": 1.6320684236673593,
+        "r2": 0.6335214454384712
+      },
+      "test_total_rows": 1056,
+      "test_valid_predictions": 1056,
+      "fallback_count": 0,
+      "fallback_rate_percent": 0.0,
+      "minimum_models_available": 2,
+      "prediction_file": "D:\\Desktop\\Air\\airaware\\ensemble\\weighted_outputs\\6h_tft__lightgbm_test_predictions.csv"
+    },
+    {
+      "horizon": "6h",
+      "models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "weights": {
+        "prediction_tft": 0.9482993167677838,
+        "prediction_gru": 2.1155494890623405e-17,
+        "prediction_random_forest": 0.051700683232216216
+      },
+      "oof_strict_rows": 1222,
+      "oof_total_rows": 1362,
+      "equal_oof_metrics": {
+        "n": 1222,
+        "rmse": 3.829532682894959,
+        "mae": 2.891554699846779,
+        "median_ae": 2.295396393466346,
+        "r2": 0.361134845373717
+      },
+      "weighted_oof_metrics": {
+        "n": 1222,
+        "rmse": 2.7987890027124456,
+        "mae": 1.905728108056107,
+        "median_ae": 1.356692957589627,
+        "r2": 0.6587615519703061
+      },
+      "dynamic_oof_metrics": {
+        "n": 1362,
+        "rmse": 2.9814534477028403,
+        "mae": 1.9811965429318898,
+        "median_ae": 1.4377796865067323,
+        "r2": 0.6176790665031805
+      },
+      "equal_test_metrics": {
+        "n": 1056,
+        "rmse": 4.28885197017408,
+        "mae": 2.6232051631895663,
+        "median_ae": 1.7465070406901493,
+        "r2": 0.7012960978985174
+      },
+      "weighted_test_metrics": {
+        "n": 1056,
+        "rmse": 4.693012801205592,
+        "mae": 2.6224731223508457,
+        "median_ae": 1.596534366550677,
+        "r2": 0.6423466806184849
+      },
+      "test_total_rows": 1056,
+      "test_valid_predictions": 1056,
+      "fallback_count": 0,
+      "fallback_rate_percent": 0.0,
+      "minimum_models_available": 2,
+      "prediction_file": "D:\\Desktop\\Air\\airaware\\ensemble\\weighted_outputs\\6h_tft__gru__random_forest_test_predictions.csv"
+    },
+    {
+      "horizon": "6h",
+      "models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm"
+      ],
+      "weights": {
+        "prediction_tft": 0.9482992985119124,
+        "prediction_gru": 0.0,
+        "prediction_random_forest": 0.05170070148808763,
+        "prediction_lightgbm": 6.8896313972342116e-18
+      },
+      "oof_strict_rows": 1222,
+      "oof_total_rows": 1362,
+      "equal_oof_metrics": {
+        "n": 1222,
+        "rmse": 3.8591851288465127,
+        "mae": 3.0024520605990808,
+        "median_ae": 2.509950385567832,
+        "r2": 0.35120295115398514
+      },
+      "weighted_oof_metrics": {
+        "n": 1222,
+        "rmse": 2.7987890027124482,
+        "mae": 1.9057281105943848,
+        "median_ae": 1.3566928762132688,
+        "r2": 0.6587615519703055
+      },
+      "dynamic_oof_metrics": {
+        "n": 1362,
+        "rmse": 2.9814534470556353,
+        "mae": 1.9811965488800307,
+        "median_ae": 1.4377795884405637,
+        "r2": 0.6176790666691667
+      },
+      "equal_test_metrics": {
+        "n": 1056,
+        "rmse": 4.251457530232637,
+        "mae": 2.5723619115231555,
+        "median_ae": 1.6987434375611192,
+        "r2": 0.7064821804475822
+      },
+      "weighted_test_metrics": {
+        "n": 1056,
+        "rmse": 4.693012762308577,
+        "mae": 2.622473104421706,
+        "median_ae": 1.5965343527161577,
+        "r2": 0.6423466865471483
+      },
+      "test_total_rows": 1056,
+      "test_valid_predictions": 1056,
+      "fallback_count": 0,
+      "fallback_rate_percent": 0.0,
+      "minimum_models_available": 2,
+      "prediction_file": "D:\\Desktop\\Air\\airaware\\ensemble\\weighted_outputs\\6h_tft__gru__random_forest__lightgbm_test_predictions.csv"
+    }
+  ],
+  "provisional_best_by_horizon": {
+    "1h": {
+      "models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest"
+      ],
+      "weights": {
+        "prediction_gru": 0.3303823544614056,
+        "prediction_lightgbm": 0.1689663362657028,
+        "prediction_tft": 0.28005241095446837,
+        "prediction_random_forest": 0.22059889831842333
+      },
+      "oof_metrics": {
+        "n": 1254,
+        "rmse": 2.32408771103018,
+        "mae": 1.6325447057825924,
+        "median_ae": 1.1216840679453117,
+        "r2": 0.8285124722687701
+      },
+      "test_metrics": {
+        "n": 1136,
+        "rmse": 3.9344702467612587,
+        "mae": 2.218447520747585,
+        "median_ae": 1.4150377716766638,
+        "r2": 0.7591087181492585
+      },
+      "fallback_rate_percent": 10.211267605633804
+    },
+    "3h": {
+      "models": [
+        "prediction_tft",
+        "prediction_gru"
+      ],
+      "weights": {
+        "prediction_tft": 1.0,
+        "prediction_gru": 0.0
+      },
+      "oof_metrics": {
+        "n": 1222,
+        "rmse": 2.754318389287619,
+        "mae": 1.889609100635235,
+        "median_ae": 1.3861575508117667,
+        "r2": 0.7080357081111078
+      },
+      "test_metrics": {
+        "n": 1104,
+        "rmse": 4.340062418256875,
+        "mae": 2.4737118093518244,
+        "median_ae": 1.7696771621704102,
+        "r2": 0.7012263565410883
+      },
+      "fallback_rate_percent": 0.0
+    },
+    "6h": {
+      "models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "weights": {
+        "prediction_tft": 0.9482993167677838,
+        "prediction_gru": 2.1155494890623405e-17,
+        "prediction_random_forest": 0.051700683232216216
+      },
+      "oof_metrics": {
+        "n": 1222,
+        "rmse": 2.7987890027124456,
+        "mae": 1.905728108056107,
+        "median_ae": 1.356692957589627,
+        "r2": 0.6587615519703061
+      },
+      "test_metrics": {
+        "n": 1056,
+        "rmse": 4.693012801205592,
+        "mae": 2.6224731223508457,
+        "median_ae": 1.596534366550677,
+        "r2": 0.6423466806184849
+      },
+      "fallback_rate_percent": 0.0
+    }
+  }
+}

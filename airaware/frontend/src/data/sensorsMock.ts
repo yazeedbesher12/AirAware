@@ -1,0 +1,77 @@
+import { SENSOR_LOCATIONS } from './sensorLocations'
+import type { SensorData } from '../types/sensors'
+
+// Development-only readings. Nothing in this file should be presented as live.
+export const mockSensors: SensorData[] = [
+  {
+    id: 1,
+    name: 'Sensor 1',
+    city: 'Tulkarem',
+    site: 'Tulkarem Municipality',
+    coordinates: SENSOR_LOCATIONS[1],
+    coordinatesAreSiteLevel: true,
+    online: true,
+    lastUpdated: '2026-09-02T09:45:00Z',
+    current: { pm25: 15.2, temperature: 31.17, humidity: 45.85 },
+    currentHealth: { epaAqi: null, epaCategory: null, whoStatus: null, highPmRisk: 'Normal' },
+    forecasts: {
+      '1h': { pm25: 16.046, safetyUpper: 19.673, safetyMargin: 3.627, future24hAverage: 17.799, highPmRisk: 'Normal', epaAqi: 67, epaCategory: 'Moderate', whoStatus: 'Above WHO Guideline', whoGuideline: 15, whoRatio: 1.19 },
+      '3h': { pm25: 17.355, safetyUpper: 23.499, safetyMargin: 6.144, future24hAverage: 17.590, highPmRisk: 'Elevated', epaAqi: 67, epaCategory: 'Moderate', whoStatus: 'Above WHO Guideline', whoGuideline: 15, whoRatio: 1.17 },
+      '6h': { pm25: 23.717, safetyUpper: 31.538, safetyMargin: 7.821, future24hAverage: 17.945, highPmRisk: 'High', epaAqi: 67, epaCategory: 'Moderate', whoStatus: 'Above WHO Guideline', whoGuideline: 15, whoRatio: 1.20 },
+    },
+  },
+  {
+    id: 2,
+    name: 'Sensor 2',
+    city: 'Nablus',
+    site: 'ANNU New Campus',
+    siteFullName: 'An-Najah National University - New Campus',
+    coordinates: SENSOR_LOCATIONS[2],
+    coordinatesAreSiteLevel: true,
+    online: true,
+    lastUpdated: '2026-09-02T09:43:00Z',
+    current: { pm25: 28.4, temperature: 29.8, humidity: 52.1 },
+    currentHealth: { epaAqi: 84, epaCategory: 'Moderate', whoStatus: 'Above WHO Guideline', highPmRisk: 'Elevated' },
+    forecasts: {
+      '1h': { pm25: 30.1, safetyUpper: 35.4, safetyMargin: 5.3, future24hAverage: 26.8, highPmRisk: 'Elevated', epaAqi: 89, epaCategory: 'Moderate', whoStatus: 'Above WHO Guideline', whoGuideline: 15, whoRatio: 1.79 },
+      '3h': { pm25: 34.8, safetyUpper: 42.2, safetyMargin: 7.4, future24hAverage: 28.3, highPmRisk: 'High', epaAqi: 99, epaCategory: 'Moderate', whoStatus: 'Above WHO Guideline', whoGuideline: 15, whoRatio: 1.89 },
+      '6h': { pm25: 29.3, safetyUpper: 38.0, safetyMargin: 8.7, future24hAverage: 29.1, highPmRisk: 'High', epaAqi: 88, epaCategory: 'Moderate', whoStatus: 'Above WHO Guideline', whoGuideline: 15, whoRatio: 1.94 },
+    },
+  },
+  {
+    id: 4,
+    name: 'Sensor 4',
+    city: 'Nablus',
+    site: 'ANNU Old Campus',
+    siteFullName: 'An-Najah National University - Old Campus',
+    coordinates: SENSOR_LOCATIONS[4],
+    coordinatesAreSiteLevel: true,
+    online: true,
+    lastUpdated: '2026-09-02T09:47:00Z',
+    current: { pm25: 9.7, temperature: 30.4, humidity: 48.6 },
+    currentHealth: { epaAqi: 40, epaCategory: 'Good', whoStatus: 'Within WHO Guideline', highPmRisk: 'Normal' },
+    forecasts: {
+      '1h': { pm25: 11.2, safetyUpper: 14.6, safetyMargin: 3.4, future24hAverage: 12.8, highPmRisk: 'Normal', epaAqi: 47, epaCategory: 'Good', whoStatus: 'Within WHO Guideline', whoGuideline: 15, whoRatio: 0.85 },
+      '3h': { pm25: 13.6, safetyUpper: 18.2, safetyMargin: 4.6, future24hAverage: 14.4, highPmRisk: 'Normal', epaAqi: 54, epaCategory: 'Moderate', whoStatus: 'Within WHO Guideline', whoGuideline: 15, whoRatio: 0.96 },
+      '6h': { pm25: 18.5, safetyUpper: 25.1, safetyMargin: 6.6, future24hAverage: 16.2, highPmRisk: 'Elevated', epaAqi: 64, epaCategory: 'Moderate', whoStatus: 'Above WHO Guideline', whoGuideline: 15, whoRatio: 1.08 },
+    },
+  },
+  {
+    id: 5,
+    name: 'Sensor 5',
+    city: 'Nablus',
+    site: 'Hisham Hijjawi College of Technology',
+    siteFullName: 'Hisham Hijjawi College of Technology',
+    coordinates: SENSOR_LOCATIONS[5],
+    coordinatesAreSiteLevel: true,
+    online: false,
+    lastUpdated: '2026-09-02T08:20:00Z',
+    current: { pm25: 21.8, temperature: 28.9, humidity: 55.4 },
+    currentHealth: { epaAqi: 71, epaCategory: 'Moderate', whoStatus: 'Above WHO Guideline', highPmRisk: 'Normal' },
+    forecasts: {
+      '1h': { pm25: 22.7, safetyUpper: 28.9, safetyMargin: 6.2, future24hAverage: 20.4, highPmRisk: 'Normal', epaAqi: 73, epaCategory: 'Moderate', whoStatus: 'Above WHO Guideline', whoGuideline: 15, whoRatio: 1.36 },
+      '3h': { pm25: 25.9, safetyUpper: 33.8, safetyMargin: 7.9, future24hAverage: 22.1, highPmRisk: 'Elevated', epaAqi: 79, epaCategory: 'Moderate', whoStatus: 'Above WHO Guideline', whoGuideline: 15, whoRatio: 1.47 },
+      '6h': { pm25: 31.6, safetyUpper: 41.7, safetyMargin: 10.1, future24hAverage: 24.7, highPmRisk: 'High', epaAqi: 92, epaCategory: 'Moderate', whoStatus: 'Above WHO Guideline', whoGuideline: 15, whoRatio: 1.65 },
+    },
+  },
+]

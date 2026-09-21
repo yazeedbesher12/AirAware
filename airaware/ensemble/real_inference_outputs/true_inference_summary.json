@@ -1,0 +1,36 @@
+{
+  "project": "AirAware",
+  "phase": "Step 5A-2 True Local Inference",
+  "engineered_dataset": "D:\\Desktop\\Air\\airaware\\backend\\outputs\\AirAware_ML_Features.csv",
+  "lightgbm_1h": {
+    "horizon": "1h",
+    "rows": 1136,
+    "mean_absolute_difference": 7.44318534819119e-16,
+    "max_absolute_difference": 7.105427357601002e-15,
+    "mean_signed_difference": -1.563694400880502e-16,
+    "within_1e_6_fraction": 1.0,
+    "within_1e_4_fraction": 1.0,
+    "within_1e_2_fraction": 1.0
+  },
+  "lightgbm_6h": {
+    "horizon": "6h",
+    "rows": 1056,
+    "mean_absolute_difference": 6.139869757396699e-16,
+    "max_absolute_difference": 7.105427357601002e-15,
+    "mean_signed_difference": -1.799907024771087e-16,
+    "within_1e_6_fraction": 1.0,
+    "within_1e_4_fraction": 1.0,
+    "within_1e_2_fraction": 1.0
+  },
+  "tft_3h": {
+    "status": "missing_dataset_columns",
+    "missing_columns": [
+      "sensor_key",
+      "series_id",
+      "target_pm25_3h",
+      "target_pm25_who_24h_avg_3h",
+      "tft_time_idx"
+    ]
+  },
+  "important_note": "This step reloads the actual saved model artifacts. LightGBM validation compares fresh model.predict() outputs against previously saved TEST predictions."
+}

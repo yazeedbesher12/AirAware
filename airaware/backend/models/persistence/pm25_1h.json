@@ -1,0 +1,3 @@
+{
+  "rule": "prediction(t+h)=latest valid value at t"
+}

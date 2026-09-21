@@ -34,6 +34,8 @@ type Props = {
 }
 
 export default function Chart({ data, layout, className = '' }: Props) {
+  const chartHeight = typeof layout?.height === 'number' ? layout.height : 340
+
   return (
     <ChartBoundary>
       <Plot
@@ -55,7 +57,7 @@ export default function Chart({ data, layout, className = '' }: Props) {
         config={{ responsive: true, displaylogo: false, modeBarButtonsToRemove: ['lasso2d', 'select2d'] }}
         useResizeHandler
         className={`plot ${className}`}
-        style={{ width: '100%', height: '100%' }}
+        style={{ width: '100%', height: `${chartHeight}px` }}
       />
     </ChartBoundary>
   )

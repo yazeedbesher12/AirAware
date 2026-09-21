@@ -2,11 +2,13 @@ import { useEffect, useMemo, useState } from 'react'
 import {
   Activity, AlertTriangle, BarChart3, CalendarRange, ChevronRight, CircleDot,
   BrainCircuit, CloudSun, Database, Download, FileText, FlaskConical, Gauge, HeartPulse, MapPin, Menu, RefreshCw,
-  Route, Search, ShieldCheck, SlidersHorizontal, TimerOff, Waves, X,
+  Route, Search, ShieldCheck, SlidersHorizontal, TimerOff, Trophy, Waves, X,
 } from 'lucide-react'
 import Chart from './components/Chart'
+import AirQualityMap from './components/map/AirQualityMap'
 import AdvancedAnalysis from './pages/AdvancedAnalysis'
 import Phase3Page from './pages/Phase3'
+import ModelBenchmarking from './pages/ModelBenchmarking'
 import { api, downloadUrl, query, type Filters } from './services/api'
 
 type AnyRow = Record<string, any>
@@ -28,6 +30,7 @@ const PAGE_META: Record<string, [string, string]> = {
   features: ['Feature Engineering', 'Evidence-driven lags, rolling context, quality features, and leakage controls'],
   who: ['WHO Health Analysis', 'Averaging-period health references with strict unit and coverage validation'],
   forecast: ['Forecast Dataset', 'Multi-horizon targets, event labels, and sample-validity preparation'],
+  models: ['Model Benchmarking', 'Independent model accuracy, errors, and real-time deployment evidence'],
   reports: ['Reports', 'Generated audit, cleaning, quality, and Phase 1 findings'],
 }
 
@@ -81,6 +84,7 @@ function OverviewPage({ overview, availability, sensors }: { overview: Overview;
   const timelines = overview.sensor_timelines.filter(row => selectedIds.has(row.sensor_id))
   const cityCounts = sensors.reduce((acc: Record<string, number>, row) => ({ ...acc, [row.city]: (acc[row.city] || 0) + row.readings }), {})
   return <div className="page-stack">
+    <AirQualityMap />
     <div className="metrics-grid">
       <Metric icon={<Database />} label="Total readings" value={fmt(overview.row_count, 0)} sub="source observations" />
       <Metric icon={<MapPin />} label="Coverage" value={`${overview.city_count} cities`} sub={`${overview.sensor_count} independent sensors`} tone="blue" />
@@ -250,6 +254,10 @@ function ReportsPage({ reports, overview }: { reports: AnyRow[]; overview: Overv
     '02_cleaning_report.md': 'Conservative cleaning decisions and complete accounting of changes.',
     '03_sensor_quality_report.md': 'Per-sensor availability, gaps, pattern flags, and descriptive status.',
     '04_phase1_findings.md': 'Evidence-led findings and concerns to resolve before Advanced EDA.',
+    '11_model_training_report.md': 'Chronological training setup, preprocessing, model status, and reproducibility notes.',
+    '12_model_evaluation_report.md': 'Performance by horizon, baseline comparison, and pollution-event evaluation.',
+    '13_ensemble_readiness_report.md': 'Accuracy and diversity evidence for later ensemble review; no combination trained.',
+    '14_realtime_model_readiness_report.md': 'Streaming replay, reload checks, inference latency, model size, and history requirements.',
   }
   return <div className="page-stack">
     <div className="report-hero"><div><span className="eyebrow">Local evidence pack</span><h2>Phase 1 reports are ready</h2><p>Each report is generated directly from the pipeline results. The original CSV checksum remains <code>{overview.source_sha256?.slice(0, 16)}…</code>.</p></div><a className="button primary" href={downloadUrl('/api/download/cleaned')}><Download size={17} /> Download cleaned CSV</a></div>
@@ -320,7 +328,7 @@ export default function App() {
   const nav = [
     ['overview', Activity, 'Overview'], ['quality', ShieldCheck, 'Data Quality'], ['explorer', Search, 'Sensor Explorer'],
     ['gaps', TimerOff, 'Time Gaps'], ['comparison', Waves, 'Sensor Comparison'], ['aqi', Gauge, 'AQI Investigation'], ['advanced', BrainCircuit, 'Advanced Analysis'],
-    ['features', FlaskConical, 'Feature Engineering'], ['who', HeartPulse, 'WHO Health Analysis'], ['forecast', Route, 'Forecast Dataset'], ['reports', FileText, 'Reports'],
+    ['features', FlaskConical, 'Feature Engineering'], ['who', HeartPulse, 'WHO Health Analysis'], ['forecast', Route, 'Forecast Dataset'], ['models', Trophy, 'Model Benchmarking'], ['reports', FileText, 'Reports'],
   ] as const
   const comparisonFeature = ['pm25', 'temperature', 'humidity', 'aqi'].includes(filters.feature) ? filters.feature : 'pm25'
   const visibleAvailability = availability.filter(row => (!filters.city || row.city === filters.city) && (!filters.sensorId || String(row.sensor_id) === filters.sensorId))
@@ -328,13 +336,13 @@ export default function App() {
   return <div className="app-shell">
     <aside className={menuOpen ? 'sidebar open' : 'sidebar'}>
       <div className="brand"><div className="brand-mark"><Waves /></div><div><strong>AirAware</strong><span>Sensor intelligence</span></div><button className="close-menu" onClick={() => setMenuOpen(false)}><X /></button></div>
-      <div className="local-badge"><CircleDot /> Local workspace<span>Phase 3</span></div>
+      <div className="local-badge"><CircleDot /> Local workspace<span>Phase 4A</span></div>
       <nav>{nav.map(([key, Icon, text]) => <button key={key} className={page === key ? 'active' : ''} onClick={() => { setPage(key); setMenuOpen(false) }}><Icon /><span>{text}</span>{page === key && <ChevronRight />}</button>)}</nav>
       <div className="sidebar-foot"><div><span>Data window</span><strong>{fmt(overview.observation_duration_hours / 24, 1)} days</strong></div><div><span>Last reading</span><strong>{new Date(overview.latest_timestamp).toLocaleDateString(undefined, { month: 'short', day: 'numeric', timeZone: 'UTC' })}</strong></div><small>All processing stays on this machine.</small></div>
     </aside>
     {menuOpen && <button className="scrim" onClick={() => setMenuOpen(false)} aria-label="Close navigation" />}
     <main>
-      <header><button className="menu-button" onClick={() => setMenuOpen(true)}><Menu /></button><div><span className="breadcrumb">AirAware / Local Phases 1-3</span><h1>{PAGE_META[page][0]}</h1><p>{PAGE_META[page][1]}</p></div><div className="header-status"><span><i /> API connected</span><small>Local · UTC data</small></div></header>
+      <header><button className="menu-button" onClick={() => setMenuOpen(true)}><Menu /></button><div><span className="breadcrumb">AirAware / Local Phases 1-4A</span><h1>{PAGE_META[page][0]}</h1><p>{PAGE_META[page][1]}</p></div><div className="header-status"><span><i /> API connected</span><small>Local · UTC data</small></div></header>
       <GlobalFilters filters={filters} setFilters={setFilters} sensors={sensors} />
       <div className="content">
         {page === 'overview' && <OverviewPage overview={overview} availability={visibleAvailability} sensors={sensors.filter(s => (!filters.city || s.city === filters.city) && (!filters.sensorId || String(s.sensor_id) === filters.sensorId))} />}
@@ -347,6 +355,7 @@ export default function App() {
         {page === 'features' && <Phase3Page view="features" filters={filters} />}
         {page === 'who' && <Phase3Page view="who" filters={filters} />}
         {page === 'forecast' && <Phase3Page view="forecast" filters={filters} />}
+        {page === 'models' && <ModelBenchmarking filters={filters} />}
         {page === 'reports' && <ReportsPage reports={reports} overview={overview} />}
       </div>
     </main>

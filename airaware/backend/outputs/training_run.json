@@ -1,0 +1,43 @@
+{
+    "project":  "AirAware",
+    "phase":  "4A",
+    "generated_at":  "2026-08-30T08:31:40.5486550Z",
+    "dataset_path":  "outputs\\AirAware_ML_Features.csv",
+    "feature_dataset_version":  "Phase 3 / 3.0.0",
+    "who_config_version":  "WHO 2021 / 2021.1",
+    "train_period":  "2026-08-06 through 2026-08-15",
+    "validation_period":  "2026-08-16 through 2026-08-19",
+    "test_period":  "2026-08-20 through 2026-08-23",
+    "split_strategy":  "Chronological; two expanding-origin validation folds; no shuffle",
+    "random_seeds":  {
+                         "global":  42
+                     },
+    "selected_models":  [
+                            "persistence",
+                            "random_forest",
+                            "xgboost",
+                            "lightgbm",
+                            "prophet",
+                            "lstm",
+                            "gru",
+                            "tft"
+                        ],
+    "python":  "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+    "platform":  "Windows-11-10.0.26200-SP0",
+    "processor":  "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+    "device":  {
+                   "cuda_available":  false,
+                   "device":  "CPU"
+               },
+    "library_versions":  {
+                             "pandas":  "3.0.5",
+                             "numpy":  "2.5.2",
+                             "scikit-learn":  "1.9.0",
+                             "xgboost":  "3.4.1",
+                             "lightgbm":  "4.7.0",
+                             "prophet":  "1.4.0",
+                             "torch":  "2.13.0",
+                             "lightning":  "2.6.5",
+                             "pytorch-forecasting":  "1.8.0"
+                         }
+}

@@ -1,0 +1,30 @@
+{
+  "project": "AirAware",
+  "phase": "Step 5A-1 Local Replay",
+  "mode": "precomputed_prediction_replay",
+  "important_note": "This replay validates runtime orchestration using saved TEST predictions. It does not yet execute LightGBM or TFT model files.",
+  "final_models": {
+    "1h": "lightgbm",
+    "3h": "tft",
+    "6h": "lightgbm"
+  },
+  "unique_readings": 1140,
+  "history_size": 96,
+  "forecast_counts": {
+    "1h": 1136,
+    "3h": 1104,
+    "6h": 1056
+  },
+  "missing_counts": {
+    "1h": 4,
+    "3h": 36,
+    "6h": 84
+  },
+  "readings_per_sensor": {
+    "1": 285,
+    "2": 285,
+    "4": 285,
+    "5": 285
+  },
+  "output_file": "D:\\Desktop\\Air\\airaware\\ensemble\\realtime_replay_outputs\\local_realtime_forecasts.csv"
+}

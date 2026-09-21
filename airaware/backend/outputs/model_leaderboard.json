@@ -1,0 +1,638 @@
+{
+  "1h": {
+    "rmse": [
+      {
+        "rank": 1,
+        "model": "gru",
+        "rmse": 3.436689124259126
+      },
+      {
+        "rank": 2,
+        "model": "lstm",
+        "rmse": 3.5479148691284363
+      },
+      {
+        "rank": 3,
+        "model": "lightgbm",
+        "rmse": 4.118169458554251
+      },
+      {
+        "rank": 4,
+        "model": "tft",
+        "rmse": 4.227807375636337
+      },
+      {
+        "rank": 5,
+        "model": "xgboost",
+        "rmse": 4.363273403625348
+      },
+      {
+        "rank": 6,
+        "model": "random_forest",
+        "rmse": 4.36933141710931
+      },
+      {
+        "rank": 7,
+        "model": "persistence",
+        "rmse": 5.21470740573858
+      },
+      {
+        "rank": 8,
+        "model": "prophet",
+        "rmse": 14.36951459171583
+      }
+    ],
+    "mae": [
+      {
+        "rank": 1,
+        "model": "lightgbm",
+        "mae": 2.336255881150798
+      },
+      {
+        "rank": 2,
+        "model": "tft",
+        "mae": 2.338501249870784
+      },
+      {
+        "rank": 3,
+        "model": "gru",
+        "mae": 2.346360632204542
+      },
+      {
+        "rank": 4,
+        "model": "lstm",
+        "mae": 2.391763977125579
+      },
+      {
+        "rank": 5,
+        "model": "xgboost",
+        "mae": 2.435751657049421
+      },
+      {
+        "rank": 6,
+        "model": "random_forest",
+        "mae": 2.5781693734503026
+      },
+      {
+        "rank": 7,
+        "model": "persistence",
+        "mae": 2.739779929577465
+      },
+      {
+        "rank": 8,
+        "model": "prophet",
+        "mae": 12.520436550371551
+      }
+    ],
+    "r2": [
+      {
+        "rank": 1,
+        "model": "gru",
+        "r2": 0.780581797517813
+      },
+      {
+        "rank": 2,
+        "model": "lstm",
+        "r2": 0.7661493739366043
+      },
+      {
+        "rank": 3,
+        "model": "lightgbm",
+        "r2": 0.7360893121497698
+      },
+      {
+        "rank": 4,
+        "model": "tft",
+        "r2": 0.7218500822225848
+      },
+      {
+        "rank": 5,
+        "model": "xgboost",
+        "r2": 0.7037397360673479
+      },
+      {
+        "rank": 6,
+        "model": "random_forest",
+        "r2": 0.7029165034017559
+      },
+      {
+        "rank": 7,
+        "model": "persistence",
+        "r2": 0.5768362641232354
+      },
+      {
+        "rank": 8,
+        "model": "prophet",
+        "r2": -2.213162924975367
+      }
+    ],
+    "event_recall": [
+      {
+        "rank": 1,
+        "model": "lstm",
+        "event_recall": 1.0
+      },
+      {
+        "rank": 2,
+        "model": "random_forest",
+        "event_recall": 0.9988452655889145
+      },
+      {
+        "rank": 3,
+        "model": "lightgbm",
+        "event_recall": 0.9988452655889145
+      },
+      {
+        "rank": 4,
+        "model": "xgboost",
+        "event_recall": 0.9976905311778291
+      },
+      {
+        "rank": 5,
+        "model": "tft",
+        "event_recall": 0.9872979214780601
+      },
+      {
+        "rank": 6,
+        "model": "persistence",
+        "event_recall": 0.9815242494226328
+      },
+      {
+        "rank": 7,
+        "model": "gru",
+        "event_recall": 0.9751958224543081
+      },
+      {
+        "rank": 8,
+        "model": "prophet",
+        "event_recall": 0.3856812933025404
+      }
+    ],
+    "event_f1": [
+      {
+        "rank": 1,
+        "model": "lightgbm",
+        "event_f1": 0.998268897864974
+      },
+      {
+        "rank": 2,
+        "model": "xgboost",
+        "event_f1": 0.9965397923875432
+      },
+      {
+        "rank": 3,
+        "model": "random_forest",
+        "event_f1": 0.9914040114613181
+      },
+      {
+        "rank": 4,
+        "model": "persistence",
+        "event_f1": 0.9906759906759907
+      },
+      {
+        "rank": 5,
+        "model": "tft",
+        "event_f1": 0.9890109890109889
+      },
+      {
+        "rank": 6,
+        "model": "gru",
+        "event_f1": 0.9758327890267798
+      },
+      {
+        "rank": 7,
+        "model": "lstm",
+        "event_f1": 0.9296116504854368
+      },
+      {
+        "rank": 8,
+        "model": "prophet",
+        "event_f1": 0.5022556390977444
+      }
+    ]
+  },
+  "3h": {
+    "rmse": [
+      {
+        "rank": 1,
+        "model": "tft",
+        "rmse": 4.340062418256875
+      },
+      {
+        "rank": 2,
+        "model": "lightgbm",
+        "rmse": 4.571093839215579
+      },
+      {
+        "rank": 3,
+        "model": "xgboost",
+        "rmse": 4.594796225452568
+      },
+      {
+        "rank": 4,
+        "model": "lstm",
+        "rmse": 4.992133473585077
+      },
+      {
+        "rank": 5,
+        "model": "random_forest",
+        "rmse": 5.100163796702854
+      },
+      {
+        "rank": 6,
+        "model": "gru",
+        "rmse": 5.132204699091061
+      },
+      {
+        "rank": 7,
+        "model": "persistence",
+        "rmse": 7.085733191072923
+      },
+      {
+        "rank": 8,
+        "model": "prophet",
+        "rmse": 14.573091597470828
+      }
+    ],
+    "mae": [
+      {
+        "rank": 1,
+        "model": "tft",
+        "mae": 2.4737118093518244
+      },
+      {
+        "rank": 2,
+        "model": "lightgbm",
+        "mae": 3.12867269871777
+      },
+      {
+        "rank": 3,
+        "model": "xgboost",
+        "mae": 3.1342573469963626
+      },
+      {
+        "rank": 4,
+        "model": "lstm",
+        "mae": 3.444952369793689
+      },
+      {
+        "rank": 5,
+        "model": "random_forest",
+        "mae": 3.684991312629392
+      },
+      {
+        "rank": 6,
+        "model": "gru",
+        "mae": 3.782804630630685
+      },
+      {
+        "rank": 7,
+        "model": "persistence",
+        "mae": 4.758061594202898
+      },
+      {
+        "rank": 8,
+        "model": "prophet",
+        "mae": 12.849631977131734
+      }
+    ],
+    "r2": [
+      {
+        "rank": 1,
+        "model": "tft",
+        "r2": 0.7012263565410883
+      },
+      {
+        "rank": 2,
+        "model": "lightgbm",
+        "r2": 0.6685709240086308
+      },
+      {
+        "rank": 3,
+        "model": "xgboost",
+        "r2": 0.665124909933432
+      },
+      {
+        "rank": 4,
+        "model": "random_forest",
+        "r2": 0.5874101114639425
+      },
+      {
+        "rank": 5,
+        "model": "lstm",
+        "r2": 0.5397261958767618
+      },
+      {
+        "rank": 6,
+        "model": "gru",
+        "r2": 0.5135347512779025
+      },
+      {
+        "rank": 7,
+        "model": "persistence",
+        "r2": 0.20362077418004965
+      },
+      {
+        "rank": 8,
+        "model": "prophet",
+        "r2": -2.3686331753264236
+      }
+    ],
+    "event_recall": [
+      {
+        "rank": 1,
+        "model": "random_forest",
+        "event_recall": 1.0
+      },
+      {
+        "rank": 2,
+        "model": "gru",
+        "event_recall": 1.0
+      },
+      {
+        "rank": 3,
+        "model": "lstm",
+        "event_recall": 0.9986376021798365
+      },
+      {
+        "rank": 4,
+        "model": "tft",
+        "event_recall": 0.9861431870669746
+      },
+      {
+        "rank": 5,
+        "model": "lightgbm",
+        "event_recall": 0.9849884526558892
+      },
+      {
+        "rank": 6,
+        "model": "xgboost",
+        "event_recall": 0.9838337182448037
+      },
+      {
+        "rank": 7,
+        "model": "persistence",
+        "event_recall": 0.9445727482678984
+      },
+      {
+        "rank": 8,
+        "model": "prophet",
+        "event_recall": 0.49653579676674364
+      }
+    ],
+    "event_f1": [
+      {
+        "rank": 1,
+        "model": "tft",
+        "event_f1": 0.9924462521789656
+      },
+      {
+        "rank": 2,
+        "model": "xgboost",
+        "event_f1": 0.9838337182448037
+      },
+      {
+        "rank": 3,
+        "model": "lightgbm",
+        "event_f1": 0.98328530259366
+      },
+      {
+        "rank": 4,
+        "model": "persistence",
+        "event_f1": 0.9714964370546318
+      },
+      {
+        "rank": 5,
+        "model": "gru",
+        "event_f1": 0.963887065003283
+      },
+      {
+        "rank": 6,
+        "model": "random_forest",
+        "event_f1": 0.9291845493562231
+      },
+      {
+        "rank": 7,
+        "model": "lstm",
+        "event_f1": 0.917971195992486
+      },
+      {
+        "rank": 8,
+        "model": "prophet",
+        "event_f1": 0.6082036775106082
+      }
+    ]
+  },
+  "6h": {
+    "rmse": [
+      {
+        "rank": 1,
+        "model": "lstm",
+        "rmse": 4.702713882945253
+      },
+      {
+        "rank": 2,
+        "model": "tft",
+        "rmse": 4.808986555306451
+      },
+      {
+        "rank": 3,
+        "model": "xgboost",
+        "rmse": 4.825359208341784
+      },
+      {
+        "rank": 4,
+        "model": "lightgbm",
+        "rmse": 4.847963300569058
+      },
+      {
+        "rank": 5,
+        "model": "random_forest",
+        "rmse": 5.094556766933756
+      },
+      {
+        "rank": 6,
+        "model": "gru",
+        "rmse": 5.455412047146243
+      },
+      {
+        "rank": 7,
+        "model": "persistence",
+        "rmse": 9.627082104588329
+      },
+      {
+        "rank": 8,
+        "model": "prophet",
+        "rmse": 14.689470628779436
+      }
+    ],
+    "mae": [
+      {
+        "rank": 1,
+        "model": "tft",
+        "mae": 2.677732566035155
+      },
+      {
+        "rank": 2,
+        "model": "xgboost",
+        "mae": 3.1984617880618935
+      },
+      {
+        "rank": 3,
+        "model": "lstm",
+        "mae": 3.201809113834398
+      },
+      {
+        "rank": 4,
+        "model": "lightgbm",
+        "mae": 3.2154242075025223
+      },
+      {
+        "rank": 5,
+        "model": "random_forest",
+        "mae": 3.4184454174991896
+      },
+      {
+        "rank": 6,
+        "model": "gru",
+        "mae": 3.893626533289838
+      },
+      {
+        "rank": 7,
+        "model": "persistence",
+        "mae": 7.181780303030303
+      },
+      {
+        "rank": 8,
+        "model": "prophet",
+        "mae": 13.215459978464175
+      }
+    ],
+    "r2": [
+      {
+        "rank": 1,
+        "model": "tft",
+        "r2": 0.6244516067811483
+      },
+      {
+        "rank": 2,
+        "model": "xgboost",
+        "r2": 0.6218900731079078
+      },
+      {
+        "rank": 3,
+        "model": "lightgbm",
+        "r2": 0.6183393114598075
+      },
+      {
+        "rank": 4,
+        "model": "random_forest",
+        "r2": 0.5785252186817703
+      },
+      {
+        "rank": 5,
+        "model": "lstm",
+        "r2": 0.5530264662550692
+      },
+      {
+        "rank": 6,
+        "model": "gru",
+        "r2": 0.3984942104745336
+      },
+      {
+        "rank": 7,
+        "model": "persistence",
+        "r2": -0.5050403165129864
+      },
+      {
+        "rank": 8,
+        "model": "prophet",
+        "r2": -2.504056278999014
+      }
+    ],
+    "event_recall": [
+      {
+        "rank": 1,
+        "model": "random_forest",
+        "event_recall": 1.0
+      },
+      {
+        "rank": 2,
+        "model": "lstm",
+        "event_recall": 0.9918256130790191
+      },
+      {
+        "rank": 3,
+        "model": "gru",
+        "event_recall": 0.9904632152588556
+      },
+      {
+        "rank": 4,
+        "model": "tft",
+        "event_recall": 0.9884526558891455
+      },
+      {
+        "rank": 5,
+        "model": "xgboost",
+        "event_recall": 0.9815242494226328
+      },
+      {
+        "rank": 6,
+        "model": "lightgbm",
+        "event_recall": 0.9676674364896074
+      },
+      {
+        "rank": 7,
+        "model": "persistence",
+        "event_recall": 0.8891454965357968
+      },
+      {
+        "rank": 8,
+        "model": "prophet",
+        "event_recall": 0.33602771362586603
+      }
+    ],
+    "event_f1": [
+      {
+        "rank": 1,
+        "model": "tft",
+        "event_f1": 0.9941927990708479
+      },
+      {
+        "rank": 2,
+        "model": "xgboost",
+        "event_f1": 0.9849362688296639
+      },
+      {
+        "rank": 3,
+        "model": "gru",
+        "event_f1": 0.9804450438300741
+      },
+      {
+        "rank": 4,
+        "model": "lightgbm",
+        "event_f1": 0.9795441262419639
+      },
+      {
+        "rank": 5,
+        "model": "lstm",
+        "event_f1": 0.9528795811518325
+      },
+      {
+        "rank": 6,
+        "model": "persistence",
+        "event_f1": 0.941320293398533
+      },
+      {
+        "rank": 7,
+        "model": "random_forest",
+        "event_f1": 0.9198088157195965
+      },
+      {
+        "rank": 8,
+        "model": "prophet",
+        "event_f1": 0.4735557363710333
+      }
+    ]
+  }
+}

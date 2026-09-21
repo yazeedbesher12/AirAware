@@ -122,3 +122,28 @@ They are stored in `backend/outputs/` and exposed through `/api/analysis/downloa
 - `forecast_dataset_summary.csv`
 
 These are stored in `backend/outputs/` and exposed through the `/api/ml/*` and `/api/who/*` routes. The WHO reference configuration cites the official [WHO 2021 global air quality guidelines](https://www.who.int/publications/i/item/9789240034228).
+
+## Phase 4A individual model benchmarking
+
+Train one saved model family without touching the test split during selection:
+
+```powershell
+cd backend
+.venv\Scripts\python.exe train_models.py --model xgboost
+```
+
+Optional filters are `--horizon 1h|3h|6h`, `--sensor SENSOR_ID`, and `--target pm25`. Run every independent benchmark with:
+
+```powershell
+.venv\Scripts\python.exe train_models.py --model all
+```
+
+Run the no-retraining, reading-by-reading deployment replay after training:
+
+```powershell
+.venv\Scripts\python.exe run_realtime_replay.py
+```
+
+Models are stored under `backend/models/<model>/`; test and time-safe expanding-origin validation predictions are stored under `backend/outputs/predictions/<model>/`. Central evidence files include `model_results.json`, `model_results_detailed.json`, `model_leaderboard.json`, `training_run.json`, `stacking_oof_predictions.csv`, `test_predictions_all_models.csv`, `realtime_replay_results.json`, and `realtime_replay_predictions.csv`.
+
+Phase 4A reports are `11_model_training_report.md`, `12_model_evaluation_report.md`, `13_ensemble_readiness_report.md`, and `14_realtime_model_readiness_report.md`. No weighted ensemble, stacking meta-model, or combined forecast is trained in this phase.

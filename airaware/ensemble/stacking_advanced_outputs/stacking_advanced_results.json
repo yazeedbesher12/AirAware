@@ -1,0 +1,2084 @@
+{
+  "project": "AirAware",
+  "phase": "Advanced Stacking",
+  "selection_rule": "Advanced stacking model chosen using chronological meta-validation within OOF only. Test is evaluated after freezing the winner.",
+  "xgboost_available": true,
+  "lightgbm_available": true,
+  "candidate_results": [
+    {
+      "meta_model": "linear_regression",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.251076648166959,
+        "mae": 1.715573630860572,
+        "median_ae": 1.33968155977717,
+        "r2": 0.74674711556732
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "nonnegative_linear",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.251076648166959,
+        "mae": 1.715573630860572,
+        "median_ae": 1.3396815597771727,
+        "r2": 0.74674711556732
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "ridge_0.1",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.2510765112921023,
+        "mae": 1.71557407688489,
+        "median_ae": 1.3396885782972827,
+        "r2": 0.7467471463649841
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "ridge_1.0",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.251075287568357,
+        "mae": 1.7155781001421608,
+        "median_ae": 1.3397517460193091,
+        "r2": 0.7467474217100866
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "ridge_10.0",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.2510638523639335,
+        "mae": 1.7156192220189206,
+        "median_ae": 1.3403835255046648,
+        "r2": 0.7467499946916868
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "elasticnet",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.2512889612428975,
+        "mae": 1.7159646045870467,
+        "median_ae": 1.341170486406627,
+        "r2": 0.7466993415969685
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "gradient_boosting",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.269361293195118,
+        "mae": 1.750246733322274,
+        "median_ae": 1.3957949152585511,
+        "r2": 0.7426162517303943
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "hist_gradient_boosting",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.3502385171443616,
+        "mae": 1.800985224246454,
+        "median_ae": 1.427863618476036,
+        "r2": 0.7239436675617236
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "random_forest_meta",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.270337156295124,
+        "mae": 1.7657494308800044,
+        "median_ae": 1.3916770947441197,
+        "r2": 0.742394845551352
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "xgboost_meta",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.277401988114907,
+        "mae": 1.7430589242194108,
+        "median_ae": 1.4173691749572752,
+        "r2": 0.7407891204053608
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "lightgbm_meta",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.285570487493688,
+        "mae": 1.7543058513203396,
+        "median_ae": 1.3773530839607124,
+        "r2": 0.7389263301202602
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "linear_regression",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.178611130919788,
+        "mae": 1.6067742489533914,
+        "median_ae": 1.2193748975916163,
+        "r2": 0.7627898482867809
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "nonnegative_linear",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.1786111309197898,
+        "mae": 1.6067742489533938,
+        "median_ae": 1.219374897591618,
+        "r2": 0.7627898482867805
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "ridge_0.1",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.178610961988106,
+        "mae": 1.606774947090806,
+        "median_ae": 1.2193615035217258,
+        "r2": 0.7627898850738034
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "ridge_1.0",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.178609445269171,
+        "mae": 1.6067812279376263,
+        "median_ae": 1.219241028917839,
+        "r2": 0.7627902153585159
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "ridge_10.0",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.17859464082222,
+        "mae": 1.606843809156797,
+        "median_ae": 1.218043366195956,
+        "r2": 0.7627934392018245
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "elasticnet",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.1788498665214724,
+        "mae": 1.6072505052297428,
+        "median_ae": 1.2191058275723163,
+        "r2": 0.7627378577224064
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "gradient_boosting",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.2153482612005866,
+        "mae": 1.6807486471914503,
+        "median_ae": 1.3619132353099843,
+        "r2": 0.7547224202097131
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "hist_gradient_boosting",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.301147898509406,
+        "mae": 1.7639533046780633,
+        "median_ae": 1.378875610284795,
+        "r2": 0.7353554835490499
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "random_forest_meta",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.2003863487292947,
+        "mae": 1.681911776393221,
+        "median_ae": 1.322846922232019,
+        "r2": 0.7580243201516084
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "xgboost_meta",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.199545363245754,
+        "mae": 1.6567408033844775,
+        "median_ae": 1.2982159042358399,
+        "r2": 0.7582092505351896
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "lightgbm_meta",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.2336172603825593,
+        "mae": 1.6986952768210928,
+        "median_ae": 1.2879799380421844,
+        "r2": 0.7506603480755349
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "linear_regression",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.1793397429711243,
+        "mae": 1.6019100129189872,
+        "median_ae": 1.2103372556226635,
+        "r2": 0.7626311572069369
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "nonnegative_linear",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.1786111309197898,
+        "mae": 1.6067742489533938,
+        "median_ae": 1.219374897591618,
+        "r2": 0.7627898482867805
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "ridge_0.1",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.1793393160824226,
+        "mae": 1.601912489725624,
+        "median_ae": 1.2103534618275784,
+        "r2": 0.7626312501984656
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "ridge_1.0",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.1793354849072974,
+        "mae": 1.6019347555359689,
+        "median_ae": 1.2104990950077692,
+        "r2": 0.7626320847637337
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "ridge_10.0",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.1792982198382855,
+        "mae": 1.6021549323360027,
+        "median_ae": 1.2119338038460477,
+        "r2": 0.7626402023355143
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "elasticnet",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.1794130948781802,
+        "mae": 1.6029240248029708,
+        "median_ae": 1.2159221340559228,
+        "r2": 0.7626151782845436
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "gradient_boosting",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.2117516099453978,
+        "mae": 1.6930305683657045,
+        "median_ae": 1.3834657680831537,
+        "r2": 0.755518197393912
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "hist_gradient_boosting",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.2721804733498163,
+        "mae": 1.746486775081896,
+        "median_ae": 1.410960913594109,
+        "r2": 0.7419763696074064
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "random_forest_meta",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.188045168923031,
+        "mae": 1.6779193721612324,
+        "median_ae": 1.2780140167302028,
+        "r2": 0.7607310183897821
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "xgboost_meta",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.190020590705336,
+        "mae": 1.6536447761924404,
+        "median_ae": 1.2789230918884278,
+        "r2": 0.7602987873479756
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "lightgbm_meta",
+      "base_models": [
+        "prediction_gru",
+        "prediction_lightgbm",
+        "prediction_tft",
+        "prediction_random_forest",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1254,
+      "train_rows": 940,
+      "validation_rows": 314,
+      "validation_metrics": {
+        "n": 314,
+        "rmse": 2.2106666777865702,
+        "mae": 1.6703337812189574,
+        "median_ae": 1.32189186068591,
+        "r2": 0.7557579902467828
+      },
+      "horizon": "1h"
+    },
+    {
+      "meta_model": "linear_regression",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.2429106601371647,
+        "mae": 2.067757037696497,
+        "median_ae": 1.576418882688004,
+        "r2": 0.5386046279917442
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "nonnegative_linear",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.3273075914727777,
+        "mae": 2.183778970346715,
+        "median_ae": 1.7098667023133816,
+        "r2": 0.514276442541372
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "ridge_0.1",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.242918486752604,
+        "mae": 2.0677696014013156,
+        "median_ae": 1.5763746636432954,
+        "r2": 0.5386024008761199
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "ridge_1.0",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.242988955574547,
+        "mae": 2.067882640375034,
+        "median_ae": 1.5759767892635579,
+        "r2": 0.5385823482607626
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "ridge_10.0",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.2436965213192837,
+        "mae": 2.0690096382257614,
+        "median_ae": 1.5793766102249656,
+        "r2": 0.5383809791254061
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "elasticnet",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.243881202307948,
+        "mae": 2.0691281120706604,
+        "median_ae": 1.5790725501737137,
+        "r2": 0.538328412750263
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "gradient_boosting",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.648923975386125,
+        "mae": 2.6364496648190445,
+        "median_ae": 2.1065537004639356,
+        "r2": 0.415838547572255
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "hist_gradient_boosting",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.7533447533178967,
+        "mae": 2.6082997141034703,
+        "median_ae": 2.1259697832605013,
+        "r2": 0.3819264200068603
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "random_forest_meta",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.9990385234860617,
+        "mae": 3.08388478322894,
+        "median_ae": 2.7820880154019143,
+        "r2": 0.2983598366990754
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "xgboost_meta",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.633650660098973,
+        "mae": 2.6586181011075287,
+        "median_ae": 2.1463783073425295,
+        "r2": 0.42071856672574925
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "lightgbm_meta",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.658692785713625,
+        "mae": 2.6174103802662,
+        "median_ae": 2.1032776437922482,
+        "r2": 0.4127065551257856
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "linear_regression",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.2230743374412283,
+        "mae": 2.025760398868803,
+        "median_ae": 1.5283447166206727,
+        "r2": 0.5442319157350575
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "nonnegative_linear",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.3273075914727777,
+        "mae": 2.183778970346715,
+        "median_ae": 1.7098667023133816,
+        "r2": 0.514276442541372
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "ridge_0.1",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.2230793823736765,
+        "mae": 2.0257653784538716,
+        "median_ae": 1.528300771059854,
+        "r2": 0.5442304889476142
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "ridge_1.0",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.2231248471311083,
+        "mae": 2.0258101813035547,
+        "median_ae": 1.5279053705582468,
+        "r2": 0.5442176306875748
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "ridge_10.0",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.223585422627111,
+        "mae": 2.0262696427123523,
+        "median_ae": 1.5297281025022764,
+        "r2": 0.5440873613375381
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "elasticnet",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.224028938374812,
+        "mae": 2.026719828894834,
+        "median_ae": 1.5325574177375545,
+        "r2": 0.5439618995808788
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "gradient_boosting",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.486813660181086,
+        "mae": 2.4333566528494868,
+        "median_ae": 1.9643075278332889,
+        "r2": 0.4665905040957532
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "hist_gradient_boosting",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.5194874114658035,
+        "mae": 2.466794853854063,
+        "median_ae": 2.0104233170502743,
+        "r2": 0.4565468658937276
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "random_forest_meta",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.8440902255683698,
+        "mae": 2.840166426398261,
+        "median_ae": 2.4120347529187907,
+        "r2": 0.35167852043486003
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "xgboost_meta",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.522832642647195,
+        "mae": 2.508275557748633,
+        "median_ae": 2.0390369224548346,
+        "r2": 0.4555132833632507
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "lightgbm_meta",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.5801045095017083,
+        "mae": 2.558680575221239,
+        "median_ae": 2.022840019130114,
+        "r2": 0.43766557022090813
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "linear_regression",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.217519837092638,
+        "mae": 2.0315097720144863,
+        "median_ae": 1.545096980838891,
+        "r2": 0.5458014622777374
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "nonnegative_linear",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.3273075914727777,
+        "mae": 2.183778970346715,
+        "median_ae": 1.7098667023133816,
+        "r2": 0.514276442541372
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "ridge_0.1",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.217526298656495,
+        "mae": 2.031514427372381,
+        "median_ae": 1.544997059028459,
+        "r2": 0.545799637993226
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "ridge_1.0",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.217584503204701,
+        "mae": 2.0315563462873376,
+        "median_ae": 1.5440980645285558,
+        "r2": 0.5457832050173756
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "ridge_10.0",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.2181714851647807,
+        "mae": 2.031993240177399,
+        "median_ae": 1.5392377831215613,
+        "r2": 0.5456174649202636
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "elasticnet",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.2188608812782276,
+        "mae": 2.0321537769792677,
+        "median_ae": 1.5388884522291155,
+        "r2": 0.5454227685796381
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "gradient_boosting",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.516415568361414,
+        "mae": 2.483836730611595,
+        "median_ae": 2.016518080391039,
+        "r2": 0.4574951143355782
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "hist_gradient_boosting",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.72009831584449,
+        "mae": 2.629177084307478,
+        "median_ae": 2.1515800681786263,
+        "r2": 0.39282748957309865
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "random_forest_meta",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.944418895980514,
+        "mae": 2.987993162541422,
+        "median_ae": 2.6692018925157015,
+        "r2": 0.317395217587926
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "xgboost_meta",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.5745247661040422,
+        "mae": 2.563419432421915,
+        "median_ae": 2.09939775466919,
+        "r2": 0.4394170479830797
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "lightgbm_meta",
+      "base_models": [
+        "prediction_tft",
+        "prediction_lightgbm",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.608405308931889,
+        "mae": 2.58071976554149,
+        "median_ae": 1.9703036933814557,
+        "r2": 0.4287398999525863
+      },
+      "horizon": "3h"
+    },
+    {
+      "meta_model": "linear_regression",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.789705470670802,
+        "mae": 2.460374838441228,
+        "median_ae": 1.7442856527118051,
+        "r2": 0.21252590242111413
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "nonnegative_linear",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.7255860114975916,
+        "mae": 2.3929375576142133,
+        "median_ae": 1.6637907135111538,
+        "r2": 0.23894761963659306
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "ridge_0.1",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.7897082807941325,
+        "mae": 2.4603878136196893,
+        "median_ae": 1.7442698686129097,
+        "r2": 0.21252473457302068
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "ridge_1.0",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.7897335879894416,
+        "mae": 2.460504580349376,
+        "median_ae": 1.7441278325696423,
+        "r2": 0.21251421721632324
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "ridge_10.0",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.7899882476117748,
+        "mae": 2.461671270058306,
+        "median_ae": 1.7451792610647132,
+        "r2": 0.21240837992445283
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "elasticnet",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.787772697349075,
+        "mae": 2.4589746841897977,
+        "median_ae": 1.7438705648631831,
+        "r2": 0.21332893095308092
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "gradient_boosting",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.8590808593742967,
+        "mae": 2.621069887725341,
+        "median_ae": 1.7985962846467896,
+        "r2": 0.1834305703296799
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "hist_gradient_boosting",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 4.094582857123434,
+        "mae": 2.673679009842199,
+        "median_ae": 1.7691373195583058,
+        "r2": 0.08072661236364975
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "random_forest_meta",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 4.476188793431507,
+        "mae": 3.5900188831636357,
+        "median_ae": 3.1811392406356376,
+        "r2": -0.09860646726624545
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "xgboost_meta",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 4.0366571904861495,
+        "mae": 2.9068953414368477,
+        "median_ae": 2.1339866447448728,
+        "r2": 0.10655237665800521
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "lightgbm_meta",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.8925328610282155,
+        "mae": 2.5410188374359075,
+        "median_ae": 1.6688076399492369,
+        "r2": 0.1692125348892325
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "linear_regression",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.820494604122283,
+        "mae": 2.5096398840455776,
+        "median_ae": 1.7935054860381987,
+        "r2": 0.1996783943027266
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "nonnegative_linear",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.7301795205540356,
+        "mae": 2.4015606464997186,
+        "median_ae": 1.668596815515202,
+        "r2": 0.23706976409986902
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "ridge_0.1",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.8204999671419153,
+        "mae": 2.509656950736208,
+        "median_ae": 1.7935144778665615,
+        "r2": 0.19967614739810258
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "ridge_1.0",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.8205482455909427,
+        "mae": 2.5098105289493535,
+        "median_ae": 1.7935953960910993,
+        "r2": 0.1996559203918017
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "ridge_10.0",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.821032142214808,
+        "mae": 2.511344136700252,
+        "median_ae": 1.7944037653827323,
+        "r2": 0.19945317026321885
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "elasticnet",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.817443066936084,
+        "mae": 2.5065406107286177,
+        "median_ae": 1.7893626375941345,
+        "r2": 0.20095636276601658
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "gradient_boosting",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.9422307840503543,
+        "mae": 2.704270800929722,
+        "median_ae": 1.9766489065890105,
+        "r2": 0.14786294688537227
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "hist_gradient_boosting",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 4.116212283154167,
+        "mae": 2.6613878623472127,
+        "median_ae": 1.8294924910326094,
+        "r2": 0.0709889307271655
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "random_forest_meta",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 4.198997509372911,
+        "mae": 3.227565038527311,
+        "median_ae": 2.6391208881497796,
+        "r2": 0.03324462764368419
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "xgboost_meta",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 4.134556208986762,
+        "mae": 2.9784989553962657,
+        "median_ae": 2.2084527015686035,
+        "r2": 0.06269019284800381
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "lightgbm_meta",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 4.123644890436837,
+        "mae": 2.8909400721513783,
+        "median_ae": 1.982961082486609,
+        "r2": 0.0676308879010541
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "linear_regression",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.8073013761393586,
+        "mae": 2.4968469790230468,
+        "median_ae": 1.7953796533328683,
+        "r2": 0.2051963155243688
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "nonnegative_linear",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.7301795205540356,
+        "mae": 2.4015606464997186,
+        "median_ae": 1.668596815515202,
+        "r2": 0.23706976409986902
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "ridge_0.1",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.8073073214047093,
+        "mae": 2.4968633099904776,
+        "median_ae": 1.7953735583339716,
+        "r2": 0.2051938332819464
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "ridge_1.0",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.807360847697978,
+        "mae": 2.4970102968171943,
+        "median_ae": 1.7953189429341414,
+        "r2": 0.20517148503241833
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "ridge_10.0",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.807897957563649,
+        "mae": 2.4984809219479027,
+        "median_ae": 1.7947960716437565,
+        "r2": 0.2049472140129882
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "elasticnet",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.8053956195348846,
+        "mae": 2.4946138085815694,
+        "median_ae": 1.7865547069617902,
+        "r2": 0.20599179932081146
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "gradient_boosting",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 3.9575661471584582,
+        "mae": 2.73613172667512,
+        "median_ae": 1.9570814610287313,
+        "r2": 0.14122038894413136
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "hist_gradient_boosting",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 4.085551121892739,
+        "mae": 2.6521283103931075,
+        "median_ae": 1.8513545622317595,
+        "r2": 0.08477756321908247
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "random_forest_meta",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 4.45978583229729,
+        "mae": 3.599369134214793,
+        "median_ae": 3.11201079092681,
+        "r2": -0.09056954916297921
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "xgboost_meta",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 4.0976580880413005,
+        "mae": 2.925281165877199,
+        "median_ae": 2.1616338157653807,
+        "r2": 0.07934525575600793
+      },
+      "horizon": "6h"
+    },
+    {
+      "meta_model": "lightgbm_meta",
+      "base_models": [
+        "prediction_tft",
+        "prediction_gru",
+        "prediction_random_forest",
+        "prediction_lightgbm",
+        "prediction_xgboost"
+      ],
+      "aligned_rows": 1222,
+      "train_rows": 916,
+      "validation_rows": 306,
+      "validation_metrics": {
+        "n": 306,
+        "rmse": 4.065023728585194,
+        "mae": 2.806616763921626,
+        "median_ae": 1.9741904533388306,
+        "r2": 0.09395132384459515
+      },
+      "horizon": "6h"
+    }
+  ],
+  "final_by_horizon": {
+    "1h": {
+      "meta_model": "ridge_10.0",
+      "base_models": [
+        "gru",
+        "lightgbm",
+        "tft",
+        "random_forest"
+      ],
+      "meta_validation_metrics": {
+        "n": 314,
+        "rmse": 2.17859464082222,
+        "mae": 1.606843809156797,
+        "median_ae": 1.218043366195956,
+        "r2": 0.7627934392018245
+      },
+      "test_metrics": {
+        "n": 1020,
+        "rmse": 3.2721661626056533,
+        "mae": 2.092217533404548,
+        "median_ae": 1.3171974816673337,
+        "r2": 0.8010871433712905
+      },
+      "coefficients": {
+        "gru": 0.26133661463073243,
+        "lightgbm": 0.12252074082637973,
+        "tft": 0.2811127718956693,
+        "random_forest": 0.28373265764661343
+      },
+      "feature_importances": null,
+      "prediction_file": "D:\\Desktop\\Air\\airaware\\ensemble\\stacking_advanced_outputs\\advanced_stacking_1h_test_predictions.csv"
+    },
+    "3h": {
+      "meta_model": "linear_regression",
+      "base_models": [
+        "tft",
+        "lightgbm",
+        "gru",
+        "random_forest",
+        "xgboost"
+      ],
+      "meta_validation_metrics": {
+        "n": 306,
+        "rmse": 3.217519837092638,
+        "mae": 2.0315097720144863,
+        "median_ae": 1.545096980838891,
+        "r2": 0.5458014622777374
+      },
+      "test_metrics": {
+        "n": 956,
+        "rmse": 3.0836675822823385,
+        "mae": 2.251007308238749,
+        "median_ae": 1.7528133432959407,
+        "r2": 0.8243779704345934
+      },
+      "coefficients": {
+        "tft": 1.1559109565357653,
+        "lightgbm": -0.2721412231794931,
+        "gru": -0.2252554933816732,
+        "random_forest": 0.12550982633407082,
+        "xgboost": 0.11996863280137623
+      },
+      "feature_importances": null,
+      "prediction_file": "D:\\Desktop\\Air\\airaware\\ensemble\\stacking_advanced_outputs\\advanced_stacking_3h_test_predictions.csv"
+    },
+    "6h": {
+      "meta_model": "nonnegative_linear",
+      "base_models": [
+        "tft",
+        "gru",
+        "random_forest"
+      ],
+      "meta_validation_metrics": {
+        "n": 306,
+        "rmse": 3.7255860114975916,
+        "mae": 2.3929375576142133,
+        "median_ae": 1.6637907135111538,
+        "r2": 0.23894761963659306
+      },
+      "test_metrics": {
+        "n": 908,
+        "rmse": 4.018221258285765,
+        "mae": 2.4279220302931983,
+        "median_ae": 1.573920395295719,
+        "r2": 0.6736734655164075
+      },
+      "coefficients": {
+        "tft": 0.9207453244630988,
+        "gru": 0.0,
+        "random_forest": 0.008748151494287601
+      },
+      "feature_importances": null,
+      "prediction_file": "D:\\Desktop\\Air\\airaware\\ensemble\\stacking_advanced_outputs\\advanced_stacking_6h_test_predictions.csv"
+    }
+  }
+}

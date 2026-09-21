@@ -1,0 +1,63 @@
+{
+  "project": "AirAware",
+  "model": "tft_causal",
+  "horizon": "3h",
+  "causal": true,
+  "real_time_ready_design": true,
+  "encoder_length": 24,
+  "encoder_hours": 6.0,
+  "prediction_length": 12,
+  "prediction_hours": 3.0,
+  "sampling_minutes": 15,
+  "train_rows": 2939,
+  "validation_rows": 1362,
+  "final_train_rows": 4301,
+  "original_test_rows": 1104,
+  "evaluated_test_rows": 1032,
+  "metrics": {
+    "mae": 3.414279794914778,
+    "rmse": 5.219032807285464,
+    "median_absolute_error": 2.3585478591918942,
+    "r2": 0.5726923388248877
+  },
+  "high_pm_p95": {
+    "threshold": 36.4735,
+    "rows": 52,
+    "mae": 11.400522675147421,
+    "rmse": 15.518661239800442,
+    "underprediction_rate": 0.9423076923076923,
+    "mean_underprediction": 11.93214708912129,
+    "worst_underprediction": 70.62011421203613
+  },
+  "sensor_metrics": {
+    "1": {
+      "rows": 258,
+      "mae": 2.651414182648178,
+      "rmse": 3.59825083097322
+    },
+    "2": {
+      "rows": 258,
+      "mae": 3.4359347906778024,
+      "rmse": 4.127323870536049
+    },
+    "4": {
+      "rows": 258,
+      "mae": 3.5545682742983797,
+      "rmse": 5.025633849375857
+    },
+    "5": {
+      "rows": 258,
+      "mae": 4.015201932034751,
+      "rmse": 7.328984023123492
+    }
+  },
+  "alignment": {
+    "decoder_step_1": "forecast origin + 15 minutes",
+    "decoder_step_12": "forecast origin + 3 hours",
+    "forecast_origin_formula": "first_decoder_tft_time_idx - 1",
+    "three_hour_prediction": "decoder step 12"
+  },
+  "checkpoint": "D:\\Desktop\\Air\\airaware\\backend\\models\\tft_causal\\pm25_3h_causal.ckpt",
+  "preprocessing": "D:\\Desktop\\Air\\airaware\\backend\\models\\tft_causal\\pm25_3h_causal.preprocessing.joblib",
+  "prediction_file": "D:\\Desktop\\Air\\airaware\\backend\\outputs\\predictions\\tft_causal\\test_pm25_3h.csv"
+}

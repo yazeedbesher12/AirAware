@@ -9,6 +9,8 @@ import type { RiskLevel, TimelineMode } from '../../types/sensors'
 import MapLegend from './MapLegend'
 import SensorDetails from './SensorDetails'
 import SensorMarker from './SensorMarker'
+import AlertsSummary from '../alerts/AlertsSummary'
+import { useAlerts } from '../../hooks/useAlerts'
 
 const TIMELINES: Array<{ value: TimelineMode; label: string }> = [
   { value: 'current', label: 'Current' },
@@ -43,6 +45,7 @@ const PALESTINE_BASEMAP: StyleSpecification = {
 
 export default function AirQualityMap() {
   const { sensors, status, error } = useSensors()
+  const { activeAlerts } = useAlerts()
   const mapContainerRef = useRef<HTMLDivElement>(null)
   const mapRef = useRef<MapLibreMap | null>(null)
   const [mapReady, setMapReady] = useState(false)
@@ -133,6 +136,7 @@ export default function AirQualityMap() {
         <span className="summary-elevated"><b>{summary.elevated}</b><small>Elevated risk</small></span>
         <span className="summary-high"><b>{summary.high}</b><small>High risk</small></span>
       </div>
+      <AlertsSummary />
     </div>
 
     <div className="map-toolbar">
@@ -156,7 +160,7 @@ export default function AirQualityMap() {
         {status === 'loading' && <div className="map-data-loading"><span />Preparing sensor layer…</div>}
         {status === 'ready' && !sensors.length && <div className="map-empty-state"><AlertCircle /><strong>No sensor data</strong><span>Sensor locations will appear here when data is available.</span></div>}
         {status === 'error' && <div className="map-empty-state error"><AlertCircle /><strong>Sensor data unavailable</strong><span>{error}</span></div>}
-        {mapReady && mapRef.current && visibleSensors.map(({ sensor, snapshot }) => <SensorMarker key={sensor.id} map={mapRef.current!} sensor={sensor} snapshot={snapshot} timeline={timeline} selected={selectedId === sensor.id} onSelect={() => selectSensor(sensor.id)} />)}
+        {mapReady && mapRef.current && visibleSensors.map(({ sensor, snapshot }) => <SensorMarker key={sensor.id} map={mapRef.current!} sensor={sensor} snapshot={snapshot} timeline={timeline} selected={selectedId === sensor.id} alertCount={activeAlerts.filter(alert => alert.sensor_id === sensor.id).length} alertSeverity={activeAlerts.some(alert => alert.sensor_id === sensor.id && alert.severity === 'critical') ? 'critical' : 'warning'} onSelect={() => selectSensor(sensor.id)} />)}
         {mapReady && sensors.length > 0 && visibleSensors.length === 0 && <div className="no-risk-results">No sensors match this risk level in the selected timeline.</div>}
       </div>
       {selectedView && <SensorDetails sensor={selectedView.sensor} snapshot={selectedView.snapshot} timeline={timeline} onClose={() => { setSelectedId(null); requestAnimationFrame(() => fitNetwork(false)) }} />}

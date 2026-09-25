@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import {
-  Activity, AlertTriangle, BarChart3, CalendarRange, ChevronRight, CircleDot,
+  Activity, AlertTriangle, BarChart3, Bell, CalendarRange, ChevronRight, CircleDot,
   BrainCircuit, CloudSun, Database, Download, FileText, FlaskConical, Gauge, HeartPulse, MapPin, Menu, RefreshCw,
   Route, Search, ShieldCheck, SlidersHorizontal, TimerOff, Trophy, Waves, X,
 } from 'lucide-react'
@@ -9,6 +9,8 @@ import AirQualityMap from './components/map/AirQualityMap'
 import AdvancedAnalysis from './pages/AdvancedAnalysis'
 import Phase3Page from './pages/Phase3'
 import ModelBenchmarking from './pages/ModelBenchmarking'
+import AlertsCenter from './components/alerts/AlertsCenter'
+import { useAlerts } from './hooks/useAlerts'
 import { api, downloadUrl, query, type Filters } from './services/api'
 
 type AnyRow = Record<string, any>
@@ -267,6 +269,7 @@ function ReportsPage({ reports, overview }: { reports: AnyRow[]; overview: Overv
 }
 
 export default function App() {
+  const { activeAlerts, openAlerts } = useAlerts()
   const [page, setPage] = useState('overview')
   const [menuOpen, setMenuOpen] = useState(false)
   const [loading, setLoading] = useState(true)
@@ -343,6 +346,7 @@ export default function App() {
     {menuOpen && <button className="scrim" onClick={() => setMenuOpen(false)} aria-label="Close navigation" />}
     <main>
       <header><button className="menu-button" onClick={() => setMenuOpen(true)}><Menu /></button><div><span className="breadcrumb">AirAware / Local Phases 1-4A</span><h1>{PAGE_META[page][0]}</h1><p>{PAGE_META[page][1]}</p></div><div className="header-status"><span><i /> API connected</span><small>Local · UTC data</small></div></header>
+      <button type="button" className="alerts-bell" onClick={() => openAlerts('active')} aria-label={`Open Alerts Center. ${activeAlerts.length} active alerts`}><Bell /><span>{activeAlerts.length}</span></button>
       <GlobalFilters filters={filters} setFilters={setFilters} sensors={sensors} />
       <div className="content">
         {page === 'overview' && <OverviewPage overview={overview} availability={visibleAvailability} sensors={sensors.filter(s => (!filters.city || s.city === filters.city) && (!filters.sensorId || String(s.sensor_id) === filters.sensorId))} />}
@@ -359,5 +363,6 @@ export default function App() {
         {page === 'reports' && <ReportsPage reports={reports} overview={overview} />}
       </div>
     </main>
+    <AlertsCenter />
   </div>
 }

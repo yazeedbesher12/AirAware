@@ -4,6 +4,7 @@ import HealthInterpretation from './HealthInterpretation'
 import RiskBadge from './RiskBadge'
 import SafetyUpperEstimate from './SafetyUpperEstimate'
 import type { ForecastHorizon, SensorData, SensorSnapshot, TimelineMode } from '../../types/sensors'
+import SensorAlerts from '../alerts/SensorAlerts'
 
 const modeName: Record<TimelineMode, string> = { current: 'Current Conditions', '1h': '1 Hour Forecast', '3h': '3 Hour Forecast', '6h': '6 Hour Forecast' }
 const shortTime = (value: string) => new Date(value).toLocaleString(undefined, {
@@ -51,6 +52,7 @@ export default function SensorDetails({ sensor, snapshot, timeline, onClose }: {
     </section>
 
     <HealthInterpretation snapshot={snapshot} timeline={timeline} />
+    <SensorAlerts sensorId={sensor.id} timeline={timeline} />
     <ForecastMiniChart sensor={sensor} timeline={timeline} />
 
     <section className="forecast-comparison">

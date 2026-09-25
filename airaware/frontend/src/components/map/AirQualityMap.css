@@ -8,6 +8,7 @@
 
 .map-command-head {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between;
   gap: 24px;
@@ -15,7 +16,7 @@
   background: linear-gradient(118deg, #09271e 0%, #103e31 61%, #165944 100%);
   color: #fff;
 }
-.map-intro { max-width: 660px; }
+.map-intro { flex: 1 1 330px; max-width: 660px; }
 .map-eyebrow { display: flex; align-items: center; gap: 7px; color: #67d9b6; font-size: 8px; text-transform: uppercase; letter-spacing: 1.05px; font-weight: 700; }
 .map-eyebrow svg { width: 14px; height: 14px; }
 .map-intro h2 { margin: 7px 0 5px; font-size: 23px; letter-spacing: -.55px; }

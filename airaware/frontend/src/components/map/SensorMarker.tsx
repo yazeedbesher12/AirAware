@@ -3,6 +3,8 @@ import { createPortal } from 'react-dom'
 import { Marker, type Map as MapLibreMap } from 'maplibre-gl'
 import type { SensorData, SensorSnapshot, TimelineMode } from '../../types/sensors'
 import RiskBadge from './RiskBadge'
+import { BellRing } from 'lucide-react'
+import type { AlertSeverity } from '../../types/alerts'
 
 const categoryClass = (category: string | null) => category ? category.toLowerCase().replaceAll(' ', '-') : 'unavailable'
 
@@ -12,6 +14,8 @@ export default function SensorMarker({
   snapshot,
   timeline,
   selected,
+  alertCount,
+  alertSeverity,
   onSelect,
 }: {
   map: MapLibreMap
@@ -19,6 +23,8 @@ export default function SensorMarker({
   snapshot: SensorSnapshot
   timeline: TimelineMode
   selected: boolean
+  alertCount: number
+  alertSeverity: AlertSeverity
   onSelect: () => void
 }) {
   const element = useMemo(() => {
@@ -45,6 +51,7 @@ export default function SensorMarker({
       aria-pressed={selected}
     >
       <span className="marker-ring" />
+      {alertCount > 0 && <span className={`marker-alert severity-${alertSeverity}`} aria-label={`${alertCount} active alert${alertCount === 1 ? '' : 's'}`}><BellRing />{alertCount}</span>}
       <span className="marker-card">
         <span className="marker-place"><i className={sensor.online ? 'online' : 'offline'} />S{sensor.id} · {sensor.city}<b>{modeLabel}</b></span>
         <strong>{snapshot.pm25 == null ? '—' : snapshot.pm25.toFixed(1)}</strong>

@@ -1,0 +1,288 @@
+{
+  "score_notice": "AirAware operational sensor-health score; not a probability or calibrated confidence.",
+  "configuration": {
+    "expected_interval_minutes": 15,
+    "gap_tolerance_minutes": 22.5,
+    "major_gap_minutes": 90,
+    "offline_minutes": 180,
+    "availability_window_rule": "Each sensor's first-to-last timestamp only; boundaries are excluded from outage inference."
+  },
+  "availability_audit": {
+    "1": {
+      "sensor_id": 1,
+      "city": "Tulkarem",
+      "site": "Tulkarem Municipality",
+      "first_timestamp": "2026-08-06T00:00:00+00:00",
+      "last_timestamp": "2026-08-23T00:30:00+00:00",
+      "total_rows": 1628,
+      "unique_timestamps": 1628,
+      "expected_sampling_interval_minutes": 15.0,
+      "observed_interval_minutes": {
+        "15.0": 1620,
+        "30.0": 7
+      },
+      "missing_timestamps": 7,
+      "largest_gap_minutes": 30.0,
+      "gaps_over_expected_tolerance": 7,
+      "gaps_at_or_over_major_threshold": 0,
+      "expected_readings": 1635,
+      "readings_received_percent": 99.572,
+      "boundary_note": "Expected readings are counted only from this sensor's first through last timestamp; dataset boundaries are not outages."
+    },
+    "2": {
+      "sensor_id": 2,
+      "city": "Nablus",
+      "site": "ANNU New Campus",
+      "first_timestamp": "2026-08-06T11:45:00+00:00",
+      "last_timestamp": "2026-08-23T00:30:00+00:00",
+      "total_rows": 1582,
+      "unique_timestamps": 1582,
+      "expected_sampling_interval_minutes": 15.0,
+      "observed_interval_minutes": {
+        "15.0": 1575,
+        "30.0": 6
+      },
+      "missing_timestamps": 6,
+      "largest_gap_minutes": 30.0,
+      "gaps_over_expected_tolerance": 6,
+      "gaps_at_or_over_major_threshold": 0,
+      "expected_readings": 1588,
+      "readings_received_percent": 99.622,
+      "boundary_note": "Expected readings are counted only from this sensor's first through last timestamp; dataset boundaries are not outages."
+    },
+    "4": {
+      "sensor_id": 4,
+      "city": "Nablus",
+      "site": "ANNU Old Campus",
+      "first_timestamp": "2026-08-06T07:30:00+00:00",
+      "last_timestamp": "2026-08-23T00:30:00+00:00",
+      "total_rows": 1597,
+      "unique_timestamps": 1597,
+      "expected_sampling_interval_minutes": 15.0,
+      "observed_interval_minutes": {
+        "15.0": 1589,
+        "30.0": 6,
+        "45.0": 1
+      },
+      "missing_timestamps": 8,
+      "largest_gap_minutes": 45.0,
+      "gaps_over_expected_tolerance": 7,
+      "gaps_at_or_over_major_threshold": 0,
+      "expected_readings": 1605,
+      "readings_received_percent": 99.502,
+      "boundary_note": "Expected readings are counted only from this sensor's first through last timestamp; dataset boundaries are not outages."
+    },
+    "5": {
+      "sensor_id": 5,
+      "city": "Nablus",
+      "site": "Hisham Hijjawi College of Technology",
+      "first_timestamp": "2026-08-06T09:15:00+00:00",
+      "last_timestamp": "2026-08-23T00:30:00+00:00",
+      "total_rows": 829,
+      "unique_timestamps": 829,
+      "expected_sampling_interval_minutes": 15.0,
+      "observed_interval_minutes": {
+        "15.0": 822,
+        "30.0": 5,
+        "11475.0": 1
+      },
+      "missing_timestamps": 769,
+      "largest_gap_minutes": 11475.0,
+      "gaps_over_expected_tolerance": 6,
+      "gaps_at_or_over_major_threshold": 1,
+      "expected_readings": 1598,
+      "readings_received_percent": 51.877,
+      "boundary_note": "Expected readings are counted only from this sensor's first through last timestamp; dataset boundaries are not outages."
+    }
+  },
+  "sensors": {
+    "1": {
+      "site": "Tulkarem Municipality",
+      "supported_channels": [
+        "pm25",
+        "temperature",
+        "humidity",
+        "no2",
+        "o3"
+      ],
+      "total_evaluated_timestamps": 1635,
+      "status_percentages": {
+        "Healthy": 94.312,
+        "Warning": 5.505,
+        "Critical": 0.183,
+        "Offline": 0.0
+      },
+      "event_counts": {
+        "missing_reading": 2,
+        "missing_timestamp": 0,
+        "sampling_gap": 7,
+        "major_sampling_gap": 0,
+        "offline": 0,
+        "flatline": 1,
+        "jump": 70,
+        "abnormal_noise": 15,
+        "possible_drift": 0,
+        "suspicious_value": 1,
+        "cross_sensor_inconsistency": 0
+      },
+      "largest_gap_minutes": 30.0,
+      "lowest_health_score": 87,
+      "current_status": "Healthy",
+      "current_health_score": 100,
+      "current_timestamp": "2026-08-23T00:30:00+00:00"
+    },
+    "2": {
+      "site": "ANNU New Campus",
+      "supported_channels": [
+        "pm25",
+        "temperature",
+        "humidity"
+      ],
+      "total_evaluated_timestamps": 1588,
+      "status_percentages": {
+        "Healthy": 85.39,
+        "Warning": 14.61,
+        "Critical": 0.0,
+        "Offline": 0.0
+      },
+      "event_counts": {
+        "missing_reading": 0,
+        "missing_timestamp": 0,
+        "sampling_gap": 6,
+        "major_sampling_gap": 0,
+        "offline": 0,
+        "flatline": 0,
+        "jump": 15,
+        "abnormal_noise": 0,
+        "possible_drift": 3,
+        "suspicious_value": 0,
+        "cross_sensor_inconsistency": 1
+      },
+      "largest_gap_minutes": 30.0,
+      "lowest_health_score": 92,
+      "current_status": "Healthy",
+      "current_health_score": 100,
+      "current_timestamp": "2026-08-23T00:30:00+00:00"
+    },
+    "4": {
+      "site": "ANNU Old Campus",
+      "supported_channels": [
+        "pm25",
+        "temperature",
+        "humidity"
+      ],
+      "total_evaluated_timestamps": 1605,
+      "status_percentages": {
+        "Healthy": 96.012,
+        "Warning": 3.988,
+        "Critical": 0.0,
+        "Offline": 0.0
+      },
+      "event_counts": {
+        "missing_reading": 0,
+        "missing_timestamp": 1,
+        "sampling_gap": 7,
+        "major_sampling_gap": 0,
+        "offline": 0,
+        "flatline": 0,
+        "jump": 31,
+        "abnormal_noise": 3,
+        "possible_drift": 0,
+        "suspicious_value": 0,
+        "cross_sensor_inconsistency": 1
+      },
+      "largest_gap_minutes": 45.0,
+      "lowest_health_score": 95,
+      "current_status": "Healthy",
+      "current_health_score": 100,
+      "current_timestamp": "2026-08-23T00:30:00+00:00"
+    },
+    "5": {
+      "site": "Hisham Hijjawi College of Technology",
+      "supported_channels": [
+        "pm25",
+        "temperature",
+        "humidity"
+      ],
+      "total_evaluated_timestamps": 1598,
+      "status_percentages": {
+        "Healthy": 50.25,
+        "Warning": 2.19,
+        "Critical": 0.438,
+        "Offline": 47.121
+      },
+      "event_counts": {
+        "missing_reading": 0,
+        "missing_timestamp": 1,
+        "sampling_gap": 5,
+        "major_sampling_gap": 2,
+        "offline": 1,
+        "flatline": 0,
+        "jump": 12,
+        "abnormal_noise": 1,
+        "possible_drift": 0,
+        "suspicious_value": 0,
+        "cross_sensor_inconsistency": 1
+      },
+      "largest_gap_minutes": 11475.0,
+      "lowest_health_score": 0,
+      "current_status": "Healthy",
+      "current_health_score": 100,
+      "current_timestamp": "2026-08-23T00:30:00+00:00"
+    }
+  },
+  "existing_flag_comparison": {
+    "jump_flag": {
+      "rows_compared": 5636,
+      "existing_positive": 276,
+      "engine_positive": 158,
+      "both_positive": 124,
+      "overall_agreement_percent": 96.7,
+      "existing_positive_detected_percent": 44.928,
+      "engine_positive_matching_existing_percent": 78.481
+    },
+    "flatline_flag": {
+      "rows_compared": 5636,
+      "existing_positive": 8,
+      "engine_positive": 1,
+      "both_positive": 1,
+      "overall_agreement_percent": 99.876,
+      "existing_positive_detected_percent": 12.5,
+      "engine_positive_matching_existing_percent": 100.0
+    },
+    "possible_drift_flag": {
+      "rows_compared": 5636,
+      "existing_positive": 43,
+      "engine_positive": 204,
+      "both_positive": 0,
+      "overall_agreement_percent": 95.617,
+      "existing_positive_detected_percent": 0.0,
+      "engine_positive_matching_existing_percent": 0.0
+    },
+    "sampling_gap_flag": {
+      "rows_compared": 5636,
+      "existing_positive": 26,
+      "engine_positive": 26,
+      "both_positive": 26,
+      "overall_agreement_percent": 100.0,
+      "existing_positive_detected_percent": 100.0,
+      "engine_positive_matching_existing_percent": 100.0
+    },
+    "suspicious_value_flag": {
+      "rows_compared": 5636,
+      "existing_positive": 7,
+      "engine_positive": 3,
+      "both_positive": 3,
+      "overall_agreement_percent": 99.929,
+      "existing_positive_detected_percent": 42.857,
+      "engine_positive_matching_existing_percent": 100.0
+    }
+  },
+  "causal_verification": {
+    "engine_filters_rows_after_as_of": true,
+    "rolling_windows_are_backward_only": true,
+    "jump_reference_excludes_current_transition": true,
+    "drift_baseline_precedes_recent_window": true,
+    "cross_sensor_data_is_filtered_at_as_of": true
+  }
+}

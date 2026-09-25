@@ -1,0 +1,32 @@
+{
+  "data_scope": {
+    "forecast_source": "D:\\Desktop\\Air\\airaware\\test_predictions_all_models.csv",
+    "forecast_note": "Existing LightGBM TEST predictions only; gaps or unavailable horizons were not fabricated.",
+    "forecast_observations": 1140,
+    "sensor_health_observations": 6426,
+    "evaluations": 6426
+  },
+  "total_events": 80,
+  "active_alerts": 24,
+  "resolved_alerts": 56,
+  "counts_by_severity": {
+    "critical": 11,
+    "warning": 69
+  },
+  "counts_by_type": {
+    "sensor_offline": 1,
+    "possible_drift": 3,
+    "suspicious_reading": 1,
+    "high_pm_risk": 61,
+    "who_exceedance": 14
+  },
+  "counts_by_sensor": {
+    "5": 24,
+    "2": 17,
+    "1": 27,
+    "4": 12
+  },
+  "deduplicated_repeats_suppressed": 4475,
+  "escalations": 61,
+  "lifecycle_transitions": 197
+}

@@ -91,7 +91,7 @@ function WhoHealth({ filters }: { filters: Filters }) {
   const groups = groupBySensor(rows)
   const compatible = String(config?.unit_compatible).toLowerCase() === 'true'
   return <div className="phase3-stack">
-    <Notice warning title="WHO status uses averaging periods" text="Single instantaneous readings are never compared with the WHO 24-hour or 8-hour guideline. Results are health-reference screening, not WHO AQI or legal compliance determinations." />
+    <Notice warning title="WHO status uses averaging periods" text="Single instantaneous readings are never compared with the WHO 24-hour or 8-hour guideline. Results are health-reference screening, not an AQI or legal compliance determination." />
     <div className="who-toolbar"><label className="inline-control"><span>WHO pollutant analysis</span><select value={pollutant} onChange={e => setPollutant(e.target.value)}><option value="pm25">PM2.5 - 24h</option><option value="no2">NO2 - 24h (unit unverified)</option><option value="o3">O3 - 8h (unit unverified)</option></select></label><a className="button small" href={downloadUrl('/api/ml/download/who_analysis_results.csv')}><Download size={14} /> WHO results</a></div>
     <Kpis items={[
       { label: 'Valid windows', value: fmt(exceedance.valid_windows || 0, 0), note: `${pollutant.toUpperCase()} reference windows` },

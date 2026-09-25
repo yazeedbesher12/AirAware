@@ -25,7 +25,7 @@ a { color: inherit; }
 .sidebar-foot div span { display:block; font-size: 9px; text-transform: uppercase; color:#6e9184; letter-spacing:.8px; }
 .sidebar-foot div strong { display:block; color:#d6e8e1; font-family:'DM Mono'; font-size:11px; margin-top:4px; }
 .sidebar-foot small { grid-column:1/-1; color:#527166; font-size:9px; line-height:1.5; }
-main { min-width: 0; }
+main { position: relative; min-width: 0; }
 header { height: 116px; padding: 27px 34px 20px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #e2e9e6; background:rgba(248,251,249,.82); backdrop-filter:blur(12px); }
 header h1 { font-size:25px; letter-spacing:-.7px; margin:2px 0 3px; color:#16332a; }
 header p { margin:0; color:#71827b; font-size:11px; }
